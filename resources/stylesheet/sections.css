@@ -1,0 +1,85 @@
+/*картинки*/
+
+img.image {
+    cursor:zoom-in;
+}
+
+/*ссылки*/
+
+a.link:hover {
+    color: maroon;
+    
+    font-weight: bold;
+}
+
+a.link:active {
+    color: red;
+}
+
+/*основная информация*/
+
+/*отступ сверху*/
+
+section.main {
+    margin-top: 80px;
+}
+
+/*список*/
+
+section.main section.basic-information article ul li {
+    list-style-image: url(../images/light.png);
+}
+
+/*наши проекты*/
+
+/*заголовок*/
+
+section.main section.our-projects article h3 {
+    text-align: justify;
+}
+
+/*информация*/
+
+section.main section.our-projects article div.project-information {
+    height: 100px;
+}
+
+section.main section.our-projects article div.project-information img.icon {
+    height: 100px;
+    
+    float:left;
+    
+    margin-right: 10px;
+}
+
+section.main section.our-projects article div.project-information img.icon-platform {
+    height: 20px;
+    
+    margin: 0 5px;
+}
+
+/*ссылки проекта*/
+
+section.main section.our-projects article div.project-link {
+    float: left;
+    
+    width: 100%;
+    
+    margin: 5px 0;
+}
+
+section.main section.our-projects article div.project-link b {
+    float: left;
+    
+    width: 70px;
+}
+
+section.main section.our-projects article div.project-link div {
+    float: left;
+}
+
+/*список*/
+
+section.main section.our-projects article ul li {
+    list-style-image: url(../images/switch.png);
+}

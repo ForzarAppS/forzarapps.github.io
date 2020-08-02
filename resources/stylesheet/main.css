@@ -1,0 +1,33 @@
+/*фон*/
+
+body {
+    background: rgba(255, 200, 200, 0.2);
+}
+
+/*ссылки*/
+
+h2.anchor {
+    padding-top: 80px;
+	margin-top: -80px;
+}
+
+/*кнопка наверх*/
+
+a.up {
+    position: fixed;
+    
+	bottom: 10px;
+	right: 15px;
+}
+
+/*абзацы*/
+
+p {
+    text-align: justify;
+}
+
+/*подвал*/
+
+footer {
+    text-align: center;
+}

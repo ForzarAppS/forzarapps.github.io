@@ -1,0 +1,40 @@
+div.popup {
+    position: fixed;
+    
+    height: 100%;
+    width: 100%;
+    
+    top: 0;
+    left: 0;
+    
+    text-align: center;
+}
+
+div.popup-background {
+    background: rgba(0,0,0,0.8);
+    
+    position: fixed;
+    
+    height: 100%;
+    width: 100%;
+    
+    cursor: zoom-out;
+}
+
+div.popup-center {
+    position: fixed;
+    
+    top: 50%;
+    left: 50%;
+    
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    cursor: zoom-out;
+}
+
+img.popup-image {
+    max-width: 85%;
+    
+    cursor: default;
+}

@@ -1,0 +1,137 @@
+/*скриншоты*/
+
+section.main section.our-projects article div.project-screenshots {
+    float: left;
+    
+    width: 100%;
+    
+    margin: 5px 0;
+}
+
+section.main section.our-projects article div.project-screenshots b {
+    float: left;
+    
+    width: 100px;
+    
+    margin: 4px 0;
+}
+
+section.main section.our-projects article div.project-screenshots div.button {
+    background: rgba(66, 170, 255, 0.2);
+    
+    float: left;
+    
+    padding: 2px;
+    
+    border: 2px solid;
+    border-radius: 10px;
+    
+    cursor:pointer;
+}
+
+/*спойлер*/
+
+section.main section.our-projects article div.project-screenshots div.spoiler {
+    border: 2px solid;
+    
+    width: 100%;
+        
+    float: left;
+    
+    text-align: center;
+    
+    /*display: none;*/
+}
+
+section.main section.our-projects article div.project-screenshots div.spoiler img.spoiler-image {
+    cursor:zoom-in;
+    
+    float: left;
+    
+    height: 100px;
+    
+    margin: 5px;
+}
+
+/*popup*/
+
+div.spoiler-popup {
+    position: fixed;
+    
+    height: 100%;
+    width: 100%;
+    
+    top: 0;
+    left: 0;
+    
+    text-align: center;
+}
+
+div.spoiler-popup-background {
+    background: rgba(0,0,0,0.8);
+    
+    position: fixed;
+    
+    height: 100%;
+    width: 100%;
+    
+    cursor: zoom-out;
+}
+
+div.spoiler-popup-center {
+    position: fixed;
+    
+    width: 90%;
+    
+    top: 50%;
+    left: 50%;
+    
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    cursor: zoom-out;
+}
+
+div.spoiler-popup-center-image {  
+    cursor: zoom-out;
+}
+
+div.button-popup-left {    
+    width: 5%;
+    
+    cursor:pointer;
+    
+    position: absolute;
+    
+    top: 50%;
+    left: -5%;
+    
+    transform: translateY(-50%);
+}
+
+div.button-popup-left img {
+    width: 100%;
+}
+
+img.spoiler-popup-image {
+    max-width: 100%;
+    
+    cursor: default;
+}
+
+div.button-popup-right {    
+    width: 5%;
+    
+    cursor:pointer;
+    
+    position: absolute;
+    
+    top: 50%;
+    right: -5%;
+    
+    transform: translateY(-50%);
+}
+
+div.button-popup-right img {
+    width: 100%;
+}

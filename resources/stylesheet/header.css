@@ -1,0 +1,150 @@
+/*шапка*/
+
+header {
+    background: url(../images/background.jpg);
+    background-size: 100%;
+    
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    
+    position: fixed;
+}
+
+header div.background {
+    background: rgba(255, 255, 255, 0.5);
+    
+    height: 80px;
+}
+
+/*лого*/
+
+header div.background div.logo {
+    height: 80px;
+    width: 25%;
+    
+    float: left;
+}
+
+header div.background div.logo div.img {
+    width: 50%;
+    
+    float: left;
+}
+
+header div.background div.logo div.img img#logo {
+    height: 40px;
+    margin: 20px 5px;
+    
+    float: right;
+}
+
+header div.background div.logo div.h1 {
+    width: 50%;
+    
+    float: left;
+}
+
+header div.background div.logo div.h1 h1 {
+    float: left;
+}
+
+header div.background div.logo div.h1 h1 a {
+    color: black;
+    text-decoration-line: none;
+}
+
+/*меню*/
+
+header nav.sections {
+    height: 80px;
+    width: 68%;
+    
+    float: left;
+}
+
+header nav.sections ul.sections {
+    height: 20px;
+    margin: 30px 0;
+    padding: 0;
+    
+    float: right;
+    
+    list-style: none;
+}
+
+header nav.sections ul.sections li {
+    margin: 0 10px;
+    
+    float: left;
+}
+
+header nav.sections ul.sections li a {
+    color: black;
+    font-weight: bold;
+    
+    text-decoration-line: none;
+}
+
+header nav.sections ul.sections li:hover a {
+    color: navy;
+    
+    text-decoration-line: underline;
+}
+
+/*язык*/
+
+header nav.languages {
+    height: 80px;
+    width: 7%;
+    
+    float: left;
+}
+
+header nav.languages ul.languages {
+    height: 20px;
+    margin: 30px 0;
+    padding: 0;
+    
+    float: right;
+    
+    list-style: none;
+}
+
+header nav.languages ul.languages li { 
+    margin: 0 5px;
+    
+    float: left;
+    
+    font-weight: bold;
+}
+
+header nav.languages ul.languages li ul { 
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+    
+    display: none;
+}
+
+header nav.languages ul.languages li:hover ul { 
+    display: block;
+}
+
+header nav.languages ul.languages li ul li { 
+    margin: 10px 0;
+}
+
+header nav.languages ul.languages li ul li a { 
+    color: black;
+    
+    text-decoration-line: none;
+}
+
+header nav.languages ul.languages li ul li:hover a { 
+    color: navy;
+    
+    text-decoration-line: underline;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Forzar AppS</title>
+        <link rel="shortcut icon" href="resources/images/logo/FAS.png" type="image/png">
+        
+        <link rel="stylesheet" href="resources/stylesheet/main.css">
+        <link rel="stylesheet" href="resources/stylesheet/header.css">
+        <link rel="stylesheet" href="resources/stylesheet/sections.css">
+        <link rel="stylesheet" href="resources/stylesheet/popup.css">
+        <link rel="stylesheet" href="resources/stylesheet/spoiler.css">
+        
+        <script src="resources/scripts/header.js"></script>
+        <script src="resources/scripts/popup.js"></script>
+        <script src="resources/scripts/image.js"></script>
+        <script src="resources/scripts/spoiler.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="background">
+                <div class="logo"><center>
+                    <div class="img"><a href=""><img id="logo" src="resources/images/logo/FAS.png"/></a></div>
+                    <div class="h1"><h1><a href="">FAS</a></h1></div>
+                    
+                    <script>AutoChangeLogo(1000)</script>
+                </center></div>
+
+                <nav class="sections">
+                    <ul class="sections">
+                        <li><a href="#basic-information">Основная информация</a></li>
+                        <li><a href="#our-projects">Наши проекты</a></li>
+                        <li><a href="#about-us">О нас</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="languages">
+                    <ul class="languages">
+                        <li>RU ˅
+                            <ul>
+                                <li><a href="">EN</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="main">
+            <section class="basic-information">
+                <h2 id="basic-information" class="anchor">Основная информация</h2>
+                
+                <article>                 
+                    <p>Молодая команда по разработке компьютерного и мобильного ПО, игр и сайтов.</p>
+                    <p>Команда объявила о старте своей деятельности 14 февраля 2020 года. Были поставлены следующие задачи:</p>
+                    <ul class="tasks">
+                        <li>получить опыт разработки ПО;</li>   
+                        <li>получить опыт работы в сфере дизайна;</li>
+                        <li>своими проектами упростить свою жизнь и жизнь других людей;</li>
+                        <li>сохранить историю разработки нашего ПО;</li>
+                        <li>заинтересовать людей программированием.</li>
+                    </ul>   
+                    
+                    <center><img class="image" src="resources/images/start.jpg" width="50%" onclick="ChangeSizeImage(this)"/></center>
+                </article>
+            </section>
+
+            <section class="our-projects">
+                <h2 id="our-projects" class="anchor">Наши проекты</h2>
+                
+                <article id="fonts-viewer">
+                    <h3>Программа «Просмотрщик Шрифтов – Fonts Viewer»</h3>
+
+                    <div class="project-information">
+                        <img class="icon" src="resources/images/projects/FV.png"/>
+
+                        <p><b>Платформа: </b><img class="icon-platform" src="resources/images/platforms/windows.png" alt="Windows"/></p>
+                        <p><b>Версия: </b>1.2</p>
+                        <p><b>Дата последнего обновления: </b>22.03.2020</p>
+                    </div>
+
+                    <p><b>Описание: </b>Программа подойдёт людям, которые всегда хотели иметь свой шрифт. А так же для людей, которым необходимо правильно расположить текст на клетчатом поле для дальнейшего его использования.</p>
+                    
+                    <b>Особенности: </b>
+                    <ul>
+                        <li> Создание и редактирование букв и символов любой сложности.</li>
+                        <li>Просмотр слов и словосочетаний, состоящих из букв и символов ранее созданных шрифтов.</li>
+                        <li>Позиционирование низа букв и символов.</li>
+                        <li>Включение и отключения сетки размером 10х10 клеток.</li>
+                        <li>Бегущая строка.</li>
+                        <li>Наличие автоматической проверки обновления.</li>
+                    </ul>
+                    
+                    <div class="project-screenshots">
+                        <b>Скриншоты: </b>
+                        <div class="button" onclick="OpenCloseSpoiler(this, 'spoiler-FV')">
+                            Показать
+                            <img src="resources/images/button-down.png" height="15px">
+                        </div>
+                        
+                        <div class="spoiler" id="spoiler-FV111">
+                            <img class='spoiler-image' src="resources/images/FV/01.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            
+                            <img class='spoiler-image' src="resources/images/FV/02.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            
+                            <img class='spoiler-image' src="resources/images/FV/03.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            
+                            <img class='spoiler-image' src="resources/images/FV/04.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            
+                            <img class='spoiler-image' src="resources/images/FV/05.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            
+                            <img class='spoiler-image' src="resources/images/FV/06.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            
+                            <img class='spoiler-image' src="resources/images/FV/07.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                        </div>
+                    </div>
+                    
+                    <div class="project-link">
+                        <b>Ссылка: </b>
+                        <div>
+                            <a class="link" href="https://yadi.sk/d/FwEQPmGjTY2zzg">Яндекс.Диск</a>
+                        </div>
+                    </div>
+                    
+                    <p><b>Статья с помощью по программе: </b><a class="link" href="https://vk.com/@fas.offical-fontsviewer-help">ВКонтакте</a></p>
+                </article>
+                
+                <center><img src="resources/images/separation.png" height="10px"/></center>
+                
+                <article id="check-update">
+                    <h3>Демонстрационный проект с открытым исходным кодом «Проверка Обновления – Check Update»</h3>
+
+                    <div class="project-information">
+                        <img class="icon" src="resources/images/projects/CU.png"/>
+
+                        <p><b>Платформа: </b><img class="icon-platform" src="resources/images/platforms/windows.png" alt="Windows"/><img class="icon-platform" src="resources/images/platforms/android.png" alt="Android"/></p>
+                        <p><b>Версия: </b>1.0</p>
+                        <p><b>Дата последнего обновления: </b>01.04.2020</p>
+                    </div>
+
+                    <p><b>Описание: </b>Программа (бесплатно, без использования сервера) показывает принцип работы проверки на наличие обновления у программ на платформах Windows и Android с использованием текстового файла на Я.Диске. Данная программа написана лишь в ознакомительных целях для понятия алгоритма проверки. При необходимости программу можно переписать на любой язык программирования, который способен выполнить эти задачи.</p>
+                    
+                    <b>Особенности: </b>
+                    <ul>
+                        <li>Демонстрация работы проверки обновления.</li>
+                        <li>Бесплатная проверка обновлений.</li>
+                        <li>Открытый исходный код.</li>
+                        <li>Наличие автоматической проверки обновления.</li>
+                    </ul>
+                    
+                    <div class="project-screenshots">
+                        <b>Скриншоты: </b>
+                        <div class="button" onclick="OpenCloseSpoiler(this)">
+                            Показать
+                            <img src="resources/images/button-down.png" height="15px">
+                        </div>
+                    </div>
+                    
+                    <div class="project-link">
+                        <b>Ссылки: </b>
+                        <div>
+                            Windows – <a class="link" href="https://yadi.sk/d/RxgA2FAoTjk8mw">Яндекс.Диск</a>
+                            <br/>
+                            Android – <a class="link" href="https://yadi.sk/d/rpN0sKW_ySoELA">Яндекс.Диск</a>
+                        </div>
+                    </div>
+                    
+                    <p><b>Код программы: </b><a class="link" href="https://github.com/ForzarAppS/CheckUpdate">GitHub</a></p>
+                </article>
+            </section>
+            
+            <section class="about-us">
+                <h2 id="about-us" class="anchor">О нас</h2>
+            </section>
+            
+            <section class="contacts">
+                <h2 id="contacts" class="anchor">Контакты</h2>
+            </section>
+        </section>
+        
+        <a class="up" href="#"><img src="resources/images/up.png" width="50px"/></a>
+        
+        <footer>Forzar Apps – 1.4.2(20)</footer>
+    </body>
+</html>
