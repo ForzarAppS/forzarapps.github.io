@@ -11,9 +11,7 @@ section.main section.our-projects article div.project-screenshots {
 section.main section.our-projects article div.project-screenshots b {
     float: left;
     
-    width: 100px;
-    
-    margin: 4px 0;
+    margin: 4px 5px 4px 0;
 }
 
 section.main section.our-projects article div.project-screenshots div.button {

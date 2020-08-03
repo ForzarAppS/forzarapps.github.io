@@ -41,13 +41,17 @@ header div.background div.logo div.img img#logo {
 }
 
 header div.background div.logo div.h1 {
-    width: 50%;
+    width: 48%;
     
     float: left;
 }
 
 header div.background div.logo div.h1 h1 {
     float: left;
+    
+    font-size: 40px;
+    
+    margin: 15px 0;
 }
 
 header div.background div.logo div.h1 h1 a {
@@ -62,6 +66,8 @@ header nav.sections {
     width: 68%;
     
     float: left;
+    
+    font-size: 16px;
 }
 
 header nav.sections ul.sections {
@@ -100,6 +106,8 @@ header nav.languages {
     width: 7%;
     
     float: left;
+    
+    font-size: 16px;
 }
 
 header nav.languages ul.languages {
