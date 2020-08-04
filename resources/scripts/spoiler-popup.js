@@ -19,7 +19,9 @@ function ChangeSizeImageSpoilerPopup(Image) {
     
     let DivCountImages = document.getElementById("count-images");
     
-    for (let i = 1; i <= CountImages(); i++) {
+    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf('images') + 7, Image.src.substr(Image.src.lastIndexOf('images') + 7).lastIndexOf('/')));
+    
+    for (let i = 1; i <= CountImages(ProjectName); i++) {
         let ImageOff = document.createElement('img');
         
         if (Image.src.substr(Image.src.lastIndexOf('/') + 1, 2) == i) {
@@ -49,8 +51,8 @@ function CloseSpoilerPopup() {
     };
 }
 
-function CountImages() {
-    let Spoiler = document.getElementById("spoiler-FV");
+function CountImages(ProjectName) {
+    let Spoiler = document.getElementById("spoiler-" + ProjectName);
     let count = 0;
     
     for (let i = 0; i < Spoiler.childNodes.length; i++) {
@@ -82,7 +84,7 @@ function ClickButtonLeft() {
             }
 
             if ((NumberImage - 1) == 0) {
-                if (count == CountImages()) {
+                if (count == CountImages(ProjectName)) {
                     Images.childNodes[i].src = "resources/images/on.png";
                     Images.childNodes[i].className = "image-on";
 
@@ -101,11 +103,11 @@ function ClickButtonLeft() {
     }
 
     if ((NumberImage - 1) == 0) {
-        if (CountImages() < 10) {
-            Image.src = "resources/images/" + ProjectName + "/0" + CountImages() + ".png";
+        if (CountImages(ProjectName) < 10) {
+            Image.src = "resources/images/" + ProjectName + "/0" + CountImages(ProjectName) + ".png";
         }
         else {
-            Image.src = "resources/images/" + ProjectName + "/" + CountImages() + ".png";
+            Image.src = "resources/images/" + ProjectName + "/" + CountImages(ProjectName) + ".png";
         } 
     }
     else {
@@ -137,7 +139,7 @@ function ClickButtonRight() {
                 Images.childNodes[i].addEventListener('click', ClickSmallImage, false);
             }
 
-            if ((NumberImage + 1) == (CountImages() + 1)) {
+            if ((NumberImage + 1) == (CountImages(ProjectName) + 1)) {
                 if (count == 1) {
                     Images.childNodes[i].src = "resources/images/on.png";
                     Images.childNodes[i].className = "image-on";
@@ -156,7 +158,7 @@ function ClickButtonRight() {
         }
     }
 
-    if ((NumberImage + 1) == (CountImages() + 1)) {
+    if ((NumberImage + 1) == (CountImages(ProjectName) + 1)) {
         Image.src = "resources/images/" + ProjectName + "/01.png";
     }
     else {

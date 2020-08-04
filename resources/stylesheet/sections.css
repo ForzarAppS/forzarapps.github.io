@@ -6,6 +6,10 @@ img.image {
 
 /*ссылки*/
 
+a.link {
+    position: relative;
+}
+
 a.link:hover {
     color: maroon;
     
@@ -14,6 +18,26 @@ a.link:hover {
 
 a.link:active {
     color: red;
+    
+    font-weight: bold;
+}
+
+a.link span {
+    float: right;
+    
+    position: absolute;
+}
+
+a.link span img {
+    float: right;
+    
+    display: none;
+    
+    height: 26px;  
+}
+
+a.link:hover img {
+    display: block;
 }
 
 /*основная информация*/
@@ -99,4 +123,24 @@ section.main section.our-projects article div.project-link div {
 
 section.main section.our-projects article ul li {
     list-style-image: url(../images/switch.png);
+}
+
+/*дополнительная информация*/
+
+section.main section.our-projects article div.additional-information {
+    float: left;
+    
+    width: 100%;
+    
+    margin: 5px 0;
+}
+
+section.main section.our-projects article div.additional-information b {
+    float: left;
+    
+    margin: 0 5px 0 0;
+}
+
+section.main section.our-projects article div.additional-information div {
+    float: left;
 }

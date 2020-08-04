@@ -26,6 +26,10 @@ p {
     text-align: justify;
 }
 
+span.hashtag {
+    color: blue;
+}
+
 /*подвал*/
 
 footer {

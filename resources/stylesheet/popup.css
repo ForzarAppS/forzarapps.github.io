@@ -8,6 +8,8 @@ div.popup {
     left: 0;
     
     text-align: center;
+    
+    z-index: 2;
 }
 
 div.popup-background {
