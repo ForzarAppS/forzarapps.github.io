@@ -37,6 +37,7 @@ header div.background div.logo div.img {
 
 header div.background div.logo div.img img#logo {
     height: 40px;
+    
     margin: 20px 5px;
     
     float: right;
@@ -74,6 +75,7 @@ header nav.sections {
 
 header nav.sections ul.sections {
     height: 20px;
+    
     margin: 30px 0;
     padding: 0;
     
@@ -116,6 +118,7 @@ header nav.languages {
 
 header nav.languages ul.languages {
     height: 20px;
+    
     margin: 30px 0;
     padding: 0;
     

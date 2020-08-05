@@ -42,12 +42,6 @@ a.link:hover img {
 
 /*основная информация*/
 
-/*отступ сверху*/
-
-section.main {
-    margin-top: 80px;
-}
-
 /*список*/
 
 section.main section.basic-information article ul li {
@@ -60,6 +54,12 @@ section.main section.basic-information article ul li {
 
 section.main section.our-projects article h3 {
     text-align: justify;
+}
+
+/*список*/
+
+section.main section.our-projects article ul li {
+    list-style-image: url(../images/switch.png);
 }
 
 /*информация*/
@@ -117,12 +117,6 @@ section.main section.our-projects article div.project-link b {
 
 section.main section.our-projects article div.project-link div {
     float: left;
-}
-
-/*список*/
-
-section.main section.our-projects article ul li {
-    list-style-image: url(../images/switch.png);
 }
 
 /*дополнительная информация*/

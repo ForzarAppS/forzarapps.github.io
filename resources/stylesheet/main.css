@@ -4,20 +4,21 @@ body {
     background: rgba(255, 200, 200, 0.2);
 }
 
-/*ссылки*/
+/*отступ сверху*/
 
-h2.anchor {
-    padding-top: 80px;
-	margin-top: -80px;
+section.main {
+    margin-top: -30px;
 }
 
 /*кнопка наверх*/
 
 a.up {
+    display: none;
+    
     position: fixed;
     
-	bottom: 10px;
-	right: 15px;
+	bottom: 5px;
+	right: 25px;
 }
 
 /*абзацы*/
