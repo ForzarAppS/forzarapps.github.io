@@ -98,7 +98,7 @@ header nav.sections ul.sections li a {
 }
 
 header nav.sections ul.sections li:hover a {
-    color: rgb(139, 0, 255);
+    color: rgb(148, 0, 211);
     
     text-decoration-line: underline;
     
@@ -159,7 +159,7 @@ header nav.languages ul.languages li ul li a {
 }
 
 header nav.languages ul.languages li ul li:hover a { 
-    color: rgb(139, 0, 255);
+    color: rgb(148, 0, 211);
     
     text-decoration-line: underline;
     

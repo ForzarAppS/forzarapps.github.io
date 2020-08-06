@@ -18,7 +18,9 @@
         <link rel="stylesheet" href="resources/stylesheet/sections.css">
         <link rel="stylesheet" href="resources/stylesheet/popup.css">
         <link rel="stylesheet" href="resources/stylesheet/spoiler.css">
-        <link rel="stylesheet" href="resources/stylesheet/spoiler-popup.css"><link rel="stylesheet" href="resources/stylesheet/scrollbar.css">
+        <link rel="stylesheet" href="resources/stylesheet/spoiler-popup.css">
+        <link rel="stylesheet" href="resources/stylesheet/scrollbar.css">
+        <link rel="stylesheet" href="resources/stylesheet/about-us.css">
         
         <script src="resources/scripts/header.js"></script>
         <script src="resources/scripts/popup.js"></script>
@@ -26,6 +28,7 @@
         <script src="resources/scripts/spoiler.js"></script>
         <script src="resources/scripts/spoiler-popup.js"></script>
         <script src="resources/scripts/scrollbar.js"></script>
+        <script src="resources/scripts/about-us.js"></script>
     </head>
     
     <body class="scrollbar-yes">
@@ -118,19 +121,19 @@
                         </div>
                         
                         <div class="spoiler" id="spoiler-FV">
-                            <img class='spoiler-image' src="resources/images/FV/01.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/FV/01.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                             
-                            <img class='spoiler-image' src="resources/images/FV/02.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/FV/02.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                             
-                            <img class='spoiler-image' src="resources/images/FV/03.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/FV/03.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                             
-                            <img class='spoiler-image' src="resources/images/FV/04.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/FV/04.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                             
-                            <img class='spoiler-image' src="resources/images/FV/05.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/FV/05.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                             
-                            <img class='spoiler-image' src="resources/images/FV/06.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/FV/06.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                             
-                            <img class='spoiler-image' src="resources/images/FV/07.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/FV/07.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                         </div>
                     </div>
                     
@@ -184,13 +187,13 @@
                         </div>
                         
                         <div class="spoiler" id="spoiler-CU">
-                            <img class='spoiler-image' src="resources/images/CU/01.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/CU/01.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                             
-                            <img class='spoiler-image' src="resources/images/CU/02.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/CU/02.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                             
-                            <img class='spoiler-image' src="resources/images/CU/03.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/CU/03.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                             
-                            <img class='spoiler-image' src="resources/images/CU/04.png" onclick="ChangeSizeImageSpoilerPopup(this)">
+                            <img class="spoiler-image" src="resources/images/CU/04.png" onclick="ChangeSizeImageSpoilerPopup(this)">
                         </div>
                     </div>
                     
@@ -266,6 +269,63 @@
             
             <section class="about-us">
                 <h2 id="about-us">О нас</h2>
+                
+                <article>
+                    <div class="button-left">
+                        <img class="button" src="resources/images/left.png" onclick="PersonButton()">
+                    </div>
+
+                    <div class="persons">
+                        <div class="person-information" id="person_1">
+                            <div class="person">
+                                <img class="person-image" src="resources/images/person/1.png">
+
+                                <div class="private-information">
+                                    <p><b>Фамилия Имя: </b>Сильченко Сергей</p>
+                                    <p><b>Псевдоним: </b>Cepera_C_A</p>
+                                </div>
+                            </div>
+
+                            <div class="information">
+                                <p><b>Специальность: </b>управление в технических системах</p>
+                                <p><b>Хобби: </b>программирование, моделирование</p>
+                                <p><b>Мечта: </b>экологичный автомобиль</p>
+                                <p><b>Должность в Forzar AppS: </b>руководитель, программист</p>
+                                <p><b>Что для меня Forzar AppS: </b>это место, в котором я могу поделиться любым своим проектом</p>
+                                <p><b>Почему я создал Forzar AppS: </b>для упрощения своей жизни и жизни окружающих</p>
+                            </div>
+                        </div>
+                        
+                        <div class="person-information" id="person_2" style="display: none">
+                            <div class="person">
+                                <img class="person-image" src="resources/images/person/2.png">
+
+                                <div class="private-information">
+                                    <p><b>Фамилия Имя: </b>Сухотин Виктор</p>
+                                    <p><b>Псевдоним: </b>GoldFinch</p>
+                                </div>
+                            </div>
+
+                            <div class="information">
+                                <p><b>Специальность: </b></p>
+                                <p><b>Хобби: </b>дизайн</p>
+                                <p><b>Мечта: </b></p>
+                                <p><b>Должность в Forzar AppS: </b>дизайнер</p>
+                                <p><b>Что для меня Forzar AppS: </b></p>
+                                <p><b>Почему я в Forzar AppS: </b></p>
+                            </div>
+                        </div>
+
+                        <div class="count-person">
+                            <img class="image-on" src="resources/images/on.png">
+                            <img class="image-off" src="resources/images/off.png">
+                        </div>
+                    </div>
+
+                    <div class="button-right">
+                        <img class="button" src="resources/images/right.png" onclick="PersonButton()">
+                    </div>
+                </article>
             </section>
             
             <section class="contacts">
