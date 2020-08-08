@@ -5,6 +5,8 @@ function HideShowScrollbar() {
 
 function ButtonUp_LinkUnderline() {
     window.onload = function() {
+        document.getElementsByClassName("nav-sections")[0].style.borderBottom = "2px solid";
+        
         document.body.addEventListener('scroll', function(event) {
             if (event.target.scrollTop >= (document.getElementById("our-projects").getBoundingClientRect().top + event.target.scrollTop - 100)) {
                 document.getElementsByClassName("up")[0].style.display = "block";
