@@ -1,0 +1,110 @@
+/*контакты*/
+
+section.main section.contacts article {
+    display: flex;
+    
+    flex-direction: row;
+    
+    justify-content: space-around;
+    
+    text-align: center;
+}
+
+section.main section.contacts article div.card {
+    width: 200px;
+    
+    border: 3px solid rgb(148, 0, 211);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px; 
+    
+    position: relative;
+}
+
+/*закрыто*/
+
+section.main section.contacts article div.card img.card-block {
+    width: 100%;
+    height: 100%;
+    
+    border-bottom-left-radius: 37px;
+    border-bottom-right-radius: 37px; 
+    
+    filter: alpha(Opacity=75);
+    opacity: 0.75;
+    
+    position: absolute;
+    
+    left: 0;
+    top: 0;
+}
+
+section.main section.contacts article div.card img.lock {    
+    position: absolute;
+    
+    width: 75%;
+    height: 75%;
+    
+    z-index: 1;
+    
+    top: 50%;
+    left: 50%;
+    
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+/*шапка*/
+
+section.main section.contacts article div.card div.header {
+    height: 50px;
+    
+    background: url(../images/background.jpg);
+    background-size: 100%;
+}
+
+section.main section.contacts article div.card div.header div.background {
+    height: 50px;
+    
+    background: rgba(255, 255, 255, 0.5);
+}
+
+section.main section.contacts article div.card div.header div.background p {
+    height: 30px;
+    
+    font-weight: bold;
+    text-align: center;
+    
+    margin: 0;
+    padding: 10px 0;
+}
+
+/*иконка*/
+
+section.main section.contacts article div.card div.icon {
+    text-align: center;
+}
+
+section.main section.contacts article div.card div.icon img {
+    height: 100px;
+    
+    padding: 10px 0;
+}
+
+/*кнопка*/
+
+section.main section.contacts article div.card a.button {
+    display: inline-block;
+    
+    background: rgba(66, 170, 255, 0.2);
+    
+    border: 3px solid rgb(148, 0, 211);
+    border-radius: 40px;
+    
+    font-weight: bold;
+    
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    
+    color: black;
+    text-decoration-line: none;
+}

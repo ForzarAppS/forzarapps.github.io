@@ -24,16 +24,3 @@ function AutoChangeLogo(Time) {
         }
     }, Time);
 }
-
-function LinkUnderline() {
-   window.onload = function() {
-        document.body.addEventListener('scroll', function(event) {
-            if (event.target.scrollTop <= (document.getElementById("our-project").getBoundingClientRect().top) + event.target.scrollTop - 100) {
-                document.getElementsByClassName("nav-sections")[0].style.borderBottom = "2px solid";
-            }
-            else {
-                
-            }
-        });
-    }
-}

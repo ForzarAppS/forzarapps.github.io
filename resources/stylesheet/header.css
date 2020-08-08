@@ -1,7 +1,7 @@
 /*шапка*/
 
 header {
-    background: url(../images/background.jpg);
+    background-image: url(../images/background.jpg);
     background-size: 100%;
     
     top: 0;
