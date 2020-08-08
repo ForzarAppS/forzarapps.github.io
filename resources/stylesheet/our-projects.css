@@ -1,0 +1,91 @@
+/*наши проекты*/
+
+/*заголовок*/
+
+section.main section.our-projects article h3 {
+    text-align: justify;
+}
+
+/*список*/
+
+section.main section.our-projects article ul li {
+    list-style-image: url(../images/switch.png);
+}
+
+/*информация*/
+
+section.main section.our-projects article div.project-information {
+    min-height: 100px;
+    width: 100%;
+    
+    float: left;
+    
+    position: relative;
+}
+
+section.main section.our-projects article div.project-information div.unit-icon {      
+    float: left;
+    
+    position: absolute;
+    
+    top: 50%;
+    
+    transform: translateY(-50%);
+}
+
+section.main section.our-projects article div.project-information img.icon {
+    width: 100px;
+}
+
+section.main section.our-projects article div.project-information div.unit-information {
+    float: left;
+    
+    margin-left: 110px;
+}
+
+section.main section.our-projects article div.project-information img.icon-platform {
+    height: 20px;
+    
+    margin: 0 5px;
+}
+
+/*ссылки проекта*/
+
+section.main section.our-projects article div.project-link {
+    float: left;
+    
+    width: 100%;
+    
+    margin: 5px 0;
+}
+
+section.main section.our-projects article div.project-link b {
+    float: left;
+    
+    margin: 0 5px 0 0;
+}
+
+section.main section.our-projects article div.project-link div {
+    float: left;
+}
+
+/*дополнительная информация*/
+
+section.main section.our-projects article div.additional-information {
+    float: left;
+    
+    width: 100%;
+    
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+section.main section.our-projects article div.additional-information b {
+    float: left;
+    
+    margin: 0 5px 0 0;
+}
+
+section.main section.our-projects article div.additional-information div {
+    float: left;
+}

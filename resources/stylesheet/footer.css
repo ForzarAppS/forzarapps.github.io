@@ -1,0 +1,24 @@
+/*подвал*/
+
+footer {
+    background: url(../images/background.jpg);
+    background-size: 100%;
+    
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    
+    text-align: center;
+}
+
+footer div.background {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+footer div.background p {
+    margin: 0;
+    padding: 10px 0;
+    
+    display: inline-block;
+}

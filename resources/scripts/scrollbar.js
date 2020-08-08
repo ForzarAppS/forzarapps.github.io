@@ -4,12 +4,14 @@ function HideShowScrollbar() {
 }
 
 function HideShowButtonUp() {
-    document.body.addEventListener('scroll', function(event) {
-        if (event.target.scrollTop > 600) {
-            document.getElementById("up").style.display = "block";
-        }
-        else {
-            document.getElementById("up").style.display = "none";
-        }
-    });
+    window.onload = function() {
+        document.body.addEventListener('scroll', function(event) {
+            if (event.target.scrollTop >= (document.getElementById("our-projects").getBoundingClientRect().top + event.target.scrollTop - 100)) {
+                document.getElementsByClassName("up")[0].style.display = "block";
+            }
+            else {
+                document.getElementsByClassName("up")[0].style.display = "none";
+            }
+        });
+    }
 }

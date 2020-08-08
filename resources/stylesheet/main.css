@@ -4,12 +4,6 @@ body {
     background: rgba(255, 200, 200, 0.2);
 }
 
-/*отступ сверху*/
-
-section.main {
-    margin-top: -30px;
-}
-
 /*кнопка наверх*/
 
 a.up {
@@ -19,20 +13,4 @@ a.up {
     
 	bottom: 5px;
 	right: 25px;
-}
-
-/*абзацы*/
-
-p {
-    text-align: justify;
-}
-
-span.hashtag {
-    color: blue;
-}
-
-/*подвал*/
-
-footer {
-    text-align: center;
 }

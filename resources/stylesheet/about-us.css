@@ -1,5 +1,13 @@
 /*о нас*/
 
+/*отступ свверху*/
+
+section.main section.about-us h2 {  
+    overflow: auto;
+    
+    border: 1px solid transparent;
+}
+
 section.main section.about-us article {
     width: 100%;
     height: 100%;
@@ -18,46 +26,46 @@ section.main section.about-us article div.persons {
     
     width: 80%;
     
-    padding-left: 10%;
+    margin: 0 10%;
 }
 
-section.main section.about-us article div.persons div.person-information {
-    width: 100%;
-    
-    overflow: auto;
+section.main section.about-us article div.persons div.information {
+    width: auto;
     
     border: 3px solid rgb(148, 0, 211);
     border-radius: 40px;
+    
+    overflow: auto;
+    
+    padding: 0 3%;
 }
 
-section.main section.about-us article div.persons div.person-information div.person {    
-    position: relative;
-    
-    left: 50%;
-    
-    transform: translateX(-50%);
+section.main section.about-us article div.persons div.information#person_1 {
+    display: block;
+}
+
+section.main section.about-us article div.persons div.information#person_2 {
+    display: none;
+}
+
+section.main section.about-us article div.persons div.information div.person {
+    width: 100%;
     
     float: left;
 }
 
-section.main section.about-us article div.persons div.person-information div.person img {      
+section.main section.about-us article div.persons div.information div.person img {      
     height: 150px;
     
     float: left;
 }
 
-section.main section.about-us article div.persons div.person-information div.person div.private-information {        
+section.main section.about-us article div.persons div.information div.person div.private-information { 
     float: left;
 }
 
-section.main section.about-us article div.persons div.person-information div.information {
-    width: 95%;
-    
-    position: relative;
-    
-    left: 50%;
-    
-    transform: translateX(-50%);
+section.main section.about-us article div.persons div.information div.person-information {
+    width: auto;
     
     float: left;
 }
@@ -74,6 +82,8 @@ section.main section.about-us article div.button-left {
     top: 50%;
     
     transform: translateY(-50%);
+    
+    cursor:pointer;
 }
 
 section.main section.about-us article div.button-left img.button {  
@@ -95,6 +105,8 @@ section.main section.about-us article div.button-right {
     left: 90%;
     
     transform: translateY(-50%);
+    
+    cursor:pointer;
 }
 
 section.main section.about-us article div.button-right img.button {

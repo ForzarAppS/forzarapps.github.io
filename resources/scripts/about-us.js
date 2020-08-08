@@ -32,3 +32,42 @@ function PersonButton() {
         }
     }
 }
+
+function ImageButton() {
+    let Image = document.getElementsByClassName("count-person")[0];
+    
+    Image.onclick = function(e) {
+        if (e.target.className == "image-off") {
+            let Images = document.getElementsByClassName(e.target.parentElement.className)[0];
+            
+            for (let i = 0; i < Images.childNodes.length; i++) {
+                if (e.target == Images.childNodes[i]) {
+                    Images.childNodes[i].src = "resources/images/on.png";
+                    Images.childNodes[i].className = "image-on";
+                    
+                    
+                    switch ((i+1)/2) {
+                        case 1: {
+                            document.getElementById("person_1").style.display = "block";
+                
+                            document.getElementById("person_2").style.display = "none";
+                            
+                            break;
+                        }
+                        case 2: {
+                            document.getElementById("person_1").style.display = "none";
+                
+                            document.getElementById("person_2").style.display = "block";
+                            
+                            break;
+                        }
+                    }
+                }
+                else {
+                    Images.childNodes[i].className = "image-off";
+                    Images.childNodes[i].src = "resources/images/off.png";
+                }
+            }
+        }
+    }
+}

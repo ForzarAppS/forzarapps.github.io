@@ -2,22 +2,20 @@ function ChangeSizeImageSpoilerPopup(Image) {
     let DivSpoilerPopup = document.createElement('div');
     
     DivSpoilerPopup.className = "spoiler-popup";
-    DivSpoilerPopup.id = "spoiler-popup";
-    DivSpoilerPopup.innerHTML = "<div class='spoiler-popup-background' onclick='CloseSpoilerPopup()'></div><div class='spoiler-popup-center' onclick='CloseSpoilerPopup()'><div class='spoiler-popup-center-image' onclick='CloseSpoilerPopup()'><div class='button-popup-left' id='popup-button-left'><img src='resources/images/left.png' onclick='ClickButtonLeft()'></div><div class='button-popup-right' id='popup-button-right'><img src='resources/images/right.png' onclick='ClickButtonRight()'></div><div class='count-images' id='count-images'></div></div></div>";
+    DivSpoilerPopup.innerHTML = "<div class='spoiler-popup-background' onclick='CloseSpoilerPopup()'></div><div class='spoiler-popup-center' onclick='CloseSpoilerPopup()'><div class='spoiler-popup-center-image' onclick='CloseSpoilerPopup()'><div class='button-popup-left'><img src='resources/images/left.png' onclick='ClickButtonLeft()'></div><div class='button-popup-right'><img src='resources/images/right.png' onclick='ClickButtonRight()'></div><div class='count-images'></div></div></div>";
     
     document.body.append(DivSpoilerPopup);
     
-    let DivPopupButtonLeft = document.getElementById("popup-button-left");
+    let DivPopupButtonLeft = document.getElementsByClassName("button-popup-left")[0];
     
     let ImageSpoilerPopup = document.createElement('img');
     
     ImageSpoilerPopup.className = "spoiler-popup-image";
-    ImageSpoilerPopup.id = "spoiler-popup-image";
     ImageSpoilerPopup.src = Image.src;
     
     DivPopupButtonLeft.after(ImageSpoilerPopup);
     
-    let DivCountImages = document.getElementById("count-images");
+    let DivCountImages = document.getElementsByClassName("count-images")[0];
     
     let ProjectName = String(Image.src.substr(Image.src.lastIndexOf('images') + 7, Image.src.substr(Image.src.lastIndexOf('images') + 7).lastIndexOf('/')));
     
@@ -44,7 +42,7 @@ function ChangeSizeImageSpoilerPopup(Image) {
 function CloseSpoilerPopup() {
     document.onclick = function(e) {
         if ((e.target.className == "spoiler-popup-background") | (e.target.className == "spoiler-popup-center") | (e.target.className == "spoiler-popup-center-image")) {
-            document.getElementById("spoiler-popup").remove();
+            document.getElementsByClassName("spoiler-popup")[0].remove();
     
             document.body.style.overflow = "auto";
         }
@@ -65,8 +63,8 @@ function CountImages(ProjectName) {
 }
 
 function ClickButtonLeft() {
-    let Image = document.getElementById("spoiler-popup-image");
-    let Images = document.getElementById("count-images");
+    let Image = document.getElementsByClassName("spoiler-popup-image")[0];
+    let Images = document.getElementsByClassName("count-images")[0];
     let count = 0;
     
     let NumberImage = Number(Image.src.substr(Image.src.lastIndexOf('/') + 1, 2));
@@ -121,8 +119,8 @@ function ClickButtonLeft() {
 }
 
 function ClickButtonRight() {
-    let Image = document.getElementById("spoiler-popup-image");
-    let Images = document.getElementById("count-images");
+    let Image = document.getElementsByClassName("spoiler-popup-image")[0];
+    let Images = document.getElementsByClassName("count-images")[0];
     let count = 0;
     
     let NumberImage = Number(Image.src.substr(Image.src.lastIndexOf('/') + 1, 2));
@@ -172,7 +170,7 @@ function ClickButtonRight() {
 }
 
 function ClickSmallImage() {
-    let Image = document.getElementById("count-images");
+    let Image = document.getElementsByClassName("count-images")[0];
     
     Image.onclick = function(e) {
         if (e.target.className == "image-off") {
@@ -185,7 +183,7 @@ function ClickSmallImage() {
                     
                     Images.childNodes[i].removeEventListener('click', ClickSmallImage, false);
                     
-                    let Image = document.getElementById("spoiler-popup-image");
+                    let Image = document.getElementsByClassName("spoiler-popup-image")[0];
                     
                     let NumberImage = i + 1;
                     let ProjectName = String(Image.src.substr(Image.src.lastIndexOf('images') + 7, Image.src.substr(Image.src.lastIndexOf('images') + 7).lastIndexOf('/')));

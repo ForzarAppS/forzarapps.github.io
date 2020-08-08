@@ -100,7 +100,7 @@ header nav.sections ul.sections li a {
 header nav.sections ul.sections li:hover a {
     color: rgb(148, 0, 211);
     
-    text-decoration-line: underline;
+    border-bottom: 2px solid;
     
     font-size: 18px;
 }
@@ -161,7 +161,7 @@ header nav.languages ul.languages li ul li a {
 header nav.languages ul.languages li ul li:hover a { 
     color: rgb(148, 0, 211);
     
-    text-decoration-line: underline;
+    border-bottom: 2px solid;
     
     font-size: 18px;
 }

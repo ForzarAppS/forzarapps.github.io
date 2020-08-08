@@ -2,12 +2,11 @@ function ChangeSizeImage(Image) {
     let DivPopup = document.createElement('div');
     
     DivPopup.className = "popup";
-    DivPopup.id = "popup";
-    DivPopup.innerHTML = "<div class='popup-background' onclick='ClosePopup()'></div><div id='popup-center' class='popup-center' onclick='ClosePopup()'></div>";
+    DivPopup.innerHTML = "<div class='popup-background' onclick='ClosePopup()'></div><div class='popup-center' onclick='ClosePopup()'></div>";
     
     document.body.append(DivPopup);
     
-    let DivPopupCenter = document.getElementById("popup-center");
+    let DivPopupCenter = document.getElementsByClassName("popup-center")[0];
 
     let ImagePopup = document.createElement('img');
     ImagePopup.className = "popup-image";
@@ -21,7 +20,7 @@ function ChangeSizeImage(Image) {
 function ClosePopup(){
     document.onclick = function(e) {
         if ((e.target.className == "popup-background") | (e.target.className == "popup-center")) {
-            document.getElementById("popup").remove();
+            document.getElementsByClassName("popup")[0].remove();
     
             document.body.style.overflow = "auto";
         }
