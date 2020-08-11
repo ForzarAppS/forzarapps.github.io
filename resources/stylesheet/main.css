@@ -6,10 +6,12 @@ body {
 
 /*кнопка наверх*/
 
-a.up {
+img.up {
     display: none;
     
     position: fixed;
+    
+    width: 50px;
     
 	bottom: 5px;
 	right: 25px;

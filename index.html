@@ -30,9 +30,10 @@
         <script src="resources/scripts/popup.js"></script>
         <script src="resources/scripts/spoiler.js"></script>
         <script src="resources/scripts/spoiler-popup.js"></script>
-        <script src="resources/scripts/scrollbar.js"></script>
+        <script src="resources/scripts/scroll.js"></script>
         <script src="resources/scripts/about-us.js"></script>
         <script src="resources/scripts/footer.js"></script>
+        <script src="resources/scripts/onload-page.js"></script>
     </head>
     
     <body class="scrollbar-yes">
@@ -47,10 +48,14 @@
 
                 <nav class="sections">
                     <ul class="sections">
-                        <li><a href="#basic-information" class="nav-sections">Основная информация</a></li>
+                        <!--<li><a href="#basic-information" class="nav-sections">Основная информация</a></li>
                         <li><a href="#our-projects" class="nav-sections">Наши проекты</a></li>
                         <li><a href="#about-us" class="nav-sections">О нас</a></li>
-                        <li><a href="#contacts" class="nav-sections">Контакты</a></li>
+                        <li><a href="#contacts" class="nav-sections">Контакты</a></li>-->
+                        <li><span onclick="Anchor('basic-information')" class="nav-sections">Основная информация</span></li>
+                        <li><span onclick="Anchor('our-projects')" class="nav-sections">Наши проекты</span></li>
+                        <li><span onclick="Anchor('about-us')" class="nav-sections">О нас</span></li>
+                        <li><span onclick="Anchor('contacts')" class="nav-sections">Контакты</span></li>
                     </ul>
                 </nav>
                 
@@ -66,7 +71,8 @@
             </div>
         </header>
         
-        <script>HideShowScrollbar()</script>
+        <script>PageOnload()</script>
+        <script>HideShowScrollBar()</script>
 
         <section class="main">
             <section class="basic-information">
@@ -222,7 +228,7 @@
                 
                 <article id="master-pascalabcnet">
                     <h3>Серия статей «Освой PascalABC.NET с Forzar AppS»</h3>
-
+                    
                     <div class="p"><b>Описание: </b>В поддержку <div class="hashtag"><span class="hashtag">#лучшедома<div class="emoji" id="house"></div></span></div> и <div class="hashtag"><span class="hashtag">#stayhome<div class="emoji" id="house"></div></span></div>! Одну из задач, которую мы ставили перед собой, когда создавали нашу команду, — это заинтересовать людей программированием. Если человек чем-то заинтересовался, значит он захочет это попробовать. Мы подготовили для Вас статью с начальной теорией и заданиями по системе программирования <a class="link" href="http://pascalabc.net">PascalABC.NET<span><div class="link" id="pascalabcnet"></div></span></a>.</div>
                     
                     <b>Рекомендации:</b>
@@ -359,9 +365,7 @@
             </section>
         </section>
         
-        <script>ButtonUp_LinkUnderline()</script>
-        
-        <a class="up" href="#"><img src="resources/images/up.png" width="50px"/></a>
+        <img src="resources/images/up.png" class="up" onclick="PageUp()"/>
         
         <footer>
             <div class="background">

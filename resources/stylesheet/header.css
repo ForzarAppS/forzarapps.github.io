@@ -90,14 +90,12 @@ header nav.sections ul.sections li {
     float: left;
 }
 
-header nav.sections ul.sections li a {
+header nav.sections ul.sections li span.nav-sections {
     color: black;
     font-weight: bold;
-    
-    text-decoration-line: none;
 }
 
-header nav.sections ul.sections li:hover a {
+header nav.sections ul.sections li:hover span.nav-sections {
     color: rgb(148, 0, 211);
     
     border-bottom: 2px solid;
