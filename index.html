@@ -10,6 +10,8 @@
         <meta property="og:description" content="Молодая команда по разработке компьютерного и мобильного ПО, игр и сайтов.">
         <meta property="og:image" content="resources/images/FAS.png">
         
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
         <title>Forzar AppS</title>
         <link rel="shortcut icon" href="resources/images/logo/FAS.png" type="image/png">
         
@@ -39,19 +41,24 @@
     <body class="scrollbar-yes">
         <header>
             <div class="background">
-                <div class="logo"><center>
-                    <div class="img"><a href=""><img id="logo" src="resources/images/logo/FAS.png"/></a></div>
-                    <div class="h1"><h1><a href="">FAS</a></h1></div>
-                    
-                    <script>AutoChangeLogo(1000)</script>
-                </center></div>
+                <div class="logo">
+                    <center>
+                        <div class="img"><a href=""><img id="logo" src="resources/images/logo/FAS.png"/></a></div>
+                        <div class="h1"><h1><a href="">FAS</a></h1></div>
+
+                        <script>AutoChangeLogo(1000)</script>
+                    </center>
+                </div>
+                
+                <input type="checkbox" id="button-menu" class="checkbox">
+                <label class="button-menu" for="button-menu">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </label>
 
                 <nav class="sections">
                     <ul class="sections">
-                        <!--<li><a href="#basic-information" class="nav-sections">Основная информация</a></li>
-                        <li><a href="#our-projects" class="nav-sections">Наши проекты</a></li>
-                        <li><a href="#about-us" class="nav-sections">О нас</a></li>
-                        <li><a href="#contacts" class="nav-sections">Контакты</a></li>-->
                         <li><span onclick="Anchor('basic-information')" class="nav-sections">Основная информация</span></li>
                         <li><span onclick="Anchor('our-projects')" class="nav-sections">Наши проекты</span></li>
                         <li><span onclick="Anchor('about-us')" class="nav-sections">О нас</span></li>
