@@ -111,6 +111,18 @@ header div.background div.logo div.h1 h1 a {
         color: rgb(148, 0, 211);
 
         border-bottom: 2px solid;
+        
+        cursor: pointer;
+
+        font-size: 18px;
+    }
+    
+    header nav.sections ul.sections li:active span.nav-sections {
+        color: rgb(148, 0, 211);
+
+        border-bottom: 2px solid;
+        
+        cursor: pointer;
 
         font-size: 18px;
     }
@@ -156,6 +168,8 @@ header div.background div.logo div.h1 h1 a {
 
     header nav.languages ul.languages li:hover ul { 
         display: block;
+        
+        cursor: pointer;
     }
 
     header nav.languages ul.languages li ul li { 
@@ -172,6 +186,8 @@ header div.background div.logo div.h1 h1 a {
         color: rgb(148, 0, 211);
 
         border-bottom: 2px solid;
+        
+        cursor: pointer;
 
         font-size: 18px;
     }
@@ -290,6 +306,8 @@ header div.background div.logo div.h1 h1 a {
         color: rgb(148, 0, 211);
 
         border-bottom: 2px solid;
+        
+        cursor: pointer;
 
         font-size: 18px;
     }
@@ -298,6 +316,8 @@ header div.background div.logo div.h1 h1 a {
         color: rgb(148, 0, 211);
 
         border-bottom: 2px solid;
+        
+        cursor: pointer;
 
         font-size: 18px;
     }
@@ -347,6 +367,8 @@ header div.background div.logo div.h1 h1 a {
 
     header nav.languages ul.languages li:hover ul { 
         display: block;
+        
+        cursor: pointer;
     }
 
     header nav.languages ul.languages li ul li { 
@@ -360,11 +382,13 @@ header div.background div.logo div.h1 h1 a {
     }
 
     header nav.languages ul.languages li ul li:hover a { 
-    color: rgb(148, 0, 211);
-    
-    border-bottom: 2px solid;
-    
-    font-size: 18px;
-}
+        color: rgb(148, 0, 211);
+
+        border-bottom: 2px solid;
+
+        cursor: pointer;
+
+        font-size: 18px;
+    }
     
 }
