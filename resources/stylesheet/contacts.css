@@ -1,23 +1,53 @@
-/*контакты*/
+/*ширина экрана больше 800*/
 
-section.main section.contacts article {
-    display: flex;
+@media (min-width: 800px) {
+    /*контакты*/
+
+    section.main section.contacts article {
+        width: 100%;
+
+        text-align: center;
+
+        overflow: auto;
+
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: space-around;
+    }
+}
+
+/*ширина экрана меньше 800*/
+
+@media (max-width: 800px) {
+    /*контакты*/
+
+    section.main section.contacts article {
+        width: 100%;
+
+        text-align: center;
+
+        overflow: auto;
+    }
     
-    flex-direction: row;
-    
-    justify-content: space-around;
-    
-    text-align: center;
+    section.main section.contacts article div.card-center  {
+        margin-left: 20%;
+    }
 }
 
 section.main section.contacts article div.card {
     width: 200px;
+    
+    float: left;
     
     border: 3px solid rgb(148, 0, 211);
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px; 
     
     position: relative;
+    
+    margin: 5px 10px;
 }
 
 /*закрыто*/

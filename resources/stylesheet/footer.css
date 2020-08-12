@@ -9,6 +9,8 @@ footer {
     
     width: 100%;
     
+    float: none;
+    
     text-align: center;
     
     margin-top: 30px;
@@ -20,7 +22,9 @@ footer div.background {
 
 footer div.background p {
     margin: 0;
-    padding: 10px 0;
+    padding: 5px 0;
     
     display: inline-block;
+    
+    text-align: center;
 }

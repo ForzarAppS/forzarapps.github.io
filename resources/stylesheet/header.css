@@ -117,16 +117,6 @@ header div.background div.logo div.h1 h1 a {
 
         font-size: 18px;
     }
-    
-    header nav.sections ul.sections li:active span.nav-sections {
-        color: rgb(148, 0, 211);
-
-        border-bottom: 2px solid;
-        
-        cursor: pointer;
-
-        font-size: 18px;
-    }
 
     /*язык*/
 
@@ -305,16 +295,6 @@ header div.background div.logo div.h1 h1 a {
     }
 
     header nav.sections ul.sections li:hover span.nav-sections {
-        color: rgb(148, 0, 211);
-
-        border-bottom: 2px solid;
-        
-        cursor: pointer;
-
-        font-size: 18px;
-    }
-    
-    header nav.sections ul.sections li:active span.nav-sections {
         color: rgb(148, 0, 211);
 
         border-bottom: 2px solid;
