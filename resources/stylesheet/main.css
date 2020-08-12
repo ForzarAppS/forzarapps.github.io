@@ -1,9 +1,25 @@
-/*фон*/
+/*ширина экрана больше 800*/
 
-body {
-    background: rgba(255, 200, 200, 0.2);
-    
-    width: auto;
+@media (min-width: 800px) {
+    /*фон*/
+
+    body {
+        background: rgba(255, 200, 200, 0.2);
+
+        width: auto;
+    }
+}
+
+/*ширина экрана меньше 800*/
+
+@media (max-width: 800px) {
+    /*фон*/
+
+    body {
+        background: rgba(255, 200, 200, 0.2);
+
+        width: 760px;
+    }
 }
 
 /*кнопка наверх*/

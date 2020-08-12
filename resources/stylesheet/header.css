@@ -62,8 +62,9 @@ header div.background div.logo div.h1 h1 a {
     text-decoration-line: none;
 }
 
+/*ширина экрана больше 800*/
+
 @media (min-width: 800px) {
-    
     /*мобильное меню*/
     
     header div.background input.checkbox {
@@ -191,11 +192,11 @@ header div.background div.logo div.h1 h1 a {
 
         font-size: 18px;
     }
-    
 }
 
-@media (max-width: 800px) {
+/*ширина экрана меньше 800*/
 
+@media (max-width: 800px) {
     /*мобильное меню*/    
 
     header div.background input.checkbox {
@@ -289,7 +290,8 @@ header div.background div.logo div.h1 h1 a {
     header nav.sections ul.sections {
         list-style: none;
 
-        padding: 1px 0;
+        padding: 0;
+        padding-bottom: 5px;
         margin: 0;
     }
 
@@ -327,7 +329,7 @@ header div.background div.logo div.h1 h1 a {
     header nav.languages {
         width: 250px;
 
-        top: 179px;
+        top: 182px;
         right: -250px;
 
         position: fixed;
@@ -389,6 +391,5 @@ header div.background div.logo div.h1 h1 a {
         cursor: pointer;
 
         font-size: 18px;
-    }
-    
+    } 
 }
