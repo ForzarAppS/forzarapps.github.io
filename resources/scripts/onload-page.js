@@ -69,8 +69,8 @@ function PageOnload() {
                 document.getElementsByClassName("nav-sections")[3].style.borderBottom = "2px solid";
             }
 
-            if (event.target.scrollTop >= (document.getElementsByTagName("footer")[0].getBoundingClientRect().top + event.target.scrollTop - 800)) {
-                document.getElementsByClassName("up")[0].style.bottom = (800 - document.getElementsByTagName("footer")[0].getBoundingClientRect().top) + "px";
+            if (event.target.scrollTop >= (document.getElementsByTagName("footer")[0].getBoundingClientRect().top + event.target.scrollTop - window.innerHeight)) {
+                document.getElementsByClassName("up")[0].style.bottom =(window.innerHeight - document.getElementsByTagName("footer")[0].getBoundingClientRect().top + 5) + "px";
             }
             else {
                 document.getElementsByClassName("up")[0].style.bottom = "5px";

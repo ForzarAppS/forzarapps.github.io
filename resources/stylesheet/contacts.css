@@ -32,7 +32,11 @@
     }
     
     section.main section.contacts article div.card-center  {
-        margin-left: 20%;
+        overflow: auto;
+        
+        width: 220px;
+        
+        margin: auto;
     }
 }
 
