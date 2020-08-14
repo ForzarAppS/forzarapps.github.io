@@ -1,4 +1,4 @@
-function AutoChangeLogo(Time) {
+function AutoChangeLogo(Time, Path) {
     let Logo = document.getElementById("logo");
     let i = 0;
 
@@ -6,18 +6,18 @@ function AutoChangeLogo(Time) {
         i++;
         switch (i) {
             case 1: {
-                Logo.src = "resources/images/logo/F.png";
+                Logo.src = Path + "F.png";
                 
                 break;
             }
             case 2: {
-                Logo.src = "resources/images/logo/A.png";
+                Logo.src = Path + "A.png";
                 
                 break;
             }
             case 3: {
                 i = 0;
-                Logo.src = "resources/images/logo/FAS.png";
+                Logo.src = Path + "FAS.png";
                 
                 break;
             }

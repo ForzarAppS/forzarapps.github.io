@@ -11,8 +11,10 @@ function PageUp() {
     document.getElementsByClassName("checkbox")[0].checked = false;
 }
 
-function Anchor(Name) {
+function Anchor(Name, Link) {
     document.body.scrollTop = document.getElementById(Name).getBoundingClientRect().top + document.body.scrollTop - 88;
     
-    document.getElementsByClassName("checkbox")[0].checked = false;
+    if (Link.style.borderBottom != "2px solid") {
+        document.getElementsByClassName("checkbox")[0].checked = false;
+    }
 }

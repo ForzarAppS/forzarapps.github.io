@@ -1,4 +1,4 @@
-function PersonButton() {
+function PersonButton(Path) {
     let Images = document.getElementsByClassName("count-person")[0];
     
     for (let i = 0; i < Images.childNodes.length; i++) {
@@ -8,10 +8,10 @@ function PersonButton() {
                 
                 document.getElementById("person_2").style.display = "block";
                 
-                Images.childNodes[i].src = "resources/images/off.png";
+                Images.childNodes[i].src = Path + "off.png";
                 Images.childNodes[i].className = "image-off";
                 
-                Images.childNodes[i+2].src = "resources/images/on.png";
+                Images.childNodes[i+2].src = Path + "on.png";
                 Images.childNodes[i+2].className = "image-on";
                 
                 break;
@@ -21,10 +21,10 @@ function PersonButton() {
                 
                 document.getElementById("person_1").style.display = "block";
                 
-                Images.childNodes[i].src = "resources/images/on.png";
+                Images.childNodes[i].src = Path + "on.png";
                 Images.childNodes[i].className = "image-on";
                 
-                Images.childNodes[i+2].src = "resources/images/off.png";
+                Images.childNodes[i+2].src = Path + "off.png";
                 Images.childNodes[i+2].className = "image-off";
                 
                 break;
@@ -33,7 +33,7 @@ function PersonButton() {
     }
 }
 
-function ImageButton() {
+function ImageButton(Path) {
     let Image = document.getElementsByClassName("count-person")[0];
     
     Image.onclick = function(e) {
@@ -42,7 +42,7 @@ function ImageButton() {
             
             for (let i = 0; i < Images.childNodes.length; i++) {
                 if (e.target == Images.childNodes[i]) {
-                    Images.childNodes[i].src = "resources/images/on.png";
+                    Images.childNodes[i].src = Path + "on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     
@@ -65,7 +65,7 @@ function ImageButton() {
                 }
                 else {
                     Images.childNodes[i].className = "image-off";
-                    Images.childNodes[i].src = "resources/images/off.png";
+                    Images.childNodes[i].src = Path + "off.png";
                 }
             }
         }

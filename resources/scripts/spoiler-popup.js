@@ -1,8 +1,8 @@
-function ChangeSizeImageSpoilerPopup(Image) {
+function ChangeSizeImageSpoilerPopup(Image, Path) {
     let DivSpoilerPopup = document.createElement('div');
     
     DivSpoilerPopup.className = "spoiler-popup";
-    DivSpoilerPopup.innerHTML = "<div class='spoiler-popup-background' onclick='CloseSpoilerPopup()'></div><div class='spoiler-popup-center' onclick='CloseSpoilerPopup()'><div class='spoiler-popup-center-image' onclick='CloseSpoilerPopup()'><div class='button-popup-left'><img src='resources/images/left.png' onclick='ClickButtonLeft()'></div><div class='button-popup-right'><img src='resources/images/right.png' onclick='ClickButtonRight()'></div><div class='count-images'></div></div></div>";
+    DivSpoilerPopup.innerHTML = "<div class='spoiler-popup-background' onclick='CloseSpoilerPopup()'></div><div class='spoiler-popup-center' onclick='CloseSpoilerPopup()'><div class='spoiler-popup-center-image' onclick='CloseSpoilerPopup()'><div class='button-popup-left'><img src='" + Path + "left.png' onclick='ClickButtonLeft(\"" + Path + "\")'></div><div class='button-popup-right'><img src='" + Path + "right.png' onclick='ClickButtonRight(\"" + Path + "\")'></div><div class='count-images'></div></div></div>";
     
     document.body.append(DivSpoilerPopup);
     
@@ -24,13 +24,13 @@ function ChangeSizeImageSpoilerPopup(Image) {
         
         if (Image.src.substr(Image.src.lastIndexOf('/') + 1, 2) == i) {
             ImageOff.className = "image-on";
-            ImageOff.src = "resources/images/on.png";  
+            ImageOff.src = Path + "on.png";  
         }
         else {
             ImageOff.className = "image-off";
-            ImageOff.src = "resources/images/off.png";
+            ImageOff.src = Path + "off.png";
             
-            ImageOff.addEventListener('click', ClickSmallImage, false);
+            ImageOff.addEventListener('click', ClickSmallImage(Path), false);
         } 
            
         DivCountImages.append(ImageOff);
@@ -66,7 +66,7 @@ function CountImages(ProjectName) {
     return Count;
 }
 
-function ClickButtonLeft() {
+function ClickButtonLeft(Path) {
     let Image = document.getElementsByClassName("spoiler-popup-image")[0];
     let Images = document.getElementsByClassName("count-images")[0];
     let count = 0;
@@ -79,26 +79,26 @@ function ClickButtonLeft() {
             count++;
             
             if (count == NumberImage) {
-                Images.childNodes[i].src = "resources/images/off.png";
+                Images.childNodes[i].src = Path + "off.png";
                 Images.childNodes[i].className = "image-off";
                 
-                Images.childNodes[i].addEventListener('click', ClickSmallImage, false);
+                Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
             }
 
             if ((NumberImage - 1) == 0) {
                 if (count == CountImages(ProjectName)) {
-                    Images.childNodes[i].src = "resources/images/on.png";
+                    Images.childNodes[i].src = Path + "on.png";
                     Images.childNodes[i].className = "image-on";
 
-                    Images.childNodes[i].removeEventListener('click', ClickSmallImage, false);
+                    Images.childNodes[i].removeEventListener('click', ClickSmallImage(Path), false);
                 }
             }
             else {
                 if (count == (NumberImage - 1)) {
-                    Images.childNodes[i].src = "resources/images/on.png";
+                    Images.childNodes[i].src = Path + "on.png";
                     Images.childNodes[i].className = "image-on";
                     
-                    Images.childNodes[i].removeEventListener('click', ClickSmallImage, false);
+                    Images.childNodes[i].removeEventListener('click', ClickSmallImage(Path), false);
                 }
             }
         }
@@ -106,23 +106,23 @@ function ClickButtonLeft() {
 
     if ((NumberImage - 1) == 0) {
         if (CountImages(ProjectName) < 10) {
-            Image.src = "resources/images/" + ProjectName + "/0" + CountImages(ProjectName) + ".png";
+            Image.src = Path + ProjectName + "/0" + CountImages(ProjectName) + ".png";
         }
         else {
-            Image.src = "resources/images/" + ProjectName + "/" + CountImages(ProjectName) + ".png";
+            Image.src = Path + ProjectName + "/" + CountImages(ProjectName) + ".png";
         } 
     }
     else {
         if ((NumberImage - 1) < 10) {
-            Image.src = "resources/images/" + ProjectName + "/0" + (NumberImage - 1) + ".png";
+            Image.src = Path + ProjectName + "/0" + (NumberImage - 1) + ".png";
         }
         else {
-            Image.src = "resources/images/" + ProjectName + "/" + (NumberImage - 1) + ".png";
+            Image.src = Path + ProjectName + "/" + (NumberImage - 1) + ".png";
         }
     }
 }
 
-function ClickButtonRight() {
+function ClickButtonRight(Path) {
     let Image = document.getElementsByClassName("spoiler-popup-image")[0];
     let Images = document.getElementsByClassName("count-images")[0];
     let count = 0;
@@ -135,45 +135,45 @@ function ClickButtonRight() {
             count++;
             
             if (count == NumberImage) {
-                Images.childNodes[i].src = "resources/images/off.png";
+                Images.childNodes[i].src = Path + "off.png";
                 Images.childNodes[i].className = "image-off";
                 
-                Images.childNodes[i].addEventListener('click', ClickSmallImage, false);
+                Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
             }
 
             if ((NumberImage + 1) == (CountImages(ProjectName) + 1)) {
                 if (count == 1) {
-                    Images.childNodes[i].src = "resources/images/on.png";
+                    Images.childNodes[i].src = Path + "on.png";
                     Images.childNodes[i].className = "image-on";
                     
-                    Images.childNodes[i].removeEventListener('click', ClickSmallImage, false);
+                    Images.childNodes[i].removeEventListener('click', ClickSmallImage(Path), false);
                 }
             }
             else {
                 if (count == (NumberImage + 1)) {
-                    Images.childNodes[i].src = "resources/images/on.png";
+                    Images.childNodes[i].src = Path + "on.png";
                     Images.childNodes[i].className = "image-on";
                     
-                    Images.childNodes[i].removeEventListener('click', ClickSmallImage, false);
+                    Images.childNodes[i].removeEventListener('click', ClickSmallImage(Path), false);
                 }
             }
         }
     }
 
     if ((NumberImage + 1) == (CountImages(ProjectName) + 1)) {
-        Image.src = "resources/images/" + ProjectName + "/01.png";
+        Image.src = Path + ProjectName + "/01.png";
     }
     else {
         if ((NumberImage + 1) < 10) {
-            Image.src = "resources/images/" + ProjectName + "/0" + (NumberImage + 1) + ".png";
+            Image.src = Path + ProjectName + "/0" + (NumberImage + 1) + ".png";
         }
         else {
-            Image.src = "resources/images/" + ProjectName + "/" + (NumberImage + 1) + ".png";
+            Image.src = Path + ProjectName + "/" + (NumberImage + 1) + ".png";
         }
     }
 }
 
-function ClickSmallImage() {
+function ClickSmallImage(Path) {
     let Image = document.getElementsByClassName("count-images")[0];
     
     Image.onclick = function(e) {
@@ -182,10 +182,10 @@ function ClickSmallImage() {
             
             for (let i = 0; i < Images.childNodes.length; i++) {
                 if (e.target == Images.childNodes[i]) {
-                    Images.childNodes[i].src = "resources/images/on.png";
+                    Images.childNodes[i].src = Path + "on.png";
                     Images.childNodes[i].className = "image-on";
                     
-                    Images.childNodes[i].removeEventListener('click', ClickSmallImage, false);
+                    Images.childNodes[i].removeEventListener('click', ClickSmallImage(Path), false);
                     
                     let Image = document.getElementsByClassName("spoiler-popup-image")[0];
                     
@@ -193,17 +193,17 @@ function ClickSmallImage() {
                     let ProjectName = String(Image.src.substr(Image.src.lastIndexOf('images') + 7, Image.src.substr(Image.src.lastIndexOf('images') + 7).lastIndexOf('/')));
                     
                     if (NumberImage < 10) {
-                        Image.src = "resources/images/" + ProjectName + "/0" + NumberImage + ".png";
+                        Image.src = Path + ProjectName + "/0" + NumberImage + ".png";
                     }
                     else {
-                        Image.src = "resources/images/" + ProjectName + "/" + NumberImage + ".png";
+                        Image.src = Path + ProjectName + "/" + NumberImage + ".png";
                     }
                 }
                 else {
                     Images.childNodes[i].className = "image-off";
-                    Images.childNodes[i].src = "resources/images/off.png";
+                    Images.childNodes[i].src = Path + "off.png";
                     
-                    Images.childNodes[i].addEventListener('click', ClickSmallImage, false);
+                    Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
                 }
             }
         }

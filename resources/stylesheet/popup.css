@@ -35,8 +35,22 @@ div.popup-center {
     cursor: zoom-out;
 }
 
-img.popup-image {
-    max-width: 75%;
-    
-    cursor: default;
+/*ширина экрана больше 800*/
+
+@media (min-width: 800px) {
+    img.popup-image {
+        max-width: 75%;
+
+        cursor: default;
+    }
+}
+
+/*ширина экрана меньше 800*/
+
+@media (max-width: 800px) {
+    img.popup-image {
+        max-width: 100%;
+
+        cursor: default;
+    }
 }
