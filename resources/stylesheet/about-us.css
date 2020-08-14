@@ -37,7 +37,7 @@ section.main section.about-us article div.persons div.information {
     
     overflow: auto;
     
-    padding: 0 3%;
+    padding: 3%;
 }
 
 section.main section.about-us article div.persons div.information#person_1 {
@@ -120,8 +120,6 @@ section.main section.about-us article div.button-right img.button {
 /*точки*/
 
 section.main section.about-us article div.persons div.count-person {   
-    width: 40px;
-    
     position: relative;
 
     left: 50%;
@@ -129,22 +127,52 @@ section.main section.about-us article div.persons div.count-person {
     transform: translateX(-50%);
 }
 
-section.main section.about-us article div.persons div.count-person img.image-off {
-    width: 10px;
-    
-    float: left;
-    
-    padding: 5px;
-    
-    cursor:pointer;
+/*ширина экрана больше 800*/
+
+@media (min-width: 800px) {
+
+    section.main section.about-us article div.persons div.count-person img.image-off {
+        width: 15px;
+
+        float: left;
+
+        padding: 5px;
+
+        cursor:pointer;
+    }
+
+    section.main section.about-us article div.persons div.count-person img.image-on {
+        width: 15px;
+
+        float: left;
+
+        padding: 5px;
+
+        cursor: default;
+    }
 }
 
-section.main section.about-us article div.persons div.count-person img.image-on {
-    width: 10px;
-    
-    float: left;
-    
-    padding: 5px;
-    
-    cursor: default;
+/*ширина экрана меньше 800*/
+
+@media (max-width: 800px) {
+
+    section.main section.about-us article div.persons div.count-person img.image-off {
+        width: 20px;
+
+        float: left;
+
+        padding: 5px;
+
+        cursor:pointer;
+    }
+
+    section.main section.about-us article div.persons div.count-person img.image-on {
+        width: 20px;
+
+        float: left;
+
+        padding: 5px;
+
+        cursor: default;
+    }
 }

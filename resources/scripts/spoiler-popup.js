@@ -36,6 +36,10 @@ function ChangeSizeImageSpoilerPopup(Image) {
         DivCountImages.append(ImageOff);
     }
     
+    let ImageWidth = document.getElementsByClassName("count-images")[0].childNodes[0].offsetWidth;
+    
+    document.getElementsByClassName("count-images")[0].style.width = (ImageWidth * CountImages(ProjectName)) + "px";
+    
     document.body.style.overflow = "hidden";
 }
 
@@ -51,15 +55,15 @@ function CloseSpoilerPopup() {
 
 function CountImages(ProjectName) {
     let Spoiler = document.getElementById("spoiler-" + ProjectName);
-    let count = 0;
+    let Count = 0;
     
     for (let i = 0; i < Spoiler.childNodes.length; i++) {
         if (Spoiler.childNodes[i].tagName == "IMG") {
-            count++;
+            Count++;
         }
     }
     
-    return count;
+    return Count;
 }
 
 function ClickButtonLeft() {

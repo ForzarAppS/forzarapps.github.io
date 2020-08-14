@@ -1,7 +1,25 @@
-/*картинки*/
+/*ширина экрана больше 800*/
 
-img.image {
-    cursor:zoom-in;
+@media (min-width: 800px) {
+    /*картинки*/
+    
+    img.normal-image {
+        cursor:zoom-in;
+        
+        max-width: 50%;
+    }
+}
+
+/*ширина экрана меньше 800*/
+
+@media (max-width: 800px) {
+    /*картинки*/
+    
+    img.normal-image {
+        cursor:zoom-in;
+        
+        max-width: 90%;
+    }
 }
 
 /*ссылки*/

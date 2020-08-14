@@ -62,14 +62,16 @@ header div.background div.logo div.h1 h1 a {
     text-decoration-line: none;
 }
 
+/*мобильное меню*/
+    
+header div.background input.checkbox {
+    display: none;
+}
+
 /*ширина экрана больше 800*/
 
 @media (min-width: 800px) {
     /*мобильное меню*/
-    
-    header div.background input.checkbox {
-        display: none;
-    }
 
     header div.background label.button-menu {
         display: none; 
@@ -103,25 +105,6 @@ header div.background div.logo div.h1 h1 a {
         float: left;
     }
 
-    header nav.sections ul.sections li span.nav-sections {
-        color: black;
-        font-weight: bold;
-    }
-
-    header nav.sections ul.sections li:hover span.nav-sections {
-        font-size: 18px;
-    }
-    
-    header nav.sections ul.sections li:hover span.nav-sections span {
-        color: rgb(148, 0, 211);
-
-        border-bottom: 2px solid;
-        
-        cursor: pointer;
-
-        font-size: 18px;
-    }
-
     /*язык*/
 
     header nav.languages {
@@ -143,59 +126,12 @@ header div.background div.logo div.h1 h1 a {
 
         list-style: none;
     }
-
-    header nav.languages ul.languages li { 
-        margin: 0 5px;
-
-        float: left;
-
-        font-weight: bold;
-    }
-
-    header nav.languages ul.languages li ul { 
-        margin: 0;
-        padding: 0;
-
-        list-style: none;
-
-        display: none;
-    }
-
-    header nav.languages ul.languages li:hover ul { 
-        display: block;
-        
-        cursor: pointer;
-    }
-
-    header nav.languages ul.languages li ul li { 
-        margin: 10px 0;
-    }
-
-    header nav.languages ul.languages li ul li a { 
-        color: black;
-
-        text-decoration-line: none;
-    }
-
-    header nav.languages ul.languages li ul li:hover a { 
-        color: rgb(148, 0, 211);
-
-        border-bottom: 2px solid;
-        
-        cursor: pointer;
-
-        font-size: 18px;
-    }
 }
 
 /*ширина экрана меньше 800*/
 
 @media (max-width: 800px) {
-    /*мобильное меню*/    
-
-    header div.background input.checkbox {
-        display: none;
-    }
+    /*мобильное меню*/
 
     header div.background label.button-menu {
         width: 25px;
@@ -293,25 +229,6 @@ header div.background div.logo div.h1 h1 a {
         margin: 5px 10px;
     }
 
-    header nav.sections ul.sections li span.nav-sections {
-        color: black;
-        font-weight: bold;
-    }
-    
-    header nav.sections ul.sections li:hover span.nav-sections {
-        font-size: 18px;
-    }
-    
-    header nav.sections ul.sections li:hover span.nav-sections span {
-        color: rgb(148, 0, 211);
-
-        border-bottom: 2px solid;
-        
-        cursor: pointer;
-
-        font-size: 18px;
-    }
-
     /*язык*/
 
     header nav.languages {
@@ -337,47 +254,70 @@ header div.background div.logo div.h1 h1 a {
         padding: 1px 0;
         margin: 0;
     }
+}
 
-    header nav.languages ul.languages li { 
-        margin: 0 5px;
+/*меню*/
 
-        float: left;
+header nav.sections ul.sections li span.nav-sections {
+    color: black;
+    font-weight: bold;
+}
 
-        font-weight: bold;
-    }
+header nav.sections ul.sections li:hover span.nav-sections {
+    font-size: 18px;
+}
 
-    header nav.languages ul.languages li ul { 
-        margin: 0;
-        padding: 0;
+header nav.sections ul.sections li:hover span.nav-sections span {
+    color: rgb(148, 0, 211);
 
-        list-style: none;
+    border-bottom: 2px solid;
 
-        display: none;
-    }
+    cursor: pointer;
 
-    header nav.languages ul.languages li:hover ul { 
-        display: block;
-        
-        cursor: pointer;
-    }
+    font-size: 18px;
+}
 
-    header nav.languages ul.languages li ul li { 
-        margin: 10px 0;
-    }
+/*язык*/
 
-    header nav.languages ul.languages li ul li a { 
-        color: black;
+header nav.languages ul.languages li { 
+    margin: 0 5px;
 
-        text-decoration-line: none;
-    }
+    float: left;
 
-    header nav.languages ul.languages li ul li:hover a { 
-        color: rgb(148, 0, 211);
+    font-weight: bold;
+}
 
-        border-bottom: 2px solid;
+ header nav.languages ul.languages li ul { 
+    margin: 0;
+    padding: 0;
 
-        cursor: pointer;
+    list-style: none;
 
-        font-size: 18px;
-    } 
+    display: none;
+}
+
+header nav.languages ul.languages li:hover ul { 
+    display: block;
+
+    cursor: pointer;
+}
+
+header nav.languages ul.languages li ul li { 
+    margin: 10px 0;
+}
+
+header nav.languages ul.languages li ul li a { 
+    color: black;
+
+    text-decoration-line: none;
+}
+
+header nav.languages ul.languages li ul li:hover a { 
+    color: rgb(148, 0, 211);
+
+    border-bottom: 2px solid;
+
+    cursor: pointer;
+
+    font-size: 18px;
 }

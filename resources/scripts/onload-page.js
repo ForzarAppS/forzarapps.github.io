@@ -2,6 +2,16 @@ function PageOnload() {
     window.onload = function() {
         document.getElementsByClassName("nav-sections")[0].style.borderBottom = "2px solid";
         
+        document.getElementsByClassName("main")[0].addEventListener('click', function(event) {
+            if (document.getElementsByClassName("checkbox")[0].checked) {
+                document.getElementsByClassName("checkbox")[0].checked = !document.getElementsByClassName("checkbox")[0].checked;
+            }
+        });
+        
+        let ImageWidth = document.getElementsByClassName("count-person")[0].childNodes[1].offsetWidth;
+    
+        document.getElementsByClassName("count-person")[0].style.width = (ImageWidth * 2) + "px";
+        
         const FontSize = Number(window.getComputedStyle(document.body).getPropertyValue('font-size').match(/\d+/)[0]);
     
         let Hashtag =  document.getElementsByClassName("hashtag");
