@@ -285,6 +285,8 @@ header nav.languages ul.languages li {
     float: left;
 
     font-weight: bold;
+    
+    cursor: default;
 }
 
  header nav.languages ul.languages li ul { 

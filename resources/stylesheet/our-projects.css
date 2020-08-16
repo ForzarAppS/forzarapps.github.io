@@ -43,10 +43,14 @@ section.main section.our-projects article div.project-information div.unit-infor
     margin-left: 110px;
 }
 
-section.main section.our-projects article div.project-information img.icon-platform {
-    height: 20px;
+section.main section.our-projects article div.project-information div.unit-information div.platform-center {
+    width: 100%; 
     
-    margin: 0 5px;
+    overflow: auto;
+}
+
+section.main section.our-projects article div.project-information div.unit-information div.platform-center span {
+    float: left;
 }
 
 /*ссылки проекта*/

@@ -1,7 +1,11 @@
+/*смена логотипа*/
+
 function AutoChangeLogo(Time, Path) {
     let Logo = document.getElementById("logo");
     let i = 0;
 
+    /*через промежуток времени*/
+    
     setInterval(function() {
         i++;
         switch (i) {

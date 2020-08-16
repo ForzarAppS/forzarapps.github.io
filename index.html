@@ -55,8 +55,12 @@
         <script src="resources/scripts/onload-page.js"></script>
     </head>
     
+    <!--скроллбар для тела страницы-->
+    
     <body class="scrollbar-yes">
         <header>
+            <!--фон-->
+            
             <div class="background">
                 <!--лого-->
                 
@@ -100,9 +104,9 @@
                 
                 <nav class="languages">
                     <ul class="languages">
-                        <li><div class="languages" id="ru"></div>RU ˅
+                        <li><div class="language" id="ru"></div>RU<div class="language" id="down"></div>
                             <ul>
-                                <li><a href="./en/"  target="_self"><div class="languages" id="en" ></div>EN</a></li>
+                                <li><a href="./en/"  target="_self"><div class="language" id="en"></div>EN</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -116,7 +120,7 @@
         
         <!--скроллбар-->
         
-        <script>HideShowScrollBar()</script>
+        <script>HideShowScrollBar(2000)</script>
 
         <section class="main">
             <!--основная информация-->
@@ -159,7 +163,12 @@
                         </div>
 
                         <div class="unit-information">
-                            <p><b>Платформа: </b><img class="icon-platform" src="resources/images/platforms/windows.png" alt="Windows"/></p>
+                            <div class="platform-center">
+                                <span>
+                                    <b>Платформа: </b>
+                                    <div class="platform" id="windows"></div>
+                                </span>
+                            </div>
                             <p><b>Версия: </b>1.2</p>
                             <p><b>Дата последнего обновления: </b>22.03.2020</p>
                         </div>
@@ -179,9 +188,9 @@
                     
                     <div class="project-screenshots">
                         <b>Скриншоты:</b>
-                        <div class="button" onclick="OpenCloseSpoiler(this, 'spoiler-FV', 'resources/images/', 'Показать', 'Скрыть')">
+                        <div class="button" onclick="OpenCloseSpoiler(this, 'spoiler-FV', 'Показать', 'Скрыть')">
                             Показать
-                            <img src="resources/images/button-down.png" height="15px">
+                            <div class="image-spoiler" id="down"></div>
                         </div>
                         
                         <div class="spoiler" id="spoiler-FV">
@@ -219,7 +228,7 @@
                 <!--разделение проектов по центру-->
                 
                 <center>
-                    <img src="resources/images/separation.png" height="10px"/>
+                    <div class="separation"></div>
                 </center>
                 
                 <!--прект 2-->
@@ -233,7 +242,13 @@
                         </div>
 
                         <div class="unit-information">
-                            <p><b>Платформа: </b><img class="icon-platform" src="resources/images/platforms/windows.png" alt="Windows"/><img class="icon-platform" src="resources/images/platforms/android.png" alt="Android"/></p>
+                            <div class="platform-center">
+                                <span>
+                                    <b>Платформа: </b>
+                                    <div class="platform" id="android"></div>
+                                    <div class="platform" id="windows"></div>
+                                </span>
+                            </div>
                             <p><b>Версия: </b>1.0</p>
                             <p><b>Дата последнего обновления: </b>01.04.2020</p>
                         </div>
@@ -251,9 +266,9 @@
                     
                     <div class="project-screenshots">
                         <b>Скриншоты:</b>
-                        <div class="button" onclick="OpenCloseSpoiler(this, 'spoiler-CU', 'resources/images/', 'Показать', 'Скрыть')">
+                        <div class="button" onclick="OpenCloseSpoiler(this, 'spoiler-CU', 'Показать', 'Скрыть')">
                             Показать
-                            <img src="resources/images/button-down.png" height="15px">
+                            <div class="image-spoiler" id="down"></div>
                         </div>
                         
                         <div class="spoiler" id="spoiler-CU">
@@ -287,7 +302,7 @@
                 <!--разделение проектов по центру-->
                 
                 <center>
-                    <img src="resources/images/separation.png" height="10px"/>
+                    <div class="separation"></div>
                 </center>
                 
                 <!--прект 3-->
