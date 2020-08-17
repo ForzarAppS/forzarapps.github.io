@@ -267,7 +267,7 @@ header nav.sections ul.sections li:hover span.nav-sections {
     font-size: 18px;
 }
 
-header nav.sections ul.sections li:hover span.nav-sections span {
+header nav.sections ul.sections li:hover span.nav-sections span.border {
     color: rgb(148, 0, 211);
 
     border-bottom: 2px solid;

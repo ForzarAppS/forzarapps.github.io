@@ -7,7 +7,7 @@ function PersonButton(Path) {
     
     /*участники*/
     
-    let Person1 = ddocument.getElementById("person_1");
+    let Person1 = document.getElementById("person_1");
     let Person2 = document.getElementById("person_2");
     
     for (let i = 0; i < CountImages.childNodes.length; i++) {
@@ -57,7 +57,7 @@ function ImageButton(Path) {
     
     /*участники*/
     
-    let Person1 = ddocument.getElementById("person_1");
+    let Person1 = document.getElementById("person_1");
     let Person2 = document.getElementById("person_2");
     
     CountImages.onclick = function(e) {
