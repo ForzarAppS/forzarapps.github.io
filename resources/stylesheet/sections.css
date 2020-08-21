@@ -8,6 +8,21 @@
         
         max-width: 50%;
     }
+    
+    /*основная информация*/
+    
+    /*список*/
+
+    section.main section.basic-information article ul.tasks li {
+        list-style-type: none;
+
+        background-position: left top 5px;
+        background-size: 12px;
+        background-repeat: no-repeat;
+
+        margin-left: -30px;
+        padding-left: 25px;
+    }
 }
 
 /*ширина экрана меньше 800*/
@@ -20,6 +35,21 @@
         
         max-width: 90%;
     }
+    
+    /*список*/
+
+    section.main section.basic-information article ul.tasks li {
+        list-style-type: none;
+
+        background-position: left top 5px;
+        background-size: 12px;
+        background-repeat: no-repeat;
+
+        margin-left: -30px;
+        padding-left: 25px;
+
+        text-align: justify;
+    }
 }
 
 /*ссылки*/
@@ -28,27 +58,11 @@ a.link {
     position: relative;
 }
 
-a.link:hover {
-    color: maroon;
-    
-    font-weight: bold;
-}
-
-a.link:active {
-    color: red;
-    
-    font-weight: bold;
-}
-
 a.link span {
-    float: right;
-    
     position: absolute;
 }
 
 a.link span div {
-    float: right;
-    
     display: none;
     
     height: 26px;  
@@ -61,6 +75,8 @@ a.link:hover div {
 /*отступ сверху*/
 
 section.main section.basic-information h2 {
+    /*иначе не корректно сверху отсутп*/
+    
     margin-top: 0;
     padding-top: 0;
 }
@@ -81,18 +97,4 @@ div.p {
 
 div.hashtag {
     display: inline-block;
-}
-
-span.hashtag {
-    float: left;
-    
-    color: blue;
-}
-
-/*основная информация*/
-
-/*список*/
-
-section.main section.basic-information article ul li {
-    list-style-image: url(../images/light.png);
 }

@@ -1,8 +1,8 @@
 /*фон*/
 
 body {
-    background: rgba(255, 200, 200, 0.2);
-
+    /*иначе не корректно на мобиильных*/
+    
     width: auto;
 }
 
@@ -11,9 +11,9 @@ body {
 img.up {
     display: none;
     
+    /*позиционирование*/
+    
     position: fixed;
-    
     width: 50px;
-    
 	right: 25px;
 }

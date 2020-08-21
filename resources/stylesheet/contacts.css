@@ -8,13 +8,26 @@
 
         text-align: center;
 
-        overflow: auto;
+        /*позиционирование*/
 
         display: flex;
-
         flex-direction: row;
-
         justify-content: space-around;
+    }
+    
+    section.main section.contacts article div.card {
+        width: 200px;
+
+        margin: 5px 10px;
+
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px; 
+
+        float: left;
+
+        /*для фона с замком*/
+
+        position: relative;
     }
 }
 
@@ -27,63 +40,61 @@
         width: 100%;
 
         text-align: center;
-
-        overflow: auto;
     }
     
     section.main section.contacts article div.card-center  {
-        overflow: auto;
-        
         width: 220px;
         
         margin: auto;
+        
+        /*иначе не корректно подвал*/
+        
+        overflow: auto;
     }
-}
+    
+    section.main section.contacts article div.card {
+        width: 200px;
 
-section.main section.contacts article div.card {
-    width: 200px;
-    
-    float: left;
-    
-    border: 3px solid rgb(148, 0, 211);
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px; 
-    
-    position: relative;
-    
-    margin: 5px 10px;
+        margin: 5px 10px;
+
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px; 
+
+        /*для фона с замком*/
+
+        position: relative;
+    }
 }
 
 /*закрыто*/
 
 section.main section.contacts article div.card img.card-block {
-    width: 100%;
-    height: 100%;
-    
     border-bottom-left-radius: 37px;
     border-bottom-right-radius: 37px; 
+    
+    /*прозрачность*/
     
     filter: alpha(Opacity=75);
     opacity: 0.75;
     
-    position: absolute;
+    /*позиционирование*/
     
+    position: absolute;
+    width: 100%;
+    height: 100%;
     left: 0;
-    top: 0;
 }
 
 section.main section.contacts article div.card img.lock {    
-    position: absolute;
-    
     width: 50%;
     height: 50%;
     
-    z-index: 1;
+    /*позиционирование*/
     
+    z-index: 1;
+    position: absolute;
     top: 50%;
     left: 50%;
-    
-    margin-right: -50%;
     transform: translate(-50%, -50%);
 }
 
@@ -98,47 +109,41 @@ section.main section.contacts article div.card div.header {
 
 section.main section.contacts article div.card div.header div.background {
     height: 50px;
-    
-    background: rgba(255, 255, 255, 0.5);
 }
 
 section.main section.contacts article div.card div.header div.background p {
     height: 30px;
     
     font-weight: bold;
-    text-align: center;
+    text-align: center; 
+    
+    padding: 10px 0;
+    
+    /*убрать отступы*/
     
     margin: 0;
-    padding: 10px 0;
 }
 
 /*иконка*/
 
-section.main section.contacts article div.card div.icon {
-    text-align: center;
-}
-
 section.main section.contacts article div.card div.icon img {
     height: 100px;
     
-    padding: 10px 0;
+    padding: 10px;
 }
 
 /*кнопка*/
 
 section.main section.contacts article div.card a.button {
-    display: inline-block;
-    
-    background: rgba(66, 170, 255, 0.2);
-    
-    border: 3px solid rgb(148, 0, 211);
     border-radius: 40px;
     
+    padding: 8px 20px;
+    margin-bottom: 8px;
+    
     font-weight: bold;
-    
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    
-    color: black;
     text-decoration-line: none;
+    
+    /*иначе кнопка не корректно*/
+    
+    display: inline-block;
 }

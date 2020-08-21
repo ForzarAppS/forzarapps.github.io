@@ -1,52 +1,76 @@
 /*наши проекты*/
 
-/*заголовок*/
+/*ширина экрана меньше 800*/
 
-section.main section.our-projects article h3 {
-    text-align: justify;
+@media (max-width: 800px) {
+    /*заголовок*/
+
+    section.main section.our-projects article h3 {
+        text-align: justify;
+    }
+    
+    /*список*/
+
+    section.main section.our-projects article ul.switch li {
+        list-style-type: none;
+
+        background-position: left top 5px;
+        background-size: 24px;
+        background-repeat: no-repeat;
+
+        margin-left: -30px;
+        padding-left: 30px;
+
+        text-align: justify;
+    }
 }
 
-/*список*/
+/*ширина экрана больше 800*/
 
-section.main section.our-projects article ul li {
-    list-style-image: url(../images/switch.png);
+@media (min-width: 800px) {
+    /*список*/
+
+    section.main section.our-projects article ul.switch li {
+        list-style-type: none;
+
+        background-position: left top 5px;
+        background-size: 24px;
+        background-repeat: no-repeat;
+
+        margin-left: -30px;
+        padding-left: 30px;
+    }
 }
 
 /*информация*/
 
 section.main section.our-projects article div.project-information {
-    min-height: 100px;
     width: 100%;
     
-    float: left;
+    /*позиционирование*/
     
+    float: left;
     position: relative;
 }
 
 section.main section.our-projects article div.project-information div.unit-icon {      
-    float: left;
+    /*позиционирование*/
     
     position: absolute;
-    
     top: 50%;
-    
     transform: translateY(-50%);
 }
 
 section.main section.our-projects article div.project-information img.icon {
-    width: 100px;
+    width: 96px;
 }
 
-section.main section.our-projects article div.project-information div.unit-information {
-    float: left;
-    
-    margin-left: 110px;
+section.main section.our-projects article div.project-information div.unit-information {  
+    margin-left: 106px;
 }
 
 section.main section.our-projects article div.project-information div.unit-information div.platform-center {
-    width: 100%; 
-    
-    overflow: auto;
+    overflow: hidden;
 }
 
 section.main section.our-projects article div.project-information div.unit-information div.platform-center span {
@@ -56,11 +80,13 @@ section.main section.our-projects article div.project-information div.unit-infor
 /*ссылки проекта*/
 
 section.main section.our-projects article div.project-link {
-    float: left;
-    
     width: 100%;
     
     margin: 5px 0;
+    
+    /*иначе не корректно разделение проектов*/
+    
+    float: left;
 }
 
 section.main section.our-projects article div.project-link b {
@@ -76,12 +102,14 @@ section.main section.our-projects article div.project-link div {
 /*дополнительная информация*/
 
 section.main section.our-projects article div.additional-information {
-    float: left;
-    
     width: 100%;
     
     margin-top: 5px;
     margin-bottom: 25px;
+    
+    /*иначе не корректно разделение проектов*/
+    
+    float: left;
 }
 
 section.main section.our-projects article div.additional-information b {

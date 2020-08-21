@@ -1,42 +1,38 @@
 /*всплывающее*/
 
 div.spoiler-popup {
+    /*позиционирование*/
+    
     position: fixed;
-    
-    height: 100%;
-    width: 100%;
-    
     top: 0;
     left: 0;
-    
     text-align: center;
-    
     z-index: 2;
 }
 
 div.spoiler-popup div.spoiler-popup-background {
     background: rgba(0,0,0,0.8);
     
-    position: fixed;
+    cursor: zoom-out;
     
+    /*позиционирование*/
+    
+    position: fixed;
     height: 100%;
     width: 100%;
-    
-    cursor: zoom-out;
 }
 
 div.spoiler-popup div.spoiler-popup-center {
+    cursor: zoom-out;
+    
+    /*позиционирование*/
+    
     position: fixed;
-    
-    width: 90%;
-    
+    width: 90%; 
     top: 50%;
     left: 50%;
-    
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    
-    cursor: zoom-out;
 }
 
 div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image {  
@@ -55,60 +51,58 @@ div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image {
     /*кнопки*/
     
     div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.button-popup-left {    
-        width: 5%;
-
         cursor:pointer;
+        
+        /*позиционирование*/
 
+        width: 5%;
         position: absolute;
-
         top: 50%;
         left: -5%;
-
         transform: translateY(-50%);
     }
     
     div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.button-popup-right {    
-        width: 5%;
-
         cursor:pointer;
+        
+        /*позиционирование*/
 
+        width: 5%;
         position: absolute;
-
         top: 50%;
         right: -5%;
-
         transform: translateY(-50%);
     }
     
     /*точки*/
     
     div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images {
+        /*позиционирование*/
+        
         position: absolute;
-
         top: 100%;
         left: 50%;
-
         transform: translateX(-50%);
     }
     
     div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images img.image-off {
-        width: 15px;
-
-        float: left;
-
-        padding: 5px;
-
         cursor:pointer;
+        
+        /*позиционирование*/
+        
+        width: 15px;
+        float: left;
+        padding: 5px;
     }
 
     div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images img.image-on {
-        width: 15px;
-
-        float: left;
-
-        padding: 5px;
-
         cursor: default;
+        
+        /*позиционирование*/
+        
+        width: 15px;
+        float: left;
+        padding: 5px;
     }
 }
 
@@ -124,60 +118,58 @@ div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image {
     /*кнопки*/
     
     div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.button-popup-left {    
-        width: 10%;
-
         cursor:pointer;
 
+        /*позиционирование*/
+        
+        width: 10%;
         position: absolute;
-
         top: 50%;
         left: -5%;
-
         transform: translateY(-50%);
     }
     
     div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.button-popup-right {    
-        width: 10%;
-
         cursor:pointer;
+        
+        /*позиционирование*/
 
+        width: 10%;
         position: absolute;
-
         top: 50%;
         right: -5%;
-
         transform: translateY(-50%);
     }
     
     /*точки*/
     
     div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images {
+        /*позиционирование*/
+        
         position: absolute;
-
         top: 100%;
         left: 50%;
-
         transform: translateX(-50%);
     }
     
     div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images img.image-off {
-        width: 20px;
-
-        float: left;
-
-        padding: 5px;
-
         cursor:pointer;
+        
+        /*позиционирование*/
+        
+        width: 20px;
+        float: left;
+        padding: 5px;
     }
 
     div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images img.image-on {
-        width: 20px;
-
-        float: left;
-
-        padding: 5px;
-
         cursor: default;
+        
+        /*позиционирование*/
+        
+        width: 20px;
+        float: left;
+        padding: 5px;
     }
 }
 

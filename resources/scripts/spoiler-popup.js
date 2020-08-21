@@ -8,7 +8,7 @@ function ChangeSizeImageSpoilerPopup(Image, Path) {
     /*настрйоки*/
     
     DivSpoilerPopup.className = "spoiler-popup";
-    DivSpoilerPopup.innerHTML = "<div class='spoiler-popup-background' onclick='CloseSpoilerPopup()'></div><div class='spoiler-popup-center' onclick='CloseSpoilerPopup()'><div class='spoiler-popup-center-image' onclick='CloseSpoilerPopup()'><div class='button-popup-left'><img src='" + Path + "left.png' onclick='ClickButtonLeft(\"" + Path + "\")'></div><div class='button-popup-right'><img src='" + Path + "right.png' onclick='ClickButtonRight(\"" + Path + "\")'></div><div class='count-images'></div></div></div>";
+    DivSpoilerPopup.innerHTML = "<div class='spoiler-popup-background' onclick='CloseSpoilerPopup()'></div><div class='spoiler-popup-center' onclick='CloseSpoilerPopup()'><div class='spoiler-popup-center-image' onclick='CloseSpoilerPopup()'><div class='button-popup-left'><img src='" + Path + "button/left.png' onclick='ClickButtonLeft(\"" + Path + "\")'></div><div class='button-popup-right'><img src='" + Path + "button/right.png' onclick='ClickButtonRight(\"" + Path + "\")'></div><div class='count-images'></div></div></div>";
     
     /*добавить*/
     
@@ -46,11 +46,11 @@ function ChangeSizeImageSpoilerPopup(Image, Path) {
         
         if (Image.src.substr(Image.src.lastIndexOf('/') + 1, 2) == i) {
             ImageOff.className = "image-on";
-            ImageOff.src = Path + "on.png";  
+            ImageOff.src = Path + "button/on.png";  
         }
         else {
             ImageOff.className = "image-off";
-            ImageOff.src = Path + "off.png";
+            ImageOff.src = Path + "button/off.png";
             
             ImageOff.addEventListener('click', ClickSmallImage(Path), false);
         }
@@ -130,7 +130,7 @@ function ClickButtonLeft(Path) {
             /*изменение изображения*/
             
             if (count == NumberImage) {
-                Images.childNodes[i].src = Path + "off.png";
+                Images.childNodes[i].src = Path + "button/off.png";
                 Images.childNodes[i].className = "image-off";
                 
                 Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
@@ -138,7 +138,7 @@ function ClickButtonLeft(Path) {
 
             if ((NumberImage - 1) == 0) {
                 if (count == CountImages(ProjectName)) {
-                    Images.childNodes[i].src = Path + "on.png";
+                    Images.childNodes[i].src = Path + "button/on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     /*удалить обработчик клика*/
@@ -148,7 +148,7 @@ function ClickButtonLeft(Path) {
             }
             else {
                 if (count == (NumberImage - 1)) {
-                    Images.childNodes[i].src = Path + "on.png";
+                    Images.childNodes[i].src = Path + "button/on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     /*удалить обработчик клика*/
@@ -206,7 +206,7 @@ function ClickButtonRight(Path) {
             /*изменение изображения*/
             
             if (count == NumberImage) {
-                Images.childNodes[i].src = Path + "off.png";
+                Images.childNodes[i].src = Path + "button/off.png";
                 Images.childNodes[i].className = "image-off";
                 
                 Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
@@ -214,7 +214,7 @@ function ClickButtonRight(Path) {
 
             if ((NumberImage + 1) == (CountImages(ProjectName) + 1)) {
                 if (count == 1) {
-                    Images.childNodes[i].src = Path + "on.png";
+                    Images.childNodes[i].src = Path + "button/on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     /*удалить обработчик клика*/
@@ -224,7 +224,7 @@ function ClickButtonRight(Path) {
             }
             else {
                 if (count == (NumberImage + 1)) {
-                    Images.childNodes[i].src = Path + "on.png";
+                    Images.childNodes[i].src = Path + "button/on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     /*удалить обработчик клика*/
@@ -267,7 +267,7 @@ function ClickSmallImage(Path) {
                 if (e.target == Images.childNodes[i]) {
                     /*изменение изображения*/
                     
-                    Images.childNodes[i].src = Path + "on.png";
+                    Images.childNodes[i].src = Path + "button/on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     /*удалить обработчик клика*/
@@ -299,7 +299,7 @@ function ClickSmallImage(Path) {
                     /*изменение изображения*/
                     
                     Images.childNodes[i].className = "image-off";
-                    Images.childNodes[i].src = Path + "off.png";
+                    Images.childNodes[i].src = Path + "button/off.png";
                     
                     Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
                 }

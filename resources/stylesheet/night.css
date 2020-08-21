@@ -1,0 +1,127 @@
+body {
+    background-color: rgba(91, 30, 49, 0.9);
+    
+    color: pink;
+}
+
+/*шапка*/
+
+header div.background {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+header div.background div.logo div.h1 h1 a {
+    color: pink;
+}
+
+/*смена темы*/
+    
+header div.background div.theme div.icon-theme {
+    background-image: url('data: image/png; base64, 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');
+}
+
+/*ширина экрана меньше 800*/
+
+@media (max-width: 800px) {
+    /*меню*/
+
+    header nav.sections { 
+        background-color: rgb(71, 0, 39);
+    }
+
+    /*язык*/
+
+    header nav.languages {
+        background-color: rgb(71, 0, 39);
+    }
+}
+
+/*меню*/
+
+header nav.sections ul.sections li:hover span.nav-sections span.border {
+    color: crimson;
+}
+
+/*язык*/
+
+header nav.languages ul.languages li ul li a { 
+    color: pink;
+}
+
+header nav.languages ul.languages li ul li:hover a { 
+    color: crimson;
+}
+
+/*ссылки*/
+
+a.link:link {
+    color: skyblue;
+}
+
+a.link:visited {
+    color: navy;
+}
+
+a.link:hover {
+    color: crimson;
+    font-weight: bold;
+}
+
+a.link:active {
+    color: red;
+    font-weight: bold;
+}
+
+/*хештеги*/
+
+div.hashtag {
+    color: skyblue;
+}
+
+/*кнопка спойлера*/
+
+section.main section.our-projects article div.project-screenshots div.button {
+    background: rgba(220, 20, 60, 0.5);
+    
+    border: 3px solid maroon;
+}
+
+/*спойлер*/
+
+section.main section.our-projects article div.project-screenshots div.spoiler {
+    border: 3px solid red;
+}
+
+/*о нас*/
+
+section.main section.about-us article div.persons div.information {
+    border: 3px solid maroon;
+}
+
+/*контакты*/
+
+section.main section.contacts article div.card {
+    border: 3px solid maroon;
+}
+
+/*шапка контактов*/
+
+section.main section.contacts article div.card div.header div.background {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*кнопка контактов*/
+
+section.main section.contacts article div.card a.button {
+    background: rgba(220, 20, 60, 0.5);
+    
+    border: 3px solid maroon;
+
+    color: pink;
+}
+
+/*подвал*/
+
+footer div.background {
+    background-color: rgba(0, 0, 0, 0.6);
+}

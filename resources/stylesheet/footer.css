@@ -4,27 +4,23 @@ footer {
     background-image: url(../images/background.jpg);
     background-size: 100%;
     
-    top: 0;
-    left: 0;
-    
     width: 100%;
-    
-    float: none;
     
     text-align: center;
     
     margin-top: 30px;
 }
 
-footer div.background {
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
 footer div.background p {
-    margin: 0;
     padding: 5px 0;
     
-    display: inline-block;
-    
     text-align: center;
+    
+    /*убрать отступы*/
+    
+    margin: 0;
+    
+    /*иначе не корректно отступы и пасхалка*/
+    
+    display: inline-block;
 }

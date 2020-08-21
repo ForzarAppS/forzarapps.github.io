@@ -1,14 +1,18 @@
 html {
+    /*полосы прокрутки*/
+    
     overflow: auto;
 }
 
 body {
-    position: absolute;
+    /*позиционирование*/
     
+    position: absolute;
     top: 80px;
     bottom: 0;
-    
     padding-right: 10px;
+    
+    /*полосы прокрутки*/
     
     overflow-y: scroll;
     overflow-x: hidden;

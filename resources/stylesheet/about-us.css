@@ -1,19 +1,22 @@
 /*о нас*/
 
-/*отступ свверху*/
+/*заголовок*/
 
-section.main section.about-us h2 {  
-    overflow: auto;
+section.main section.about-us h2 { 
+    /*иначе не корректно якорь*/
     
+    overflow: auto;
     border: 1px solid transparent;
 }
 
+/*тело*/
+
 section.main section.about-us article {
     width: 100%;
-    height: 100%;
+    
+    /*для стрелок*/
     
     overflow: auto;
-    
     position: relative;
 }
 
@@ -21,24 +24,20 @@ section.main section.about-us article p {
     margin: 5px 0;
 }
 
-section.main section.about-us article div.persons {   
-    float: left;
-    
-    width: 80%;
-    
+section.main section.about-us article div.persons {
     margin: 0 10%;
 }
 
 section.main section.about-us article div.persons div.information {
-    width: auto;
-    
-    border: 3px solid rgb(148, 0, 211);
-    border-radius: 40px;
-    
-    overflow: auto;
-    
     padding: 3%;
+    
+    /*для границы*/
+    
+    border-radius: 40px;
+    overflow: auto;
 }
+
+/*участники*/
 
 section.main section.about-us article div.persons div.information#person_1 {
     display: block;
@@ -47,6 +46,8 @@ section.main section.about-us article div.persons div.information#person_1 {
 section.main section.about-us article div.persons div.information#person_2 {
     display: none;
 }
+
+/*шапка участника*/
 
 section.main section.about-us article div.persons div.information div.person {
     width: 100%;
@@ -60,16 +61,6 @@ section.main section.about-us article div.persons div.information div.person img
     float: left;
 }
 
-section.main section.about-us article div.persons div.information div.person div.private-information { 
-    float: left;
-}
-
-section.main section.about-us article div.persons div.information div.person-information {
-    width: auto;
-    
-    float: left;
-}
-
 /*кнопки*/
 
 section.main section.about-us article div.button-left {  
@@ -77,13 +68,13 @@ section.main section.about-us article div.button-left {
     
     width: 10%;  
     
-    position: absolute;
-    
-    top: 50%;
-    
-    transform: translateY(-50%);
-    
     cursor:pointer;
+    
+    /*позиционирование*/
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 section.main section.about-us article div.button-left img.button {  
@@ -99,14 +90,14 @@ section.main section.about-us article div.button-right {
     
     width: 10%;
     
-    position: absolute;
+    cursor:pointer;
     
+    /*позиционирование*/
+    
+    position: absolute;
     top: 50%;
     left: 90%;
-    
     transform: translateY(-50%);
-    
-    cursor:pointer;
 }
 
 section.main section.about-us article div.button-right img.button {
@@ -120,10 +111,10 @@ section.main section.about-us article div.button-right img.button {
 /*точки*/
 
 section.main section.about-us article div.persons div.count-person {   
-    position: relative;
-
-    left: 50%;
+    /*позиционирование*/
     
+    position: relative;
+    left: 50%;
     transform: translateX(-50%);
 }
 
