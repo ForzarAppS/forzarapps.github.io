@@ -127,7 +127,6 @@ header div.background {
 
         cursor: pointer;
 
-        border: 2px solid #222;
         border-radius: 5px;
         
         /*позиционирование*/
@@ -139,8 +138,6 @@ header div.background {
     }
 
     header div.background label.button-menu span {
-        background-color: black;
-        
         border: 1px solid transparent;
         border-radius: 5px;
         

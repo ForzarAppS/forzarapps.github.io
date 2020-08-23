@@ -1,7 +1,13 @@
 /*при загрузке страницы*/
 
 function PageOnload(Path) {
-    window.onload = function() {
+    /*запрет на открытие картинок*/
+        
+    document.oncontextmenu = disablecontext;
+    
+    /*после загрузки*/
+    
+    window.onload = function() {  
         /*начальное присвоение темы*/
         
         let LinkTheme = document.getElementById("link-theme");
@@ -206,4 +212,14 @@ function PageScroll(Sections) {
                 Button.style.bottom = "5px";
             }
         });
+}
+
+/*запрет на открытие картинок*/
+
+function disablecontext(e) {
+	var clickedEl = (e==null) ? event.srcElement.tagName : e.target.tagName;
+    
+	if (clickedEl == "IMG") {
+		return false;
+	}
 }
