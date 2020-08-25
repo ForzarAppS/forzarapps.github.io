@@ -77,12 +77,15 @@ section.main section.about-us article div.button-left {
     transform: translateY(-50%);
 }
 
-section.main section.about-us article div.button-left img.button {  
+section.main section.about-us article div.button-left div.button {  
     float: right;
     
-    width: 75%;
+    width: 100%;
     
-    padding-right: 10%;
+    padding-top: 173%;
+    
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 section.main section.about-us article div.button-right {
@@ -100,12 +103,15 @@ section.main section.about-us article div.button-right {
     transform: translateY(-50%);
 }
 
-section.main section.about-us article div.button-right img.button {
+section.main section.about-us article div.button-right div.button {
     float: left;
     
-    width: 75%;
+    width: 100%;
     
-    padding-left: 10%;
+    padding-top: 173%;
+    
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 /*точки*/
@@ -122,24 +128,32 @@ section.main section.about-us article div.persons div.count-person {
 
 @media (min-width: 800px) {
 
-    section.main section.about-us article div.persons div.count-person img.image-off {
+    section.main section.about-us article div.persons div.count-person div.image-off {
         width: 15px;
+        height: 15px;
 
         float: left;
 
-        padding: 5px;
+        margin: 5px;
 
         cursor:pointer;
+        
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 
-    section.main section.about-us article div.persons div.count-person img.image-on {
+    section.main section.about-us article div.persons div.count-person div.image-on {
         width: 15px;
+        height: 15px;
 
         float: left;
 
-        padding: 5px;
+        margin: 5px;
 
         cursor: default;
+        
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 }
 
@@ -147,23 +161,31 @@ section.main section.about-us article div.persons div.count-person {
 
 @media (max-width: 800px) {
 
-    section.main section.about-us article div.persons div.count-person img.image-off {
+    section.main section.about-us article div.persons div.count-person div.image-off {
         width: 20px;
+        height: 20px;
 
         float: left;
 
-        padding: 5px;
+        margin: 5px;
 
         cursor:pointer;
+        
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 
-    section.main section.about-us article div.persons div.count-person img.image-on {
+    section.main section.about-us article div.persons div.count-person div.image-on {
         width: 20px;
+        height: 20px;
 
         float: left;
 
-        padding: 5px;
+        margin: 5px;
 
         cursor: default;
+        
+        background-size: 100%;
+        background-repeat: no-repeat;
     }
 }

@@ -8,7 +8,7 @@ function ChangeSizeImageSpoilerPopup(Image, Path) {
     /*настрйоки*/
     
     DivSpoilerPopup.className = "spoiler-popup";
-    DivSpoilerPopup.innerHTML = "<div class='spoiler-popup-background' onclick='CloseSpoilerPopup()'></div><div class='spoiler-popup-center' onclick='CloseSpoilerPopup()'><div class='spoiler-popup-center-image' onclick='CloseSpoilerPopup()'><div class='button-popup-left'><img src='" + Path + "button/left.png' onclick='ClickButtonLeft(\"" + Path + "\")'></div><div class='button-popup-right'><img src='" + Path + "button/right.png' onclick='ClickButtonRight(\"" + Path + "\")'></div><div class='count-images'></div></div></div>";
+    DivSpoilerPopup.innerHTML = "<div class='spoiler-popup-background' onclick='CloseSpoilerPopup()'></div><div class='spoiler-popup-center' onclick='CloseSpoilerPopup()'><div class='spoiler-popup-center-image' onclick='CloseSpoilerPopup()'><div class='button-popup-left'><div class='button-left' onclick='ClickButtonLeft(\"" + Path + "\")'></div></div><div class='button-popup-right'><div class='button-right' onclick='ClickButtonRight(\"" + Path + "\")'></div></div><div class='count-images'></div></div></div>";
     
     /*добавить*/
     
@@ -40,17 +40,15 @@ function ChangeSizeImageSpoilerPopup(Image, Path) {
     for (let i = 1; i <= CountImages(ProjectName); i++) {
         /*создать*/
         
-        let ImageOff = document.createElement('img');
+        let ImageOff = document.createElement('div');
         
         /*настройки*/
         
         if (Image.src.substr(Image.src.lastIndexOf('/') + 1, 2) == i) {
             ImageOff.className = "image-on";
-            ImageOff.src = Path + "button/on.png";  
         }
         else {
             ImageOff.className = "image-off";
-            ImageOff.src = Path + "button/off.png";
             
             ImageOff.addEventListener('click', ClickSmallImage(Path), false);
         }
@@ -60,11 +58,11 @@ function ChangeSizeImageSpoilerPopup(Image, Path) {
         DivCountImages.append(ImageOff);
     }
     
-    /*размеры точечек*/
+    /*размеры блока точечек*/
     
     let ImageWidth = document.getElementsByClassName("count-images")[0].childNodes[0].offsetWidth;
     
-    document.getElementsByClassName("count-images")[0].style.width = (ImageWidth * CountImages(ProjectName)) + "px";
+    document.getElementsByClassName("count-images")[0].style.width = ((ImageWidth + 10) * CountImages(ProjectName)) + "px";
     
     /*прокрутка*/
     
@@ -124,13 +122,12 @@ function ClickButtonLeft(Path) {
     let ProjectName = String(Image.src.substr(Image.src.lastIndexOf('images') + 7, Image.src.substr(Image.src.lastIndexOf('images') + 7).lastIndexOf('/')));
     
     for (let i = 0; i < Images.childNodes.length; i++) {
-        if (Images.childNodes[i].tagName == "IMG") {
+        if (Images.childNodes[i].tagName == "DIV") {
             count++;
             
             /*изменение изображения*/
             
             if (count == NumberImage) {
-                Images.childNodes[i].src = Path + "button/off.png";
                 Images.childNodes[i].className = "image-off";
                 
                 Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
@@ -138,7 +135,6 @@ function ClickButtonLeft(Path) {
 
             if ((NumberImage - 1) == 0) {
                 if (count == CountImages(ProjectName)) {
-                    Images.childNodes[i].src = Path + "button/on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     /*удалить обработчик клика*/
@@ -148,7 +144,6 @@ function ClickButtonLeft(Path) {
             }
             else {
                 if (count == (NumberImage - 1)) {
-                    Images.childNodes[i].src = Path + "button/on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     /*удалить обработчик клика*/
@@ -200,13 +195,12 @@ function ClickButtonRight(Path) {
     let ProjectName = String(Image.src.substr(Image.src.lastIndexOf('images') + 7, Image.src.substr(Image.src.lastIndexOf('images') + 7).lastIndexOf('/')));
     
     for (let i = 0; i < Images.childNodes.length; i++) {
-        if (Images.childNodes[i].tagName == "IMG") {
+        if (Images.childNodes[i].tagName == "DIV") {
             count++;
             
             /*изменение изображения*/
             
             if (count == NumberImage) {
-                Images.childNodes[i].src = Path + "button/off.png";
                 Images.childNodes[i].className = "image-off";
                 
                 Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
@@ -214,7 +208,6 @@ function ClickButtonRight(Path) {
 
             if ((NumberImage + 1) == (CountImages(ProjectName) + 1)) {
                 if (count == 1) {
-                    Images.childNodes[i].src = Path + "button/on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     /*удалить обработчик клика*/
@@ -224,7 +217,6 @@ function ClickButtonRight(Path) {
             }
             else {
                 if (count == (NumberImage + 1)) {
-                    Images.childNodes[i].src = Path + "button/on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     /*удалить обработчик клика*/
@@ -267,7 +259,6 @@ function ClickSmallImage(Path) {
                 if (e.target == Images.childNodes[i]) {
                     /*изменение изображения*/
                     
-                    Images.childNodes[i].src = Path + "button/on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     /*удалить обработчик клика*/
@@ -299,7 +290,6 @@ function ClickSmallImage(Path) {
                     /*изменение изображения*/
                     
                     Images.childNodes[i].className = "image-off";
-                    Images.childNodes[i].src = Path + "button/off.png";
                     
                     Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
                 }

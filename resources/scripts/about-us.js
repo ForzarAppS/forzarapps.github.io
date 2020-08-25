@@ -1,6 +1,6 @@
 /*боковые кнопки*/
 
-function PersonButton(Path) {
+function PersonButton() {
     /*блок с маленькими изображениями*/
     
     let CountImages = document.getElementsByClassName("count-person")[0];
@@ -11,7 +11,7 @@ function PersonButton(Path) {
     let Person2 = document.getElementById("person_2");
     
     for (let i = 0; i < CountImages.childNodes.length; i++) {
-        if (CountImages.childNodes[i].tagName == "IMG") {
+        if (CountImages.childNodes[i].tagName == "DIV") {
             if (CountImages.childNodes[i].className == "image-on") {
                 /*изменение участников*/
                 
@@ -20,10 +20,8 @@ function PersonButton(Path) {
                 
                 /*изменение изображений*/
                 
-                CountImages.childNodes[i].src = Path + "off.png";
                 CountImages.childNodes[i].className = "image-off";
                 
-                CountImages.childNodes[i+2].src = Path + "on.png";
                 CountImages.childNodes[i+2].className = "image-on";
                 
                 break;
@@ -36,10 +34,8 @@ function PersonButton(Path) {
                 
                 /*изменение изображений*/
                 
-                CountImages.childNodes[i].src = Path + "on.png";
                 CountImages.childNodes[i].className = "image-on";
                 
-                CountImages.childNodes[i+2].src = Path + "off.png";
                 CountImages.childNodes[i+2].className = "image-off";
                 
                 break;
@@ -72,7 +68,6 @@ function ImageButton(Path) {
                 if (e.target == Images.childNodes[i]) {
                     /*изменение изображений*/
                     
-                    Images.childNodes[i].src = Path + "on.png";
                     Images.childNodes[i].className = "image-on";
                     
                     
@@ -99,7 +94,6 @@ function ImageButton(Path) {
                     /*изменение изображений*/
                     
                     Images.childNodes[i].className = "image-off";
-                    Images.childNodes[i].src = Path + "off.png";
                 }
             }
         }

@@ -85,24 +85,32 @@ div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image {
         transform: translateX(-50%);
     }
     
-    div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images img.image-off {
+    div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images div.image-off {
         cursor:pointer;
         
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
         /*позиционирование*/
         
         width: 15px;
+        height: 15px;
         float: left;
-        padding: 5px;
+        margin: 5px;
     }
 
-    div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images img.image-on {
+    div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images div.image-on {
         cursor: default;
+        
+        background-size: 100%;
+        background-repeat: no-repeat;
         
         /*позиционирование*/
         
         width: 15px;
+        height: 15px;
         float: left;
-        padding: 5px;
+        margin: 5px;
     }
 }
 
@@ -152,33 +160,51 @@ div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image {
         transform: translateX(-50%);
     }
     
-    div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images img.image-off {
+    div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images div.image-off {
         cursor:pointer;
         
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
         /*позиционирование*/
         
         width: 20px;
+        height: 20px;
         float: left;
-        padding: 5px;
+        margin: 5px;
     }
 
-    div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images img.image-on {
+    div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.count-images div.image-on {
         cursor: default;
+        
+        background-size: 100%;
+        background-repeat: no-repeat;
         
         /*позиционирование*/
         
         width: 20px;
+        height: 20px;
         float: left;
-        padding: 5px;
+        margin: 5px;
     }
 }
 
 /*кнопки*/
 
-div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.button-popup-left img {
+div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.button-popup-left div.button-left {
     width: 100%;
+    
+    padding-top: 173%;
+    
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
-div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.button-popup-right img {
+div.spoiler-popup div.spoiler-popup-center div.spoiler-popup-center-image div.button-popup-right div.button-right {
     width: 100%;
+    
+    padding-top: 173%;
+    
+    background-size: 100%;
+    background-repeat: no-repeat;
 }

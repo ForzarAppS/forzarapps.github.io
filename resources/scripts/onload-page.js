@@ -46,11 +46,11 @@ function PageOnload(Path) {
             }
         });
         
-        /*изменение размеров точечек*/
+        /*изменение размеров блока точечек*/
         
         let ImageWidth = document.getElementsByClassName("count-person")[0].childNodes[1].offsetWidth;
     
-        document.getElementsByClassName("count-person")[0].style.width = (ImageWidth * 2) + "px";
+        document.getElementsByClassName("count-person")[0].style.width = ((ImageWidth + 10) * 2) + "px";
         
         /*размер шрифта*/
         
