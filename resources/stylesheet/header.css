@@ -50,6 +50,8 @@ header div.background {
 
     header nav.sections {
         width: 66%;
+        
+        height: 20px;
 
         float: left;
 
