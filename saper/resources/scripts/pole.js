@@ -505,7 +505,7 @@ function ClearClick() {
                         switch (button) {
                             case 0: {
                                 DivButton.id = "flag";
-                                DivButton.style.backgroundImage = "url(../resources/images/buttons/no-flag.png)";
+                                DivButton.style.backgroundImage = "url(resources/images/buttons/no-flag.png)";
                                 DivButton.onclick = function() {
                                     /*установка флага*/
 
@@ -552,7 +552,7 @@ function ClearClick() {
 
 function ClearAllClick_ShowMine(FireMine) {
     if (!!FireMine) {
-        FireMine.style.backgroundImage = "url(../resources/images/mine/fire-mine.png)";
+        FireMine.style.backgroundImage = "url(resources/images/mine/fire-mine.png)";
     }
     
     /*удалить кнопки*/
@@ -569,7 +569,7 @@ function ClearAllClick_ShowMine(FireMine) {
             DivCell.setAttribute("data-open", "true");
 
             if (DivCell.getAttribute("data-flag") == "true") {
-                DivCell.style.backgroundImage = "url(../resources/images/mine/flag-mine.png)";
+                DivCell.style.backgroundImage = "url(resources/images/mine/flag-mine.png)";
             }
         }
     }
