@@ -1,0 +1,139 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.pole {
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+}
+
+div.col {
+    float: left;
+}
+
+div.col[data-kontur] {
+    float: left;
+}
+
+div.cell {
+    width: 20px;
+    height: 20px;
+    
+    border: 1px solid;
+}
+
+div.cell[data-open="false"] {
+    background-color: lightblue;
+}
+
+div.cell[data-open="true"] {
+    background-color: oldlace;
+}
+
+div.cell[data-count-mine] {
+    background-size: 100%;
+}
+
+div.cell[data-count-mine][data-open="false"] {
+    background-size: 0%;
+}
+
+div.cell[data-count-mine="1"] {
+    background-image: url(../images/digit/1.png);
+}
+
+div.cell[data-count-mine="2"] {
+    background-image: url(../images/digit/2.png);
+}
+
+div.cell[data-count-mine="3"] {
+    background-image: url(../images/digit/3.png);
+}
+
+div.cell[data-count-mine="4"] {
+    background-image: url(../images/digit/4.png);
+}
+
+div.cell[data-count-mine="5"] {
+    background-image: url(../images/digit/5.png);
+}
+
+div.cell[data-count-mine="6"] {
+    background-image: url(../images/digit/6.png);
+}
+
+div.cell[data-count-mine="7"] {
+    background-image: url(../images/digit/7.png);
+}
+
+div.cell[data-count-mine="8"] {
+    background-image: url(../images/digit/8.png);
+}
+
+div.cell[data-kontur] {
+    width: 0px;
+    height: 0px;
+    
+    border: 0px;
+    
+    background-color: lightgray;
+}
+
+div.cell[data-mine="true"] {
+    background-image: url(../images/mine/mine.png);
+    background-size: 100%;
+}
+
+div.cell[data-mine="true"][data-open="false"] {
+    background-size: 0%;
+}
+
+div.button {
+    width: 25px;
+    height: 25px;
+    
+    float: left;
+    position: absolute;
+    
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: lightgreen;
+}
+
+div.button#flag {
+    background-image: url(../images/buttons/flag.png);
+}
+
+div.button#cancel {
+    background-image: url(../images/buttons/cancel.png);
+}
+
+div.button#lopata {
+    background-image: url(../images/buttons/lopata.png);
+}
+
+div.cell[data-flag="true"][data-open="false"] {
+    background-image: url(../images/buttons/flag.png);
+    
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button {
+    color: red;
+    font-weight: bold;
+    background-color: lightblue;
+}
+
+div.count {
+    color: lightcoral;
+}
+
+div.label {
+    color: lightcoral;
+}
