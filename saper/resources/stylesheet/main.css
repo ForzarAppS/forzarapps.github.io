@@ -1,6 +1,10 @@
 body {
     margin: 0 auto;
     text-align: center;
+    
+    /*иначе не корректно на мобильных*/
+    
+    width: 100%;
 }
 
 div.button {
