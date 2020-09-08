@@ -1,25 +1,108 @@
 <!DOCTYPE HTML>
 
-<html lang="ru">
+<!--подключение для отображения ссылки на сайт-->
+
+<html lang="ru" prefix="og: //ogp.me/ns#">
     <head>
         <meta charset="utf-8">
-    
+        
+        <!--отображение ссылки на сайт-->
+        
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Saper">
+        <meta property="og:site_name" content="Forzar AppS">
+        <meta property="og:url" content="https://forzarapps.github.io/saper">
+        <meta property="og:description" content="Компьютерная игра-головоломка.">
+        <meta property="og:image" content="resources/images/FAS.png">
+        
+        <!--для мобльных браузеров-->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        
         <!--вкладка-->
         
         <title>Saper</title>
+        <link rel="shortcut icon" href="resources/images/mine/mine.png" type="image/png">
         
         <!--таблицы стилей-->
         
         <link rel="stylesheet" href="resources/stylesheet/pole.css">
+        <link rel="stylesheet" href="resources/stylesheet/main.css">
+        <link rel="stylesheet" href="resources/stylesheet/scrollbar.css">
+        
+        <link rel="stylesheet" href="../resources/stylesheet/header.css">    
+        <link rel="stylesheet" href="../resources/stylesheet/image.css">
+        <link rel="stylesheet" href="../resources/stylesheet/footer.css">
+        
+        <!--таблица стилей для темы-->
+        
+        <link rel="stylesheet" href="../resources/stylesheet/light.css" id="link-theme">
         
         <!--скрипты-->
         
-        <script src="resources/scripts/pole.js"></script>
+        <script src="resources/scripts/rules.js"></script>       
+        <script src="resources/scripts/onload-page.js"></script>
+        
+        <script src="../resources/scripts/header.js"></script>
+        <script src="../resources/scripts/footer.js"></script>
+        <script src="../resources/scripts/theme.js"></script>
     </head>
     
-    <body>  
+    <!--убрать скроллбар для тела страницы-->
+    
+    <body class="scrollbar-no">
+        <header>
+            <!--фон-->
+            
+            <div class="background">
+                <!--лого-->
+                
+                <div class="logo">
+                    <!--по центру-->
+                    
+                    <center>
+                        <div class="img">
+                            <a href="" target="_self"><img id="logo" src="../resources/images/logo/FAS.png"/></a>
+                        </div>
+                        
+                        <div class="h1">
+                            <h1>
+                                <a href="" target="_self">FAS</a>
+                            </h1>
+                        </div>
+
+                        <!--смена логотипа-->
+                        
+                        <script>AutoChangeLogo(1000, '../resources/images/logo/')</script>
+                    </center>
+                </div>
+                
+                <!--смена темы-->
+                
+                <div onclick="ChangeTheme('../resources/stylesheet/')" class="theme">
+                    <div class="icon-theme"></div>
+                </div>
+            </div>
+        </header>
+        
+        <!--при загрузке страницы-->
+        
+        <script>PageOnload("../resources/stylesheet/")</script>
+        
         <!--создание объектов-->
         
         <script>CreateObjects(9, 9, 10)</script>
+        
+        <!--подвал-->
+        
+        <footer>
+            <!--фон-->
+            
+            <div class="background">
+                <p>О всех ошибках в отображении сайта Вы можете сообщить по ссылкам из раздела «Контакты»</p>
+                <br/>
+                <p onclick="Easter(this)"><b>Forzar AppS</b> – 1.4.2(20)</p>
+            </div>
+        </footer>
     </body>
 </html>

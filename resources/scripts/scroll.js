@@ -7,7 +7,7 @@ function HideShowScrollBar(Time) {
     
     /*показать*/
     
-    document.body.addEventListener('scroll', function() {
+    document.body.addEventListener("scroll", function() {
         document.body.className = "scrollbar-yes";
     });
 }

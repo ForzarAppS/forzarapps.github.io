@@ -8,6 +8,13 @@ body {
     color: black;
 }
 
+/*кнопка*/
+
+button {
+    color: black;
+    background-color: lightblue;
+}
+
 /*полоса скроллбара*/
 
 body.scrollbar-yes::-webkit-scrollbar-track {

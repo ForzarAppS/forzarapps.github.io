@@ -1,12 +1,12 @@
 /*открытие закрытие спойлера*/
 function OpenCloseSpoiler(SpoilerButton, SpoilerId, On, Off) {
     switch (SpoilerButton.firstElementChild.id) {
-        case 'down': {
+        case "down": {
             SpoilerButton.outerHTML = "<div class='button' onclick='OpenCloseSpoiler(this, \"" + SpoilerId + "\", \"" + On + "\", \"" + Off + "\")'>" + Off + "<div class='image-spoiler' id='up'></div></div>";
             
             /*размер шрифта*/
         
-            const FontSize = Number(window.getComputedStyle(document.body).getPropertyValue('font-size').match(/\d+/)[0]);
+            const FontSize = Number(window.getComputedStyle(document.body).getPropertyValue("font-size").match(/\d+/)[0]);
             
             /*ширина картинки кнопки*/
             
@@ -22,12 +22,12 @@ function OpenCloseSpoiler(SpoilerButton, SpoilerId, On, Off) {
             
             break;
         }
-        case 'up': {
+        case "up": {
             SpoilerButton.outerHTML = "<div class='button' onclick='OpenCloseSpoiler(this, \"" + SpoilerId + "\", \"" + On + "\", \"" + Off + "\")'>" + On + "<div class='image-spoiler' id='down'></div></div>";
             
             /*размер шрифта*/
         
-            const FontSize = Number(window.getComputedStyle(document.body).getPropertyValue('font-size').match(/\d+/)[0]);
+            const FontSize = Number(window.getComputedStyle(document.body).getPropertyValue("font-size").match(/\d+/)[0]);
             
             /*ширина картинки кнопки*/
             

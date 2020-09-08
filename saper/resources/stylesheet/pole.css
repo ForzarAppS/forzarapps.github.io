@@ -1,13 +1,10 @@
-body {
-    margin: 0 auto;
-    text-align: center;
-}
-
 div.pole {
     width: 100%;
     
     display: flex;
     justify-content: center;
+    
+    color: black;
 }
 
 div.col {
@@ -31,6 +28,7 @@ div.cell[data-open="false"] {
 
 div.cell[data-open="true"] {
     background-color: oldlace;
+    background-color: rgb(255, 200, 200);
 }
 
 div.cell[data-count-mine] {
@@ -91,49 +89,10 @@ div.cell[data-mine="true"][data-open="false"] {
     background-size: 0%;
 }
 
-div.button {
-    width: 25px;
-    height: 25px;
-    
-    float: left;
-    position: absolute;
-    
-    background-size: 90%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: lightgreen;
-}
-
-div.button#flag {
-    background-image: url(../images/buttons/flag.png);
-}
-
-div.button#cancel {
-    background-image: url(../images/buttons/cancel.png);
-}
-
-div.button#lopata {
-    background-image: url(../images/buttons/lopata.png);
-}
-
 div.cell[data-flag="true"][data-open="false"] {
     background-image: url(../images/buttons/flag.png);
     
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-button {
-    color: red;
-    font-weight: bold;
-    background-color: lightblue;
-}
-
-div.count {
-    color: lightcoral;
-}
-
-div.label {
-    color: lightcoral;
 }

@@ -3,7 +3,7 @@
 function ChangeSizeImage(Image) {
     /*создать*/
     
-    let DivPopup = document.createElement('div');
+    let DivPopup = document.createElement("div");
     
     /*настройки*/
     
@@ -16,7 +16,7 @@ function ChangeSizeImage(Image) {
 
     /*создать*/
     
-    let ImagePopup = document.createElement('img');
+    let ImagePopup = document.createElement("img");
     
     /*настройки*/
     

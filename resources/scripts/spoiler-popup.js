@@ -3,7 +3,7 @@
 function ChangeSizeImageSpoilerPopup(Image, Path) {
     /*создать*/
     
-    let DivSpoilerPopup = document.createElement('div');
+    let DivSpoilerPopup = document.createElement("div");
     
     /*настрйоки*/
     
@@ -16,7 +16,7 @@ function ChangeSizeImageSpoilerPopup(Image, Path) {
     
     /*создать*/
     
-    let ImageSpoilerPopup = document.createElement('img');
+    let ImageSpoilerPopup = document.createElement("img");
     
     /*настройки*/
     
@@ -35,22 +35,22 @@ function ChangeSizeImageSpoilerPopup(Image, Path) {
     
     /*название проекта*/
     
-    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf('images') + 7, Image.src.substr(Image.src.lastIndexOf('images') + 7).lastIndexOf('/')));
+    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 7, Image.src.substr(Image.src.lastIndexOf("images") + 7).lastIndexOf("/")));
     
     for (let i = 1; i <= CountImages(ProjectName); i++) {
         /*создать*/
         
-        let ImageOff = document.createElement('div');
+        let ImageOff = document.createElement("div");
         
         /*настройки*/
         
-        if (Image.src.substr(Image.src.lastIndexOf('/') + 1, 2) == i) {
+        if (Image.src.substr(Image.src.lastIndexOf("/") + 1, 2) == i) {
             ImageOff.className = "image-on";
         }
         else {
             ImageOff.className = "image-off";
             
-            ImageOff.addEventListener('click', ClickSmallImage(Path), false);
+            ImageOff.addEventListener("click", ClickSmallImage(Path), false);
         }
         
         /*добавить*/
@@ -115,11 +115,11 @@ function ClickButtonLeft(Path) {
     
     /*номер изображения*/
     
-    let NumberImage = Number(Image.src.substr(Image.src.lastIndexOf('/') + 1, 2));
+    let NumberImage = Number(Image.src.substr(Image.src.lastIndexOf("/") + 1, 2));
     
     /*название проекта*/
     
-    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf('images') + 7, Image.src.substr(Image.src.lastIndexOf('images') + 7).lastIndexOf('/')));
+    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 7, Image.src.substr(Image.src.lastIndexOf("images") + 7).lastIndexOf("/")));
     
     for (let i = 0; i < Images.childNodes.length; i++) {
         if (Images.childNodes[i].tagName == "DIV") {
@@ -130,7 +130,7 @@ function ClickButtonLeft(Path) {
             if (count == NumberImage) {
                 Images.childNodes[i].className = "image-off";
                 
-                Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
+                Images.childNodes[i].addEventListener("click", ClickSmallImage(Path), false);
             }
 
             if ((NumberImage - 1) == 0) {
@@ -139,7 +139,7 @@ function ClickButtonLeft(Path) {
                     
                     /*удалить обработчик клика*/
 
-                    Images.childNodes[i].removeEventListener('click', ClickSmallImage(Path), false);
+                    Images.childNodes[i].removeEventListener("click", ClickSmallImage(Path), false);
                 }
             }
             else {
@@ -148,7 +148,7 @@ function ClickButtonLeft(Path) {
                     
                     /*удалить обработчик клика*/
                     
-                    Images.childNodes[i].removeEventListener('click', ClickSmallImage(Path), false);
+                    Images.childNodes[i].removeEventListener("click", ClickSmallImage(Path), false);
                 }
             }
         }
@@ -188,11 +188,11 @@ function ClickButtonRight(Path) {
     
     /*номер изображения*/
     
-    let NumberImage = Number(Image.src.substr(Image.src.lastIndexOf('/') + 1, 2));
+    let NumberImage = Number(Image.src.substr(Image.src.lastIndexOf("/") + 1, 2));
     
     /*название проекта*/
     
-    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf('images') + 7, Image.src.substr(Image.src.lastIndexOf('images') + 7).lastIndexOf('/')));
+    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 7, Image.src.substr(Image.src.lastIndexOf("images") + 7).lastIndexOf("/")));
     
     for (let i = 0; i < Images.childNodes.length; i++) {
         if (Images.childNodes[i].tagName == "DIV") {
@@ -203,7 +203,7 @@ function ClickButtonRight(Path) {
             if (count == NumberImage) {
                 Images.childNodes[i].className = "image-off";
                 
-                Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
+                Images.childNodes[i].addEventListener("click", ClickSmallImage(Path), false);
             }
 
             if ((NumberImage + 1) == (CountImages(ProjectName) + 1)) {
@@ -212,7 +212,7 @@ function ClickButtonRight(Path) {
                     
                     /*удалить обработчик клика*/
                     
-                    Images.childNodes[i].removeEventListener('click', ClickSmallImage(Path), false);
+                    Images.childNodes[i].removeEventListener("click", ClickSmallImage(Path), false);
                 }
             }
             else {
@@ -221,7 +221,7 @@ function ClickButtonRight(Path) {
                     
                     /*удалить обработчик клика*/
                     
-                    Images.childNodes[i].removeEventListener('click', ClickSmallImage(Path), false);
+                    Images.childNodes[i].removeEventListener("click", ClickSmallImage(Path), false);
                 }
             }
         }
@@ -263,7 +263,7 @@ function ClickSmallImage(Path) {
                     
                     /*удалить обработчик клика*/
                     
-                    Images.childNodes[i].removeEventListener('click', ClickSmallImage(Path), false);
+                    Images.childNodes[i].removeEventListener("click", ClickSmallImage(Path), false);
                     
                     /*изображение*/
                     
@@ -275,7 +275,7 @@ function ClickSmallImage(Path) {
                     
                     /*название проекта*/
                     
-                    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf('images') + 7, Image.src.substr(Image.src.lastIndexOf('images') + 7).lastIndexOf('/')));
+                    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 7, Image.src.substr(Image.src.lastIndexOf("images") + 7).lastIndexOf("/")));
                     
                     /*увеличение норера изображения*/
                     
@@ -291,7 +291,7 @@ function ClickSmallImage(Path) {
                     
                     Images.childNodes[i].className = "image-off";
                     
-                    Images.childNodes[i].addEventListener('click', ClickSmallImage(Path), false);
+                    Images.childNodes[i].addEventListener("click", ClickSmallImage(Path), false);
                 }
             }
         }

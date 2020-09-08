@@ -8,6 +8,13 @@ body {
     color: pink;
 }
 
+/*кнопка*/
+
+button {
+    color: pink;
+    background-color: rgb(220, 20, 60);
+}
+
 /*полоса скроллбара*/
 
 body.scrollbar-yes::-webkit-scrollbar-track {
