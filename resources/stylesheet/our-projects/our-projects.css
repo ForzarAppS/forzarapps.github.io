@@ -1,0 +1,123 @@
+/*наши проекты*/
+
+/*ширина экрана меньше 800*/
+
+@media (max-width: 800px) {
+    /*заголовок*/
+
+    section.main section.our-projects article h3 {
+        text-align: justify;
+    }
+    
+    /*список*/
+
+    section.main section.our-projects article ul.switch li {
+        list-style-type: none;
+
+        background-position: left top 5px;
+        background-size: 24px;
+        background-repeat: no-repeat;
+
+        margin-left: -30px;
+        padding-left: 30px;
+
+        text-align: justify;
+    }
+}
+
+/*ширина экрана больше 800*/
+
+@media (min-width: 800px) {
+    /*список*/
+
+    section.main section.our-projects article ul.switch li {
+        list-style-type: none;
+
+        background-position: left top 5px;
+        background-size: 24px;
+        background-repeat: no-repeat;
+
+        margin-left: -30px;
+        padding-left: 30px;
+    }
+}
+
+/*информация*/
+
+section.main section.our-projects article div.project-information {
+    width: 100%;
+    
+    /*позиционирование*/
+    
+    float: left;
+    position: relative;
+}
+
+section.main section.our-projects article div.project-information div.unit-icon {      
+    /*позиционирование*/
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section.main section.our-projects article div.project-information img.icon {
+    width: 96px;
+}
+
+section.main section.our-projects article div.project-information div.unit-information {  
+    margin-left: 106px;
+}
+
+section.main section.our-projects article div.project-information div.unit-information div.platform-center {
+    overflow: hidden;
+}
+
+section.main section.our-projects article div.project-information div.unit-information div.platform-center span {
+    float: left;
+}
+
+/*ссылки проекта*/
+
+section.main section.our-projects article div.project-link {
+    width: 100%;
+    
+    margin: 5px 0;
+    
+    /*иначе не корректно разделение проектов*/
+    
+    overflow: auto;
+}
+
+section.main section.our-projects article div.project-link b {
+    float: left;
+    
+    margin: 0 5px 0 0;
+}
+
+section.main section.our-projects article div.project-link div {
+    float: left;
+}
+
+/*дополнительная информация*/
+
+section.main section.our-projects article div.additional-information {
+    width: 100%;
+    
+    margin-top: 5px;
+    margin-bottom: 25px;
+    
+    /*иначе не корректно разделение проектов*/
+    
+    overflow: auto;
+}
+
+section.main section.our-projects article div.additional-information b {
+    float: left;
+    
+    margin: 0 5px 0 0;
+}
+
+section.main section.our-projects article div.additional-information div {
+    float: left;
+}

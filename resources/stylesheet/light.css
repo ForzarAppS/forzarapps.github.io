@@ -63,6 +63,14 @@ header nav.sections ul.sections li:hover span.nav-sections span.border {
     color: rgb(148, 0, 211);
 }
 
+header nav.sections ul.sections li span.nav-sections span.border a {
+    color: black;
+}
+
+header nav.sections ul.sections li span.nav-sections span.border a:hover {
+    color: rgb(148, 0, 211);
+}
+
 /*язык*/
 
 header nav.languages ul.languages li ul li a { 

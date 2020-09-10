@@ -1,0 +1,501 @@
+<!DOCTYPE HTML>
+
+<!--подключение для отображения ссылки на сайт-->
+
+<html lang="en" prefix="og: //ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        
+        <!--отображение ссылки на сайт-->
+        
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Forzar AppS">
+        <meta property="og:site_name" content="Forzar AppS">
+        <meta property="og:url" content="https://forzarapps.github.io/en/our-projects">
+        <meta property="og:description" content="All Forzar AppS projects.">
+        <meta property="og:image" content="../../resources/images/FAS.png">
+        
+        <!--для мобльных браузеров-->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        
+        <!--вкладка-->
+        
+        <title>Forzar AppS</title>
+        <link rel="shortcut icon" href="../../resources/images/logo/FAS.png" type="image/png">
+        
+        <!--ссылки на новой вкладке-->
+        
+        <base target="_blank">
+        
+        <!--таблицы стилей-->
+        
+        <link rel="stylesheet" href="../../resources/stylesheet/our-projects/sections.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/our-projects/our-projects.css">
+        
+        <link rel="stylesheet" href="../../resources/stylesheet/main.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/header.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/spoiler.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/spoiler-popup.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/scrollbar.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/image.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/footer.css">
+        
+        <!--таблица стилей для темы-->
+        
+        <link rel="stylesheet" href="../../resources/stylesheet/light.css" id="link-theme">
+        
+        <!--скрипты-->
+        
+        <script src="../../resources/scripts/our-projects/onload-page.js"></script>
+        
+        <script src="../../resources/scripts/header.js"></script>
+        <script src="../../resources/scripts/spoiler.js"></script>
+        <script src="../../resources/scripts/spoiler-popup.js"></script>
+        <script src="../../resources/scripts/scroll.js"></script>
+        <script src="../../resources/scripts/footer.js"></script>
+        <script src="../../resources/scripts/theme.js"></script>
+    </head>
+    
+    <!--скроллбар для тела страницы-->
+    
+    <body class="scrollbar-yes">
+        <header>
+            <!--фон-->
+            
+            <div class="background">
+                <!--лого-->
+                
+                <div class="logo">
+                    <!--по центру-->
+                    
+                    <center>
+                        <div class="img">
+                            <a href="../" target="_self"><img id="logo" src="../../resources/images/logo/FAS.png"/></a>
+                        </div>
+                        
+                        <div class="h1">
+                            <h1>
+                                <a href="../" target="_self">FAS</a>
+                            </h1>
+                        </div>
+
+                        <!--смена логотипа-->
+                        
+                        <script>AutoChangeLogo(1000, '../../resources/images/logo/')</script>
+                    </center>
+                </div>
+                
+                <!--смена темы-->
+                
+                <div onclick="ChangeTheme('../../resources/stylesheet/')" class="theme">
+                    <div class="icon-theme"></div>
+                </div>
+                
+                <!--кнопка-->
+                
+                <input type="checkbox" id="button-menu" class="checkbox">
+                
+                <!--вид кнопки-->
+                
+                <label class="button-menu" for="button-menu">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </label>
+                
+                <!--разделы-->
+
+                <nav class="sections">
+                    <ul class="sections">
+                        <li>
+                            <span class="nav-sections">
+                                <span class="border"><a href="../" target="_self">Basic information</a></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span onclick="Anchor('our-projects', this)" class="nav-sections">
+                                <span class="border">Our projects</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="nav-sections">
+                                <span class="border"><a href="../" target="_self">About us</a></span>
+                            </span>
+                        </li>
+                        <li><span class="nav-sections">
+                            <span class="border"><a href="../" target="_self">Contacts</a></span>
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!--языки-->
+                
+                <nav class="languages">
+                    <ul class="languages">
+                        <li>
+                            <div class="language" id="en"></div>
+                            EN
+                            <div class="language" id="down"></div>
+                            <ul>
+                                <li>
+                                    <a href="../../our-projects/"  target="_self">
+                                        <div class="language" id="ru"></div>
+                                        RU
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!--при загрузке страницы-->
+        
+        <script>PageOnload("../../resources/stylesheet/")</script>
+        
+        <!--скроллбар-->
+        
+        <script>HideShowScrollBar(2000)</script>
+
+        <section class="main">
+            <!--проекты-->
+            
+            <section class="our-projects">
+                <h2 id="our-projects">Our projects</h2>
+                
+                <!--проект 1-->
+                
+                <article id="fonts-viewer">
+                    <h3>The program «Fonts Viewer – Просмотрщик Шрифтов»</h3>
+
+                    <div class="project-information">
+                        <div class="unit-icon">
+                            <img class="icon" src="../../resources/images/projects/FV.png"/>
+                        </div>
+
+                        <div class="unit-information">
+                            <div class="platform-center">
+                                <span>
+                                    <b>Платформа: </b>
+                                    <div class="platform" id="windows"></div>
+                                </span>
+                            </div>
+                            <p><b>Version: </b>1.2</p>
+                            <p><b>Date of last update: </b>22.03.2020</p>
+                        </div>
+                    </div>
+
+                    <p><b>Description: </b>This program for people, who wants to create a font. And for people, who want to arrange text in cells for using.</p>
+                    
+                    <b>Features:</b>
+                    <ul class="switch">
+                        <li>Creating and editing letters and symbols of any complexity.</li>
+                        <li>View words and phrases composed of letters and symbols from previously created fonts.</li>
+                        <li>Bottom positioning of letters and symbols.</li>
+                        <li>Turns on and off the 10x10 grid.</li>
+                        <li>Ticker.</li>
+                        <li>Availability of automatic update check.</li>
+                    </ul>
+                    
+                    <div class="project-screenshots">
+                        <b>Screenshots:</b>
+                        <div class="button" onclick="OpenCloseSpoiler(this, 'spoiler-FV', 'Show', 'Hide')">
+                            Show
+                            <div class="image-spoiler" id="down"></div>
+                        </div>
+                        
+                        <div class="spoiler" id="spoiler-FV">
+                            <img class="spoiler-image" src="../../resources/images/FV/01.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')">
+                            
+                            <img class="spoiler-image" src="../../resources/images/FV/02.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')">
+                            
+                            <img class="spoiler-image" src="../../resources/images/FV/03.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')">
+                            
+                            <img class="spoiler-image" src="../../resources/images/FV/04.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')">
+                            
+                            <img class="spoiler-image" src="../../resources/images/FV/05.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')">
+                            
+                            <img class="spoiler-image" src="../../resources/images/FV/06.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')" style="max-width: 95%">
+                            
+                            <img class="spoiler-image" src="../../resources/images/FV/07.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')" style="max-width: 95%">
+                        </div>
+                    </div>
+                    
+                    <div class="project-link">
+                        <b>Link:</b>
+                        <div>
+                            <a class="link" href="https://yadi.sk/d/FwEQPmGjTY2zzg">
+                                Yandex.Disk
+                                <span>
+                                    <div class="link" id="yandexdisk"></div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="additional-information">
+                        <b>Article with help about the program:</b>
+                        <div>
+                            <a class="link" href="https://vk.com/@fas.offical-fontsviewer-help">
+                                VKontacte
+                                <span>
+                                    <div class="link" id="vkontakte"></div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!--разделение проектов по центру-->
+                
+                <center>
+                    <div class="separation"></div>
+                </center>
+                
+                <!--проект 2-->
+                
+                <article id="check-update">
+                    <h3>Open source demo project «Check Update – Проверка Обновления»</h3>
+
+                    <div class="project-information">
+                        <div class="unit-icon">
+                            <img class="icon" src="../../resources/images/projects/CU.png"/>
+                        </div>
+
+                        <div class="unit-information">
+                            <div class="platform-center">
+                                <span>
+                                    <b>Платформа: </b>
+                                    <div class="platform" id="android"></div>
+                                    <div class="platform" id="windows"></div>
+                                </span>
+                            </div>
+                            <p><b>Version: </b>1.0</p>
+                            <p><b>Date of last update: </b>01.04.2020</p>
+                        </div>
+                    </div>
+
+                    <p><b>Description: </b>The program (free of charge, without using a server) shows how the check for updates for programs on Windows and Android platforms works using a text file on Yandex Disk. This program is written for informational purposes only for the concept of a verification algorithm. If necessary, the program can be rewritten into any programming language that is capable of performing these tasks.</p>
+                    
+                    <b>Features:</b>
+                    <ul class="switch">
+                        <li>Demonstration of the update check operation.</li>
+                        <li>Free check for updates.</li>
+                        <li>Open source.</li>
+                        <li>Availability of automatic update check.</li>
+                    </ul>
+                    
+                    <div class="project-screenshots">
+                        <b>Screenshots:</b>
+                        <div class="button" onclick="OpenCloseSpoiler(this, 'spoiler-CU', 'Show', 'Hide')">
+                            Show
+                            <div class="image-spoiler" id="down"></div>
+                        </div>
+                        
+                        <div class="spoiler" id="spoiler-CU">
+                            <img class="spoiler-image" src="../../resources/images/CU/01.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')">
+                            
+                            <img class="spoiler-image" src="../../resources/images/CU/02.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')">
+                            
+                            <img class="spoiler-image" src="../../resources/images/CU/03.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')">
+                            
+                            <img class="spoiler-image" src="../../resources/images/CU/04.png" onclick="ChangeSizeImageSpoilerPopup(this, '../../resources/images/')">
+                        </div>
+                    </div>
+                    
+                    <div class="project-link">
+                        <b>Links:</b>
+                        <div>
+                            Windows – 
+                            <a class="link" href="https://yadi.sk/d/RxgA2FAoTjk8mw">
+                                Yandex.Disk
+                                <span>
+                                    <div class="link" id="yandexdisk"></div>
+                                </span>
+                            </a>
+                            <br/>
+                            Android – 
+                            <a class="link" href="https://yadi.sk/d/rpN0sKW_ySoELA">
+                                Yandex.Disk
+                                <span>
+                                    <div class="link" id="yandexdisk"></div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="additional-information">
+                        <b>Program code:</b>
+                        <div>
+                            <a class="link" href="https://github.com/ForzarAppS/CheckUpdate">
+                                GitHub
+                                <span>
+                                    <div class="link" id="github"></div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!--разделение проектов по центру-->
+                
+                <center>
+                    <div class="separation"></div>
+                </center>
+                
+                <!--проект 3-->
+                
+                <article id="master-pascalabcnet">
+                    <h3>Series of articles «Learn PascalABC.NET with Forzar AppS Series»</h3>
+                    
+                    <div class="p">
+                        <b>Description: </b>
+                        In support
+                        <div class="hashtag">
+                            #лучшедома
+                            <div class="emoji" id="house"></div>
+                        </div>
+                        and
+                        <div class="hashtag">
+                            #stayhome
+                            <div class="emoji" id="house"></div>
+                        </div>!
+                        One of the tasks that we set ourselves when we created our team was to get people interested in programming. If a person is interested in something, then he wants to try it. We have prepared for you an article with initial theory and tasks on the programming system
+                        <a class="link" href="http://pascalabc.net">PascalABC.NET<span><div class="link" id="pascalabcnet"></div></span></a>.
+                    </div>
+                    
+                    <b>Recommendations:</b>
+                    <ul class="switch">
+                        <li>More details about operators, procedures and functions you can find in the program help or on the site
+                            <a class="link" href="http://pascalabc.net/downloads/pabcnethelp">PascalABC.NET<span><div class="link" id="pascalabcnet"></div></span></a>.
+                        </li>
+                        <li>It is best to enable line numbering in the program settings.</li>
+                        <li>You can debug the program through writeln (to the console) in places where you need to find out the value of a variable, and you will find out how the program is executed.</li>
+                        <li>It is best to separate code fragments with empty lines.</li>
+                        <li>For each new nesting of code, you must increase the indent on the left.</li>
+                        <li>Be sure to comment out all the code.</li>
+                        <li>Books on the programming system you can find at site
+                            <a class="link" href="http://pascalabc.net/books">PascalABC.NET<span><div class="link" id="pascalabcnet"></div></span></a>.
+                        </li>
+                    </ul>
+                    
+                    <b>The most understandable books for beginners to read:</b>
+                    <ul class="switch">
+                        <li>Alexander Osipov, «PascalABC.NET: An Introduction to Modern Programming», 2019 – 
+                            <a class="link" href="http://pascalabc.net/downloads/OsipovBook/КнигаДляСайта.pdf">PascalABC.NET<span><div class="link" id="pascalabcnet"></div></span></a>.
+                        </li>
+                        <li>Alexander Osipov, «PascalABC.NET: student's choice Part 1», 2020 – 
+                            <a class="link" href="http://pascalabc.net/downloads/OsipovBook/StudentChoice.pdf">PascalABC.NET<span><div class="link" id="pascalabcnet"></div></span></a>.
+                        </li>
+                        <li>Alexander Osipov, «PascalABC.NET: student's choice Part 2», 2020 – 
+                            <a class="link" href="http://pascalabc.net/downloads/OsipovBook/StudentChoice2.pdf">PascalABC.NET<span><div class="link" id="pascalabcnet"></div></span></a>.
+                        </li>
+                    </ul>
+                      
+                    <div class="project-link">
+                        <b>Content:</b>
+                        <div>
+                            <div>
+                                Part 1 – 
+                                <a class="link" href="https://vk.com/@fas.offical-osvoi-pascalabcnet-s-forzar-apps-chast-1">
+                                    VKontacte
+                                    <span>
+                                        <div class="link" id="vkontakte"></div>
+                                    </span>
+                                </a>
+                            </div>
+                            <br/>
+                            <div>
+                                Part 1. Solution – 
+                                <a class="link" href="https://vk.com/@fas.offical-osvoi-pascalabcnet-s-forzar-apps-chast-1-reshenie">
+                                    VKontacte
+                                    <span>
+                                        <div class="link" id="vkontakte"></div>
+                                    </span>
+                                </a>
+                            </div>
+                            <br/>
+                            <div>
+                                Part 2 – 
+                                <a class="link" href="https://vk.com/@fas.offical-osvoi-pascalabcnet-s-forzar-apps-chast-2">
+                                    VKontacte
+                                    <span>
+                                        <div class="link" id="vkontakte"></div>
+                                    </span>
+                                </a>
+                            </div>
+                            <br/>
+                            <div>
+                                Part 2. Solution – 
+                                <a class="link" href="https://vk.com/@fas.offical-osvoi-pascalabcnet-s-forzar-apps-chast-2-reshenie">
+                                    VKontacte
+                                    <span>
+                                        <div class="link" id="vkontakte"></div>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="additional-information">
+                        <b>Ask questions about theory or assignments:</b>
+                        <div>
+                            <a class="link" href="https://vk.me/fas.offical">
+                                VKontacte
+                                <span>
+                                    <div class="link" id="vkontakte"></div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!--разделение проектов по центру-->
+                
+                <center>
+                    <div class="separation"></div>
+                </center>
+                
+                <!--проект 4-->
+                
+                <article id="saper">
+                    <h3>Computer puzzle game «Saper»</h3>
+                    
+                    <div class="project-information">
+                        <p style="margin-top: 0"><b>Version: </b>1.0</p>
+                    </div>
+                    
+                    <div class="project-link">
+                        <b>Link:</b>
+                        <div>
+                            <a class="link" href="../saper/">
+                                Play
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </section>
+        
+        <!--кнопка вверх-->
+        
+        <div class="up" onclick="PageUp()"></div>
+        
+        <!--подвал-->
+        
+        <footer>
+            <!--фон-->
+            
+            <div class="background">
+                <p>You can report about all errors in the display of the site by following the links from the section «Contacts»</p>
+                <br/>
+                <p>Translated by <a href="https://vk.com/id93686058" class="link">Anna</a> and <a href="https://vk.com/id45023008" class="link">Denis</a></p>
+                <br/>
+                <p onclick="Easter(this)"><b>Forzar AppS</b> – 1.4.2(20)</p>
+            </div>
+        </footer>
+    </body>
+</html>

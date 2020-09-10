@@ -195,6 +195,7 @@ header div.background {
     header nav.sections { 
         width: 250px;
         
+        text-align: left;
         font-size: 16px;
         
         /*позиционирование*/
@@ -324,6 +325,10 @@ header nav.sections ul.sections li:hover span.nav-sections span.border {
     cursor: pointer;
 
     font-size: 18px;
+}
+
+header nav.sections ul.sections li span.nav-sections span.border a {
+    text-decoration-line: none;
 }
 
 /*язык*/

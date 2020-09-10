@@ -52,26 +52,6 @@
     }
 }
 
-/*ссылки*/
-
-a.link {
-    position: relative;
-}
-
-a.link span {
-    position: absolute;
-}
-
-a.link span div {
-    display: none;
-    
-    height: 26px;  
-}
-
-a.link:hover div {
-    display: block;
-}
-
 /*отступ сверху*/
 
 section.main section.basic-information h2 {
@@ -85,16 +65,4 @@ section.main section.basic-information h2 {
 
 p {
     text-align: justify;
-}
-
-div.p {
-    text-align: justify;
-    
-    margin: 20px 0;
-}
-
-/*хештеги*/
-
-div.hashtag {
-    display: inline-block;
 }

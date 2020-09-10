@@ -2,18 +2,18 @@
 
 <!--подключение для отображения ссылки на сайт-->
 
-<html lang="ru" prefix="og: //ogp.me/ns#">
+<html lang="en" prefix="og: //ogp.me/ns#">
     <head>
         <meta charset="utf-8">
         
         <!--отображение ссылки на сайт-->
         
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Сапёр">
+        <meta property="og:title" content="Saper">
         <meta property="og:site_name" content="Forzar AppS">
-        <meta property="og:url" content="https://forzarapps.github.io/saper">
-        <meta property="og:description" content="Компьютерная игра-головоломка.">
-        <meta property="og:image" content="../resources/images/FAS.png">
+        <meta property="og:url" content="https://forzarapps.github.io/en/saper">
+        <meta property="og:description" content="Computer puzzle game.">
+        <meta property="og:image" content="../../resources/images/FAS.png">
         
         <!--для мобльных браузеров-->
         
@@ -21,31 +21,31 @@
         
         <!--вкладка-->
         
-        <title>Сапёр</title>
-        <link rel="shortcut icon" href="../resources/images/saper/mine/mine.png" type="image/png">
+        <title>Saper</title>
+        <link rel="shortcut icon" href="../../resources/images/saper/mine/mine.png" type="image/png">
         
         <!--таблицы стилей-->
         
-        <link rel="stylesheet" href="../resources/stylesheet/saper/pole.css">
-        <link rel="stylesheet" href="../resources/stylesheet/saper/main.css">
-        <link rel="stylesheet" href="../resources/stylesheet/saper/scrollbar.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/saper/pole.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/saper/main.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/saper/scrollbar.css">
         
-        <link rel="stylesheet" href="../resources/stylesheet/header.css">   
-        <link rel="stylesheet" href="../resources/stylesheet/image.css">
-        <link rel="stylesheet" href="../resources/stylesheet/footer.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/header.css">    
+        <link rel="stylesheet" href="../../resources/stylesheet/image.css">
+        <link rel="stylesheet" href="../../resources/stylesheet/footer.css">
         
         <!--таблица стилей для темы-->
         
-        <link rel="stylesheet" href="../resources/stylesheet/light.css" id="link-theme">
+        <link rel="stylesheet" href="../../resources/stylesheet/light.css" id="link-theme">
         
         <!--скрипты-->
         
-        <script src="../resources/scripts/saper/rules.js"></script>       
-        <script src="../resources/scripts/saper/onload-page.js"></script>
+        <script src="../../resources/scripts/saper/rules.js"></script>       
+        <script src="../../resources/scripts/saper/onload-page.js"></script>
         
-        <script src="../resources/scripts/header.js"></script>
-        <script src="../resources/scripts/footer.js"></script>
-        <script src="../resources/scripts/theme.js"></script>
+        <script src="../../resources/scripts/header.js"></script>
+        <script src="../../resources/scripts/footer.js"></script>
+        <script src="../../resources/scripts/theme.js"></script>
     </head>
     
     <!--убрать скроллбар для тела страницы-->
@@ -62,7 +62,7 @@
                     
                     <center>
                         <div class="img">
-                            <a href="../" target="_self"><img id="logo" src="../resources/images/logo/FAS.png"/></a>
+                            <a href="../" target="_self"><img id="logo" src="../../resources/images/logo/FAS.png"/></a>
                         </div>
                         
                         <div class="h1">
@@ -73,13 +73,13 @@
 
                         <!--смена логотипа-->
                         
-                        <script>AutoChangeLogo(1000, '../resources/images/logo/')</script>
+                        <script>AutoChangeLogo(1000, '../../resources/images/logo/')</script>
                     </center>
                 </div>
                 
                 <!--смена темы-->
                 
-                <div onclick="ChangeTheme('../resources/stylesheet/')" class="theme">
+                <div onclick="ChangeTheme('../../resources/stylesheet/')" class="theme">
                     <div class="icon-theme"></div>
                 </div>
                 
@@ -101,21 +101,21 @@
                     <ul class="sections">
                         <li>
                             <span class="nav-sections">
-                                <span class="border"><a href="../" target="_self">Основная информация</a></span>
+                                <span class="border"><a href="../" target="_self">Basic information</a></span>
                             </span>
                         </li>
                         <li>
                             <span class="nav-sections">
-                                <span class="border"><a href="../our-projects/" target="_self">Наши проекты</a></span>
+                                <span class="border"><a href="../our-projects/" target="_self">Our projects</a></span>
                             </span>
                         </li>
                         <li>
                             <span class="nav-sections">
-                                <span class="border"><a href="../" target="_self">О нас</a></span>
+                                <span class="border"><a href="../" target="_self">About us</a></span>
                             </span>
                         </li>
                         <li><span class="nav-sections">
-                            <span class="border"><a href="../" target="_self">Контакты</a></span>
+                            <span class="border"><a href="../" target="_self">Contacts</a></span>
                             </span>
                         </li>
                     </ul>
@@ -126,14 +126,14 @@
                 <nav class="languages">
                     <ul class="languages">
                         <li>
-                            <div class="language" id="ru"></div>
-                            RU
+                            <div class="language" id="en"></div>
+                            EN
                             <div class="language" id="down"></div>
                             <ul>
                                 <li>
-                                    <a href="../en/saper/"  target="_self">
-                                        <div class="language" id="en"></div>
-                                        EN
+                                    <a href="../../saper/"  target="_self">
+                                        <div class="language" id="ru"></div>
+                                        RU
                                     </a>
                                 </li>
                             </ul>
@@ -145,11 +145,11 @@
         
         <!--при загрузке страницы-->
         
-        <script>PageOnload("../resources/stylesheet/")</script>
+        <script>PageOnload("../../resources/stylesheet/")</script>
         
         <!--настройка значений-->
         
-        <script>CreateObjects(9, 9, 10, "../", "Новая игра", "Осталось мин", "Победа", "Поражение")</script>
+        <script>CreateObjects(9, 9, 10, "../../", "New game", "Remaining mines", "Victory", "Defeat")</script>
         
         <!--подвал-->
         
@@ -157,9 +157,11 @@
             <!--фон-->
             
             <div class="background">
-                <p><b>Версия ПО: </b>v1.0</p>
+                <p><b>Version software: </b>v1.0</p>
                 <br/>
-                <p>О всех ошибках в отображении сайта Вы можете сообщить по ссылкам из раздела «Контакты»</p>
+                <p>You can report about all errors in the display of the site by following the links from the section «Contacts»</p>
+                <br/>
+                <p>Translated by <a href="https://vk.com/id93686058" class="link">Anna</a> and <a href="https://vk.com/id45023008" class="link">Denis</a></p>
                 <br/>
                 <p onclick="Easter(this)"><b>Forzar AppS</b> – 1.4.2(20)</p>
             </div>
