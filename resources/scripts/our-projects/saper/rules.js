@@ -1,6 +1,14 @@
 var CountCol;
 var CountRow;
 var CountMine;
+var Path;
+
+var Translation = {
+    Game: "",
+    Mine: "",
+    Win: "",
+    Lose: "",
+};
 
 /*настройка значений*/
 
@@ -8,6 +16,21 @@ function SetDigit(Col, Row, Mine) {
     CountCol = Col;
     CountRow = Row;
     CountMine = Mine;
+}
+
+/*настройка значений пути*/
+
+function SetPathString(PathLocal) {
+    Path = PathLocal;
+}
+
+/*настройка значений строк*/
+
+function SetString(Game, TextMine, Win, Lose) {
+    Translation.Game = Game;
+    Translation.Mine = TextMine;
+    Translation.Win = Win;
+    Translation.Lose = Lose;
 }
 
 /*рандом*/
@@ -18,13 +41,14 @@ function GetRandom(digit) {
 
 /*создание кнопки новой игры*/
 
-function NewGame() {
+function NewGame() {   
     /*создать*/
     
     let DivButtton = document.createElement("button");
 
     /*настройки*/
 
+    DivButtton.className = "new-game";
     DivButtton.onclick = function(){
         for (let cell = 0; cell < (CountCol+2)*(CountRow+2); cell++) {
             let DivCell = document.getElementsByClassName("cell")[cell];
@@ -51,7 +75,7 @@ function NewGame() {
         let DivCount = document.getElementsByClassName("count")[0];
         
         if (DivCount != null) {
-            DivCount.innerHTML = "Осталось мин: 10";
+            DivCount.innerHTML = Translation.Mine+": 10";
         }
         
         /*удалить кнопки*/
@@ -66,12 +90,12 @@ function NewGame() {
             document.getElementsByClassName("label")[0].remove();
         }
     };
-    DivButtton.innerHTML = "Новая игра";
+    DivButtton.innerHTML = Translation.Game;
     DivButtton.style.marginTop = "30px";
 
     /*добавить*/
 
-    document.body.append(DivButtton);
+    document.getElementsByTagName("header")[0].after(DivButtton);
 }
 
 /*создание блока мин*/
@@ -84,11 +108,11 @@ function CreateCount() {
     /*настройки*/
 
     DivCount.className = "count";
-    DivCount.innerHTML = "Осталось мин: 10";
+    DivCount.innerHTML = Translation.Mine+": 10";
 
     /*добавить*/
 
-    document.body.append(DivCount);
+    document.getElementsByClassName("new-game")[0].after(DivCount);
 }
 
 /*создание поля*/
@@ -104,7 +128,7 @@ function CreatePole() {
 
     /*добавить*/
 
-    document.body.append(DivPole);
+    document.getElementsByClassName("count")[0].after(DivPole);
     
     for (let col = 0; col < CountCol+2; col++) {
         /*создать колонку*/
@@ -176,21 +200,29 @@ function CreatePole() {
 
 /*создание объектов*/
 
-function CreateObjects(Col, Row, Mine) {
+function CreateObjects(Col, Row, Mine, PathLocal, Game, TextMine, Win, Lose) {
+    /*настройка значений*/
+
+    SetDigit(Col, Row, Mine);
+
+    /*настройка значений пути*/
+
+    SetPathString(PathLocal);
+
+    /*настройка значений строк*/
+
+    SetString(Game, TextMine, Win, Lose);
+
     /*создание кнопки новой игры*/
 
     NewGame();
-    
-    /*настройка значений*/
-    
-    SetDigit(Col, Row, Mine);
-    
+
     /*создание блока мин*/
-    
+
     CreateCount();
-    
+
     /*создание поля*/
-    
+
     CreatePole();
 }
 
@@ -302,7 +334,7 @@ function ClearClick() {
         /*настройки*/
 
         DivLabel.className = "label";
-        DivLabel.innerHTML = "Победа!";
+        DivLabel.innerHTML = Translation.Win+"!";
         
         /*добавить*/
 
@@ -420,7 +452,7 @@ function ClearClick() {
                                         /*настройки*/
 
                                         DivLabel.className = "label";
-                                        DivLabel.innerHTML = "Поражение!";
+                                        DivLabel.innerHTML = Translation.Lose+"!";
 
                                         /*добавить*/
 
@@ -442,8 +474,13 @@ function ClearClick() {
                         }
 
                         DivButton.style.border = "1px solid";
-                        DivButton.style.left = (25*button) + "px";
-
+                        if (document.documentElement.clientWidth > 800) {
+                            DivButton.style.left = (50*button) + "px";
+                        }
+                        else{
+                            DivButton.style.left = (25*button) + "px";
+                        }
+                        
                         /*добавить*/
 
                         DivButtons.append(DivButton);
@@ -507,7 +544,7 @@ function ClearClick() {
                         switch (button) {
                             case 0: {
                                 DivButton.id = "flag";
-                                DivButton.style.backgroundImage = "url(resources/images/buttons/no-flag.png)";
+                                DivButton.style.backgroundImage = "url("+Path+"resources/images/our-projects/saper/buttons/no-flag.png)";
                                 DivButton.onclick = function() {
                                     /*установка флага*/
 
@@ -537,8 +574,13 @@ function ClearClick() {
                         }
 
                         DivButton.style.border = "1px solid";
-                        DivButton.style.left = (25*button) + "px";
-
+                        if (document.documentElement.clientWidth > 800) {
+                            DivButton.style.left = (50*button) + "px";
+                        }
+                        else{
+                            DivButton.style.left = (25*button) + "px";
+                        }
+                        
                         /*добавить*/
 
                         DivButtons.append(DivButton);
@@ -554,7 +596,7 @@ function ClearClick() {
 
 function ClearAllClick_ShowMine(FireMine) {
     if (!!FireMine) {
-        FireMine.style.backgroundImage = "url(resources/images/mine/fire-mine.png)";
+        FireMine.style.backgroundImage = "url("+Path+"resources/images/our-projects/saper/mine/fire-mine.png)";
     }
     
     /*удалить кнопки*/
@@ -571,7 +613,7 @@ function ClearAllClick_ShowMine(FireMine) {
             DivCell.setAttribute("data-open", "true");
 
             if (DivCell.getAttribute("data-flag") == "true") {
-                DivCell.style.backgroundImage = "url(resources/images/mine/flag-mine.png)";
+                DivCell.style.backgroundImage = "url("+Path+"resources/images/our-projects/saper/mine/flag-mine.png)";
             }
         }
     }
@@ -614,5 +656,5 @@ function SearchMine() {
     
     /*изменить блок*/
 
-    document.getElementsByClassName("count")[0].innerHTML = "Осталось мин: "+count;
+    document.getElementsByClassName("count")[0].innerHTML = Translation.Mine+": "+count;
 }

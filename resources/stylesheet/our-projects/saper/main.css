@@ -46,14 +46,14 @@ button {
 }
 
 div.button#flag {
-    background-image: url(../../images/saper/buttons/flag.png);
+    background-image: url(../../../images/our-projects/saper/buttons/flag.png);
 }
 
 div.button#cancel {
-    background-image: url(../../images/saper/buttons/cancel.png);
+    background-image: url(../../../images/our-projects/saper/buttons/cancel.png);
 }
 
 div.button#lopata {
-    background-image: url(../../images/saper/buttons/lopata.png);
+    background-image: url(../../../images/our-projects/saper/buttons/lopata.png);
 }
 

@@ -35,7 +35,7 @@ function ChangeSizeImageSpoilerPopup(Image, Path) {
     
     /*название проекта*/
     
-    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 7, Image.src.substr(Image.src.lastIndexOf("images") + 7).lastIndexOf("/")));
+    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 20, Image.src.substr(Image.src.lastIndexOf("images") + 20).lastIndexOf("/")));
     
     for (let i = 1; i <= CountImages(ProjectName); i++) {
         /*создать*/
@@ -119,7 +119,7 @@ function ClickButtonLeft(Path) {
     
     /*название проекта*/
     
-    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 7, Image.src.substr(Image.src.lastIndexOf("images") + 7).lastIndexOf("/")));
+    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 20, Image.src.substr(Image.src.lastIndexOf("images") + 20).lastIndexOf("/")));
     
     for (let i = 0; i < Images.childNodes.length; i++) {
         if (Images.childNodes[i].tagName == "DIV") {
@@ -192,7 +192,7 @@ function ClickButtonRight(Path) {
     
     /*название проекта*/
     
-    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 7, Image.src.substr(Image.src.lastIndexOf("images") + 7).lastIndexOf("/")));
+    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 20, Image.src.substr(Image.src.lastIndexOf("images") + 20).lastIndexOf("/")));
     
     for (let i = 0; i < Images.childNodes.length; i++) {
         if (Images.childNodes[i].tagName == "DIV") {
@@ -275,7 +275,7 @@ function ClickSmallImage(Path) {
                     
                     /*название проекта*/
                     
-                    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 7, Image.src.substr(Image.src.lastIndexOf("images") + 7).lastIndexOf("/")));
+                    let ProjectName = String(Image.src.substr(Image.src.lastIndexOf("images") + 20, Image.src.substr(Image.src.lastIndexOf("images") + 20).lastIndexOf("/")));
                     
                     /*увеличение норера изображения*/
                     
