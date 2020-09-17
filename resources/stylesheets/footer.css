@@ -1,0 +1,24 @@
+/*подвал*/
+
+footer {
+    background-image: url(../images/background.jpg);
+    background-size: 100%;
+    
+    text-align: center;
+    
+    margin-top: 30px;
+}
+
+footer div.background p {
+    padding: 5px 0;
+    
+    text-align: center;
+    
+    /*убрать отступы*/
+    
+    margin: 0;
+    
+    /*иначе не корректно отступы и пасхалка*/
+    
+    display: inline-block;
+}

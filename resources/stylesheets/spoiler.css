@@ -1,0 +1,77 @@
+/*скриншоты*/
+
+section.main section.our-projects article div.project-screenshots {
+    width: 100%;
+    
+    margin: 5px 0;
+    
+    /*иначе не корректно разделение проектов*/
+    
+    float: left;
+}
+
+section.main section.our-projects article div.project-screenshots b {
+    float: left;
+    
+    margin: 4px 5px 4px 0;
+}
+
+/*кнопка спойлера*/
+
+section.main section.our-projects article div.project-screenshots div.button {  
+    padding: 2px;
+    
+    border-radius: 10px;
+    
+    cursor:pointer;
+    
+    /*иначе не корректно ширина кнопки*/
+    
+    float: left;
+}
+
+/*спойлер*/
+
+section.main section.our-projects article div.project-screenshots div.spoiler {
+    border-radius: 20px;
+
+    padding: 10px;
+
+    width: 95%;
+
+    text-align: center;
+
+    display: none;
+    
+    /*иначе не корректно блок*/
+    
+    float: left;
+}
+
+/*ширина экрана больше 800*/
+
+@media (min-width: 800px) {
+
+    section.main section.our-projects article div.project-screenshots div.spoiler img.spoiler-image {
+        cursor:zoom-in;
+
+        height: 100px;
+
+        margin: 5px;
+
+        float: left;
+    }
+}
+
+/*ширина экрана меньше 800*/
+
+@media (max-width: 800px) {
+
+    section.main section.our-projects article div.project-screenshots div.spoiler img.spoiler-image {
+        cursor:zoom-in;
+
+        height: 100px;
+
+        margin: 5px;
+    }
+}

@@ -1,0 +1,113 @@
+div.pole {
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    
+    color: black;
+}
+
+div.col {
+    float: left;
+}
+
+div.col[data-kontur] {
+    float: left;
+}
+
+/*ширина экрана больше 800*/
+
+@media (min-width: 800px) {
+    div.cell {
+        width: 40px;
+        height: 40px;
+
+        border: 1px solid;
+    }
+}
+
+/*ширина экрана меньше 800*/
+
+@media (max-width: 800px) {
+    div.cell {
+        width: 20px;
+        height: 20px;
+
+        border: 1px solid;
+    }
+}
+
+div.cell[data-open="false"] {
+    background-color: lightblue;
+}
+
+div.cell[data-open="true"] {
+    background-color: oldlace;
+    background-color: rgb(255, 200, 200);
+}
+
+div.cell[data-count-mine] {
+    background-size: 100%;
+}
+
+div.cell[data-count-mine][data-open="false"] {
+    background-size: 0%;
+}
+
+div.cell[data-count-mine="1"] {
+    background-image: url(../../../images/our-projects/saper/digit/1.png);
+}
+
+div.cell[data-count-mine="2"] {
+    background-image: url(../../../images/our-projects/saper/digit/2.png);
+}
+
+div.cell[data-count-mine="3"] {
+    background-image: url(../../../images/our-projects/saper/digit/3.png);
+}
+
+div.cell[data-count-mine="4"] {
+    background-image: url(../../../images/our-projects/saper/digit/4.png);
+}
+
+div.cell[data-count-mine="5"] {
+    background-image: url(../../../images/our-projects/saper/digit/5.png);
+}
+
+div.cell[data-count-mine="6"] {
+    background-image: url(../../../images/our-projects/saper/digit/6.png);
+}
+
+div.cell[data-count-mine="7"] {
+    background-image: url(../../../images/our-projects/saper/digit/7.png);
+}
+
+div.cell[data-count-mine="8"] {
+    background-image: url(../../../images/our-projects/saper/digit/8.png);
+}
+
+div.cell[data-kontur] {
+    width: 0px;
+    height: 0px;
+    
+    border: 0px;
+    
+    background-color: lightgray;
+}
+
+div.cell[data-mine="true"] {
+    background-image: url(../../../images/our-projects/saper/mine/mine.png);
+    background-size: 100%;
+}
+
+div.cell[data-mine="true"][data-open="false"] {
+    background-size: 0%;
+}
+
+div.cell[data-flag="true"][data-open="false"] {
+    background-image: url(../../../images/our-projects/saper/buttons/flag.png);
+    
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}

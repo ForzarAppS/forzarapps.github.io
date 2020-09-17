@@ -1,0 +1,57 @@
+/*всплывающее*/
+
+div.popup {
+    /*позиционирование*/
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+div.popup-background {
+    background: rgba(0,0,0,0.8);
+    
+    cursor: zoom-out;
+    
+    /*позиционирование*/
+    
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+/*центрование*/
+
+div.popup-center {
+    cursor: zoom-out;
+    
+    /*позиционирование*/
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+/*ширина экрана больше 800*/
+
+@media (min-width: 800px) {
+    img.popup-image {
+        max-width: 75%;
+
+        cursor: default;
+    }
+}
+
+/*ширина экрана меньше 800*/
+
+@media (max-width: 800px) {
+    img.popup-image {
+        max-width: 100%;
+
+        cursor: default;
+    }
+}
