@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+
+<!--подключение для отображения ссылки на сайт-->
+
+<html lang="ru" prefix="og: //ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        
+        <!--отображение ссылки на сайт-->
+        
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Рандомазер">
+        <meta property="og:site_name" content="Forzar AppS">
+        <meta property="og:url" content="https://forzarapps.github.io/our-projects/randomizer">
+        <meta property="og:description" content="Распределение вопросов/билетов среди студентов.">
+        <meta property="og:image" content="../../resources/images/FAS.png">
+        
+        <!--для мобльных браузеров-->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        
+        <!--вкладка-->
+        
+        <title>Рандомазер</title>
+        <link rel="shortcut icon" href="resources/images/logo/FAS.png" type="image/png">
+        
+        <!--таблицы стилей-->
+        
+        <link rel="stylesheet" href="../../resources/stylesheets/our-projects/randomizer/main.css">
+        <link rel="stylesheet" href="../../resources/stylesheets/our-projects/randomizer/scrollbar.css">
+        
+        <link rel="stylesheet" href="../../resources/stylesheets/header.css">   
+        <link rel="stylesheet" href="../../resources/stylesheets/image.css">
+        <link rel="stylesheet" href="../../resources/stylesheets/footer.css">
+        
+        <!--таблица стилей для темы-->
+        
+        <link rel="stylesheet" href="../../resources/stylesheets/light.css" id="link-theme">
+        
+        <!--скрипты-->
+              
+        <script src="../../resources/scripts/our-projects/randomizer/rules.js"></script> 
+        <script src="../../resources/scripts/our-projects/randomizer/onload-page.js"></script>
+        
+        <script src="../../resources/scripts/header.js"></script>
+        <script src="../../resources/scripts/footer.js"></script>
+        <script src="../../resources/scripts/theme.js"></script>
+    </head>
+    
+    <!--убрать скроллбар для тела страницы-->
+    
+    <body class="scrollbar-no">
+        <header>
+            <!--фон-->
+            
+            <div class="background">
+                <!--лого-->
+                
+                <div class="logo">
+                    <!--по центру-->
+                    
+                    <center>
+                        <div class="img">
+                            <a href="../" target="_self"><img id="logo" src="../../resources/images/logo/FAS.png"/></a>
+                        </div>
+                        
+                        <div class="h1">
+                            <h1>
+                                <a href="../../" target="_self">FAS</a>
+                            </h1>
+                        </div>
+
+                        <!--смена логотипа-->
+                        
+                        <script>AutoChangeLogo(1000, '../../resources/images/logo/')</script>
+                    </center>
+                </div>
+                
+                <!--смена темы-->
+                
+                <div onclick="ChangeTheme('../../resources/stylesheets/')" class="theme">
+                    <div class="icon-theme"></div>
+                </div>
+                
+                <!--кнопка-->
+                
+                <input type="checkbox" id="button-menu" class="checkbox">
+                
+                <!--вид кнопки-->
+                
+                <label class="button-menu" for="button-menu">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </label>
+                
+                <!--разделы-->
+
+                <nav class="sections">
+                    <ul class="sections">
+                        <li>
+                            <span class="nav-sections">
+                                <span class="border"><a href="../../" target="_self">Основная информация</a></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="nav-sections">
+                                <span class="border"><a href="../" target="_self">Наши проекты</a></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="nav-sections">
+                                <span class="border"><a href="../../" target="_self">О нас</a></span>
+                            </span>
+                        </li>
+                        <li><span class="nav-sections">
+                            <span class="border"><a href="../../" target="_self">Контакты</a></span>
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!--языки-->
+                
+                <nav class="languages">
+                    <ul class="languages">
+                        <li>
+                            <div class="language" id="ru"></div>
+                            RU
+                            <div class="language" id="down"></div>
+                            <ul>
+                                <li>
+                                    <a href=""  target="_self">
+                                        <div class="language" id="en"></div>
+                                        EN
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <!--при загрузке страницы-->
+        
+        <script>PageOnload("../../resources/stylesheets/")</script>
+        
+        <!--настройка значений-->
+        
+        <div>
+            <b>Добавьте студента:</b><input type="text" style="margin-top: 30px" class="input-people"><button style="margin-left: 10px; margin-top: 30px" onclick="AddPeople()">Добавить</button><br/>
+            
+            <b>Список студентов:</b>
+            <div class="FIO"></div>
+            
+            <b>Введите количество вопросов/билетов:</b><input type="text" style="margin-top: 30px" class="count-questions"><button style="margin-left: 10px; margin-top: 30px" onclick="RandomQuestions()">Распределить</button><br/>
+            
+            <b>Распределённые вопросы/билеты:</b>
+            <div class="FIO-Questions"></div>
+        </div>
+        
+        <!--подвал-->
+        
+        <footer>
+            <!--фон-->
+            
+            <div class="background">
+                <p><b>Версия ПО: </b>v1.0</p>
+                <br/>
+                <p>О всех ошибках в отображении сайта Вы можете сообщить по ссылкам из раздела «Контакты»</p>
+                <br/>
+                <p onclick="Easter(this)"><b>Forzar AppS</b> – 1.4.2(20)</p>
+            </div>
+        </footer>
+    </body>
+</html>
