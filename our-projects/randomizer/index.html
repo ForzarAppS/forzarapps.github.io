@@ -9,7 +9,7 @@
         <!--отображение ссылки на сайт-->
         
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Рандомазер">
+        <meta property="og:title" content="Рандомайзер">
         <meta property="og:site_name" content="Forzar AppS">
         <meta property="og:url" content="https://forzarapps.github.io/our-projects/randomizer">
         <meta property="og:description" content="Распределение вопросов/билетов среди студентов.">
@@ -21,8 +21,8 @@
         
         <!--вкладка-->
         
-        <title>Рандомазер</title>
-        <link rel="shortcut icon" href="resources/images/logo/FAS.png" type="image/png">
+        <title>Рандомайзер</title>
+        <link rel="shortcut icon" href="../../resources/images/our-projects/randomizer/randomizer.png" type="image/png">
         
         <!--таблицы стилей-->
         
@@ -41,6 +41,9 @@
               
         <script src="../../resources/scripts/our-projects/randomizer/rules.js"></script> 
         <script src="../../resources/scripts/our-projects/randomizer/onload-page.js"></script>
+        <script src="../../resources/scripts/our-projects/randomizer/screenshot.js"></script>
+        
+        <script type="text/javascript" src="../../resources/scripts/html2canvas.js"></script>
         
         <script src="../../resources/scripts/header.js"></script>
         <script src="../../resources/scripts/footer.js"></script>
@@ -148,17 +151,19 @@
         
         <!--настройка значений-->
         
-        <div>
-            <b>Добавьте студента:</b><input type="text" style="margin-top: 30px" class="input-people"><button style="margin-left: 10px; margin-top: 30px" onclick="AddPeople()">Добавить</button><br/>
+        <div class="form-randomizer" style="padding-top: 20px; padding-bottom: 20px">
+            <b>Добавьте студента: </b><input type="text" class="input-people"><button style="margin-left: 10px" onclick="AddPeople()">Добавить</button><br/>
             
             <b>Список студентов:</b>
             <div class="FIO"></div>
             
-            <b>Введите количество вопросов/билетов:</b><input type="text" style="margin-top: 30px" class="count-questions"><button style="margin-left: 10px; margin-top: 30px" onclick="RandomQuestions()">Распределить</button><br/>
+            <b>Введите количество вопросов/билетов: </b><input type="text" style="margin-top: 30px" class="count-questions"><button style="margin-left: 10px; margin-top: 20px" onclick="RandomQuestions()">Распределить</button><br/>
             
             <b>Распределённые вопросы/билеты:</b>
             <div class="FIO-Questions"></div>
         </div>
+        
+        <button class="button-screenshot"onclick="GetScreenshot()">Скопировать скриншот</button>
         
         <!--подвал-->
         
