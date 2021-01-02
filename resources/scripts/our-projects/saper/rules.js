@@ -33,10 +33,10 @@ function SetString(Game, TextMine, Win, Lose) {
     Translation.Lose = Lose;
 }
 
-/*рандом*/
+/*целочисленный рандом*/
 
 function GetRandom(digit) {
-    return Math.floor(Math.random() * Math.floor(digit)) + 1;
+    return Math.floor(Math.random()*Math.floor(digit))+1;
 }
 
 /*создание кнопки новой игры*/

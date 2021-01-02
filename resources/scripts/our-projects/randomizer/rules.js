@@ -1,18 +1,30 @@
-function AddPeople() {    
+/*добавление студентов*/
+
+function AddPeople() {   
+    /*если ввёдена не пустота*/
+    
     if (document.getElementsByClassName("input-people")[0].value != ''){
         document.getElementsByClassName("FIO")[0].innerHTML = document.getElementsByClassName("FIO")[0].innerHTML + "<div class='people'>" + document.getElementsByClassName("input-people")[0].value + "</div>";
     }
 }
 
-function RandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max))+1;
+/*целочисленный рандом*/
+
+function GetRandom(digit) {
+    return Math.floor(Math.random()*Math.floor(digit))+1;
 }
 
-function RandomQuestions() {    
+function RandomQuestions() {  
+    /*если ввёдена не пустота*/
+    
     if (document.getElementsByClassName("count-questions")[0].value != ''){
+        /*очистка старых значений*/
+        
         while(document.getElementsByClassName("people-questions").length > 0) {
            document.getElementsByClassName("people-questions")[0].remove();
         }
+        
+        /*количество людей и количество вопросов*/
         
         let CountQuestions = document.getElementsByClassName("count-questions")[0].value;
         let CountPeople = document.getElementsByClassName("people").length;
@@ -22,15 +34,21 @@ function RandomQuestions() {
         let FlagRandomQuestions = true;
         let CountPeopleQuestions = 0;
 
+        /*количество людей равну количеству вопросов*/
+        
         if (CountPeople == CountQuestions){
+            /*проход по всем людям*/
+            
             for (let i = 0; i <= CountPeople-1; i++) {
                 CountPeopleQuestions = 0;
 
                 FlagRandomQuestions = true;
 
+                /*генерация уникального номера вопроса*/
+                
                 while (FlagRandomQuestions) { 
                     FlagRandomQuestions = false;
-                    NumberQuestions = RandomInt(CountQuestions);
+                    NumberQuestions = GetRandom(CountQuestions);
 
                     for (let k = 0; k < MasNumberQuestions.length; k++) {
                         if (MasNumberQuestions[k] == NumberQuestions) {
@@ -43,7 +61,11 @@ function RandomQuestions() {
                     }
                 }
 
+                /*хранение уже сгенерированных вопросов*/
+                
                 MasNumberQuestions.push(NumberQuestions);
+                
+                /*добавление строки студент-вопросы*/
 
                 document.getElementsByClassName("FIO-Questions")[0].innerHTML = document.getElementsByClassName("FIO-Questions")[0].innerHTML + "<div class='people-questions'>" + document.getElementsByClassName("people")[i].innerHTML + " – " + NumberQuestions + "</div>";
             }
@@ -56,13 +78,18 @@ function RandomQuestions() {
             let MoreQuestions = LessQuestions+1;
 
             let MasNumberPeopleMoreQuestions = [];
+            
+            /*генерация номеров людей с бОльшим количеством вопросов*/
+            
             for (let i = 0; i <= MoreQuestionsPeople-1; i++) {
                 let NumberPeople;
                 let FlagRandomPeople = true;
 
+                /*генерация уникального номера человека*/
+                
                 while (FlagRandomPeople) { 
                     FlagRandomPeople = false;
-                    NumberPeople = RandomInt(CountPeople);
+                    NumberPeople = GetRandom(CountPeople);
 
                     for (let j = 0; j < i; j++) {
                         if (MasNumberPeopleMoreQuestions[j] == NumberPeople) {
@@ -79,9 +106,14 @@ function RandomQuestions() {
             }
 
             MasNumberQuestions = [];
+            
+            /*проход по всем людям*/
 
             for (let i = 0; i <= CountPeople-1; i++) {
                 let FlagSearch = false;
+                
+                /*поиск людей с бОльшим количеством вопросов*/
+                
                 for (let j = 0; j <= MoreQuestionsPeople-1; j++) {
                     if (i+1 == MasNumberPeopleMoreQuestions[j]){
                         FlagSearch = true;
@@ -92,6 +124,8 @@ function RandomQuestions() {
                 let StrQuestions = "";
                 CountPeopleQuestions = 0;
 
+                /*если этот человек найден*/
+                
                 if (FlagSearch){
                     CountPeopleQuestions = MoreQuestions;
                 }
@@ -99,14 +133,14 @@ function RandomQuestions() {
                     CountPeopleQuestions = LessQuestions;
                 }
 
-                NumberQuestions;
-
                 for (let j = 1; j <= CountPeopleQuestions; j++) {
                     FlagRandomQuestions = true;
 
+                    /*генерация уникального номера вопроса*/
+                    
                     while (FlagRandomQuestions) { 
                         FlagRandomQuestions = false;
-                        NumberQuestions = RandomInt(CountQuestions);
+                        NumberQuestions = GetRandom(CountQuestions);
 
                         for (let k = 0; k < MasNumberQuestions.length; k++) {
                             if (MasNumberQuestions[k] == NumberQuestions) {
@@ -119,7 +153,11 @@ function RandomQuestions() {
                         }
                     }
 
+                    /*хранение уже сгенерированных вопросов*/
+                    
                     MasNumberQuestions.push(NumberQuestions);
+                    
+                    /*склейка строки вопросов*/
 
                     if (j == CountPeopleQuestions){
                         StrQuestions = StrQuestions + NumberQuestions;
@@ -128,6 +166,8 @@ function RandomQuestions() {
                         StrQuestions = StrQuestions + NumberQuestions + ", ";
                     }
                 }
+                
+                /*добавление строки студент-вопросы*/
 
                 document.getElementsByClassName("FIO-Questions")[0].innerHTML = document.getElementsByClassName("FIO-Questions")[0].innerHTML + "<div class='people-questions'>" + document.getElementsByClassName("people")[i].innerHTML + " – " + StrQuestions + "</div>";
             }

@@ -1,16 +1,29 @@
-function GetScreenshot() {
+/*создание скриншота*/
+
+function GetScreenshot(TranslationText, Time) {
+    /*проверка на существование надписи*/
+    
     if (document.getElementsByClassName("text-screenshot")[0] == undefined){
-        html2canvas(document.getElementsByClassName("form-randomizer")[0], {backgroundColor: window.getComputedStyle(document.body).backgroundColor}).then(function(canvas) {
+        /*создание канваса с нужным цветом фона*/
+        
+        html2canvas(document.getElementsByClassName("forma-randomizer")[0], {backgroundColor: window.getComputedStyle(document.body).backgroundColor}).then(function(canvas) {
             let screenshot = canvas;
             
-            //показать скриншот на странице
-            //document.getElementsByClassName("form-randomizer")[0].appendChild(screenshot);
+            /*показать скриншот на странице*/
+            
+            /*document.getElementsByClassName("forma-randomizer")[0].appendChild(screenshot);*/
 
+            /*скопировать надпись в буфер*/
+            
             screenshot.toBlob(blob => navigator.clipboard.write([new ClipboardItem({'image/png': blob})]));
 
-            document.getElementsByClassName("button-screenshot")[0].insertAdjacentHTML("afterend", "<div class='text-screenshot'>Изображение скопированно в буфер</div>");
+            /*создать надпись*/
+            
+            document.getElementsByClassName("button-screenshot")[0].insertAdjacentHTML("afterend", "<div class='text-screenshot'>"+TranslationText+"</div>");
 
-            setTimeout(() => document.getElementsByClassName("text-screenshot")[0].remove(), 5000);
+            /*убрать надпись*/
+            
+            setTimeout(() => document.getElementsByClassName("text-screenshot")[0].remove(), Time);
         });
     }
 }

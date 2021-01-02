@@ -27,6 +27,7 @@
         <!--таблицы стилей-->
         
         <link rel="stylesheet" href="../../resources/stylesheets/our-projects/randomizer/main.css">
+        <link rel="stylesheet" href="../../resources/stylesheets/our-projects/randomizer/forma.css">
         <link rel="stylesheet" href="../../resources/stylesheets/our-projects/randomizer/scrollbar.css">
         
         <link rel="stylesheet" href="../../resources/stylesheets/header.css">   
@@ -151,19 +152,19 @@
         
         <!--настройка значений-->
         
-        <div class="form-randomizer" style="padding-top: 20px; padding-bottom: 20px">
-            <b>Добавьте студента: </b><input type="text" class="input-people"><button style="margin-left: 10px" onclick="AddPeople()">Добавить</button><br/>
+        <div class="forma-randomizer">
+            <b>Добавьте студента: </b><input type="text" class="input-people"><button onclick="AddPeople()">Добавить</button><br/>
             
             <b>Список студентов:</b>
             <div class="FIO"></div>
             
-            <b>Введите количество вопросов/билетов: </b><input type="text" style="margin-top: 30px" class="count-questions"><button style="margin-left: 10px; margin-top: 20px" onclick="RandomQuestions()">Распределить</button><br/>
+            <b>Введите количество вопросов/билетов: </b><input type="text" style="margin-top: 20px" class="count-questions"><button onclick="RandomQuestions()">Распределить</button><br/>
             
             <b>Распределённые вопросы/билеты:</b>
             <div class="FIO-Questions"></div>
         </div>
         
-        <button class="button-screenshot"onclick="GetScreenshot()">Скопировать скриншот</button>
+        <button class="button-screenshot" onclick="GetScreenshot('Изображение скопированно в буфер', 5000)">Скопировать скриншот</button>
         
         <!--подвал-->
         
