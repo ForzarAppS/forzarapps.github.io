@@ -95,9 +95,13 @@ function RandomQuestions() {
                 
                 MasNumberQuestions.push(NumberQuestions);
                 
+                /*строка человека*/
+                
+                let StringPeople = document.getElementsByClassName("people")[i].textContent;
+                
                 /*добавление строки студент-вопросы*/
 
-                document.getElementsByClassName("FIO-Questions")[0].innerHTML = document.getElementsByClassName("FIO-Questions")[0].innerHTML + "<div class='people-questions'>" + document.getElementsByClassName("people")[i].textContent + " – " + NumberQuestions + "</div>";
+                document.getElementsByClassName("FIO-Questions")[0].innerHTML = document.getElementsByClassName("FIO-Questions")[0].innerHTML + "<div class='people-questions'>" + StringPeople.substring(0, StringPeople.length - 1) + " – " + NumberQuestions + "</div>";
             }
         }
         else{
@@ -197,9 +201,13 @@ function RandomQuestions() {
                     }
                 }
                 
+                /*строка человека*/
+                
+                let StringPeople = document.getElementsByClassName("people")[i].textContent;
+                
                 /*добавление строки студент-вопросы*/
 
-                document.getElementsByClassName("FIO-Questions")[0].innerHTML = document.getElementsByClassName("FIO-Questions")[0].innerHTML + "<div class='people-questions'>" + document.getElementsByClassName("people")[i].textContent + " – " + StrQuestions + "</div>";
+                document.getElementsByClassName("FIO-Questions")[0].innerHTML = document.getElementsByClassName("FIO-Questions")[0].innerHTML + "<div class='people-questions'>" + StringPeople.substring(0, StringPeople.length - 1) + " – " + StrQuestions + "</div>";
             }
         }
     }
