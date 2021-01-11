@@ -74,6 +74,7 @@ function ChangeSizeImageSpoilerPopup(Image, Path) {
 function CloseSpoilerPopup() {
     document.onclick = function(e) {
         /*по чему можно кликнуть, чтобы закрыть*/
+        
         if ((e.target.className == "spoiler-popup-background") | (e.target.className == "spoiler-popup-center") | (e.target.className == "spoiler-popup-center-image")) {
             /*удалить*/
             

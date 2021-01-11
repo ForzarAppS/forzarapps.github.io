@@ -42,7 +42,7 @@
               
         <script src="../../resources/scripts/our-projects/randomizer/rules.js"></script> 
         <script src="../../resources/scripts/our-projects/randomizer/onload-page.js"></script>
-        <script src="../../resources/scripts/our-projects/randomizer/screenshot.js"></script>
+        <script src="../../resources/scripts/our-projects/randomizer/copy.js"></script>
         
         <script type="text/javascript" src="../../resources/scripts/html2canvas.js"></script>
         
@@ -158,13 +158,15 @@
             <b>Список студентов:</b>
             <div class="FIO"></div>
             
-            <b>Введите количество вопросов/билетов: </b><input type="text" style="margin-top: 20px" class="count-questions"><button onclick="RandomQuestions()">Распределить</button><br/>
+            <b>Введите количество вопросов/билетов: </b><input type="text" class="count-questions"><button onclick="RandomQuestions()">Распределить</button><br/>
             
             <b>Распределённые вопросы/билеты:</b>
             <div class="FIO-Questions"></div>
         </div>
         
-        <button class="button-screenshot" onclick="GetScreenshot('Изображение скопированно в буфер', 5000)">Скопировать скриншот</button>
+        <div class="button-copy">
+            <button class="button-copy-screenshot" onclick="CopyScreenshot('Изображение скопировано в буфер', 5000)">Скопировать скриншот</button><button class="button-copy-text" onclick="CopyText('Текст скопирован в буфер', 5000)">Скопировать текст</button>
+        </div>
         
         <!--подвал-->
         

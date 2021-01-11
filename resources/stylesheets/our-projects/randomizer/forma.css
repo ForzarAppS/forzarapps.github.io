@@ -1,8 +1,21 @@
-div.form-randomizer {
+div.forma-randomizer {
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-div.form-randomizer button {
+div.forma-randomizer button {
+    margin-left: 10px;
+}
+
+div.forma-randomizer div.people button.delete-people {
+    vertical-align:middle;
+    margin-bottom: 5px;
+}
+
+div.forma-randomizer input.count-questions {
+    margin-top: 20px;
+}
+
+button.button-copy-text {
     margin-left: 10px;
 }

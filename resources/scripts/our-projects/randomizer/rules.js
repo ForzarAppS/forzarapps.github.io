@@ -1,11 +1,41 @@
 /*добавление студентов*/
 
-function AddPeople() {   
+function AddPeople() {
+    /*количество уже введённых студентов*/
+    
+    let CountPeople = document.getElementsByClassName("people").length;
+    
     /*если ввёдена не пустота*/
     
     if (document.getElementsByClassName("input-people")[0].value != ''){
-        document.getElementsByClassName("FIO")[0].innerHTML = document.getElementsByClassName("FIO")[0].innerHTML + "<div class='people'>" + document.getElementsByClassName("input-people")[0].value + "</div>";
+        document.getElementsByClassName("FIO")[0].innerHTML = document.getElementsByClassName("FIO")[0].innerHTML + "<div class='people'>" + document.getElementsByClassName("input-people")[0].value + "<button onclick='DeletePeople()' class='delete-people' id='" + CountPeople + "'>x</button></div>";
     }
+    
+    document.getElementsByClassName("input-people")[0].value = '';
+}
+
+/*удаление человека*/
+
+function DeletePeople(){
+    document.onclick = function(e) {
+        /*по чему можно кликнуть, чтобы удалить*/
+        
+        if (e.target.className == "delete-people") {
+            /*удалить*/
+            
+            document.getElementsByClassName("people")[e.target.id].remove();
+            
+            /*количество уже введённых студентов*/
+    
+            let CountPeople = document.getElementsByClassName("people").length;
+
+            /*переприсваивание номеров кнопок удаления*/
+
+            for (let i = 0; i <= CountPeople-1; i++) {
+                document.getElementsByClassName("delete-people")[i].id = i;
+            }
+        } 
+    };
 }
 
 /*целочисленный рандом*/
@@ -67,7 +97,7 @@ function RandomQuestions() {
                 
                 /*добавление строки студент-вопросы*/
 
-                document.getElementsByClassName("FIO-Questions")[0].innerHTML = document.getElementsByClassName("FIO-Questions")[0].innerHTML + "<div class='people-questions'>" + document.getElementsByClassName("people")[i].innerHTML + " – " + NumberQuestions + "</div>";
+                document.getElementsByClassName("FIO-Questions")[0].innerHTML = document.getElementsByClassName("FIO-Questions")[0].innerHTML + "<div class='people-questions'>" + document.getElementsByClassName("people")[i].textContent + " – " + NumberQuestions + "</div>";
             }
         }
         else{
@@ -169,7 +199,7 @@ function RandomQuestions() {
                 
                 /*добавление строки студент-вопросы*/
 
-                document.getElementsByClassName("FIO-Questions")[0].innerHTML = document.getElementsByClassName("FIO-Questions")[0].innerHTML + "<div class='people-questions'>" + document.getElementsByClassName("people")[i].innerHTML + " – " + StrQuestions + "</div>";
+                document.getElementsByClassName("FIO-Questions")[0].innerHTML = document.getElementsByClassName("FIO-Questions")[0].innerHTML + "<div class='people-questions'>" + document.getElementsByClassName("people")[i].textContent + " – " + StrQuestions + "</div>";
             }
         }
     }
