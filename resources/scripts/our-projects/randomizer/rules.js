@@ -5,10 +5,14 @@ function AddPeople() {
     
     let CountPeople = document.getElementsByClassName("people").length;
     
+    /*размер шрифта*/
+        
+    const FontSize = Number(window.getComputedStyle(document.body).getPropertyValue('font-size').match(/\d+/)[0]);
+    
     /*если ввёдена не пустота*/
     
     if (document.getElementsByClassName("input-people")[0].value != ''){
-        document.getElementsByClassName("FIO")[0].innerHTML = document.getElementsByClassName("FIO")[0].innerHTML + "<div class='people'>" + document.getElementsByClassName("input-people")[0].value + "<button onclick='DeletePeople()' class='delete-people' id='" + CountPeople + "'>x</button></div>";
+        document.getElementsByClassName("FIO")[0].innerHTML = document.getElementsByClassName("FIO")[0].innerHTML + "<div class='people'>" + document.getElementsByClassName("input-people")[0].value + "<button onclick='DeletePeople()' class='delete-people' id='" + CountPeople + "' style='font-size:"+FontSize+"px'>x</button></div>";
     }
     
     document.getElementsByClassName("input-people")[0].value = '';

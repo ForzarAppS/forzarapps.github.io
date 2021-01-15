@@ -16,17 +16,21 @@ function CopyScreenshot(TranslationText, Time) {
 
                 /*document.getElementsByClassName("forma-randomizer")[0].appendChild(screenshot);*/
 
-                /*скопировать скриншот в буфер*/
+                /*проверяем поддержку*/
+                
+                if (navigator.clipboard) {
+                    /*скопировать скриншот в буфер*/
 
-                screenshot.toBlob(blob => navigator.clipboard.write([new ClipboardItem({'image/png': blob})]));
+                    screenshot.toBlob(blob => navigator.clipboard.write([new ClipboardItem({'image/png': blob})]));
+                    
+                    /*создать надпись*/
 
-                /*создать надпись*/
+                    document.getElementsByClassName("button-copy")[0].insertAdjacentHTML("beforeend", "<div class='text-copy-screenshot'>"+TranslationText+"</div>");
 
-                document.getElementsByClassName("button-copy")[0].insertAdjacentHTML("beforeend", "<div class='text-copy-screenshot'>"+TranslationText+"</div>");
+                    /*убрать надпись*/
 
-                /*убрать надпись*/
-
-                setTimeout(() => document.getElementsByClassName("text-copy-screenshot")[0].remove(), Time);
+                    setTimeout(() => document.getElementsByClassName("text-copy-screenshot")[0].remove(), Time);
+                }
             });
         }
     }

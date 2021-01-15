@@ -37,6 +37,16 @@ function PageOnload(Path) {
         let Sections = document.getElementsByClassName("nav-sections");
 
         Sections[1].style.borderBottom = "2px solid";
+        
+        /*размер шрифта*/
+        
+        const FontSize = Number(window.getComputedStyle(document.body).getPropertyValue('font-size').match(/\d+/)[0]);
+        
+        let CountButton = document.getElementsByTagName("button").length;
+        
+        for (let i = 0; i <= CountButton-1; i++) {
+            document.getElementsByTagName("button")[i].style.fontSize = FontSize + "px";
+        }
     }
 }
 

@@ -92,6 +92,12 @@ function NewGame() {
     };
     DivButtton.innerHTML = Translation.Game;
     DivButtton.style.marginTop = "30px";
+    
+    /*размер шрифта*/
+        
+    const FontSize = Number(window.getComputedStyle(document.body).getPropertyValue('font-size').match(/\d+/)[0]);
+    
+    DivButtton.style.fontSize = FontSize + "px";
 
     /*добавить*/
 
